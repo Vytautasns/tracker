@@ -7,6 +7,8 @@
 
 <script>
 import Navigation from './components/Navigation';
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
 
   components: { Navigation },
@@ -16,6 +18,25 @@ export default {
 
     }
   },
+
+  created() {
+    this.fetchExercises();
+  },
+
+  computed: {
+    ...mapGetters([
+      'exercisesList',
+    ]),
+
+  },
+
+  methods: {
+    ...mapActions([
+      'fetchExercises',
+    ]),
+
+  },
+
 
 }
 </script>

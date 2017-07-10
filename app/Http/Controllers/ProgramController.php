@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Program;
+use App\Exercise;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,22 @@ class ProgramController extends Controller
      */
     public function index()
     {
+      $user = Auth::user();
 
+      return $user->load([
+        'exercises',
+        'programs' => function ($q) {
+          $q->with([
+            'days' => function ($q) {
+              $q->with([
+                'steps' => function ($q) {
+                  $q->with(['logs']);
+                }
+              ]);
+            }
+          ]);
+        },
+      ]);
     }
 
     /**

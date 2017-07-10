@@ -94,6 +94,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
 
   data() {
@@ -102,9 +104,22 @@ export default {
     }
   },
 
-  mounted() {
+  created() {
+  },
+
+  computed: {
+    ...mapGetters([
+    ]),
 
   },
+
+  methods: {
+    ...mapActions([
+    ]),
+
+  },
+
+
 }
 </script>
 

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\File;
 use App\Program;
 use App\Day;
 use App\Step;
+use App\Exercise;
+use App\Setting;
 
 class User extends Authenticatable
 {
@@ -35,10 +37,41 @@ class User extends Authenticatable
      * Methods
      * *************************************************************************
     */
+
+    // Attach all default exercises to a user
+    // from exercises table
+    // /database/data/exercises_seed.json
+    public function attachDefaultExercises()
+    {
+      $exercises = \App\Exercise::all();
+      foreach ($exercises as $exercise) {
+        $this->exercises()->attach($exercise->id);
+      }
+    }
+    
+    // Create initial settings
+    // for newly registered user
+    public function createDefaultSettings()
+    {
+      Setting::create([
+       'user_id' => $this->id,
+       'name' => 'first_login',
+       'value' => '1',
+      ]);
+
+      Setting::create([
+        'user_id' => $this->id,
+        'name' => 'weight_units',
+        'value' => 'kg',
+      ]);
+    }
+
+    // Create default starting programs
+    // from file /database/data/programs.json
     public function createDefaultPrograms()
     {
        $path = database_path();
-       $json = File::get("$path/data/program.json");
+       $json = File::get("$path/data/programs.json");
        $data = json_decode($json);
 
        foreach ($data as $program) {

@@ -49753,7 +49753,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -49801,7 +49801,8 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
 //
 //
 //
@@ -49897,13 +49898,21 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
+var _vuex = __webpack_require__(94);
+
 exports.default = {
   data: function data() {
     return {
       edit: true
     };
   },
-  mounted: function mounted() {}
+  created: function created() {},
+
+
+  computed: _extends({}, (0, _vuex.mapGetters)([])),
+
+  methods: _extends({}, (0, _vuex.mapActions)([]))
+
 };
 
 /***/ }),
@@ -52932,15 +52941,35 @@ var _vuex2 = _interopRequireDefault(_vuex);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = new _vuex2.default.Store({
-  actions: {},
+  actions: {
+    fetchExercises: function fetchExercises(_ref) {
+      var commit = _ref.commit;
 
-  getters: {},
+      axios.get('/api/exercises').then(function (response) {
+        commit('set_exercises', response.data);
+      }).catch(function (error) {
+        console.log(error);
+      });
+    }
+  },
 
-  mutations: {},
+  getters: {
+    exercisesList: function exercisesList(state) {
+      return state.exercises;
+    }
+  },
+
+  mutations: {
+    set_exercises: function set_exercises(state, payload) {
+      state.exercises = payload;
+    }
+  },
 
   modules: {},
 
-  state: {}
+  state: {
+    exercises: ''
+  }
 
 });
 
@@ -53902,7 +53931,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -53918,9 +53947,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
+//
+//
+//
+//
+
 var _Navigation = __webpack_require__(100);
 
 var _Navigation2 = _interopRequireDefault(_Navigation);
+
+var _vuex = __webpack_require__(94);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53930,14 +53969,17 @@ exports.default = {
 
   data: function data() {
     return {};
-  }
-}; //
-//
-//
-//
-//
-//
-//
+  },
+  created: function created() {
+    this.fetchExercises();
+  },
+
+
+  computed: _extends({}, (0, _vuex.mapGetters)(['exercisesList'])),
+
+  methods: _extends({}, (0, _vuex.mapActions)(['fetchExercises']))
+
+};
 
 /***/ }),
 /* 100 */

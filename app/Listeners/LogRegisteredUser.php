@@ -7,6 +7,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Setting;
 use App\Program;
+use App\Exercise;
 
 class LogRegisteredUser
 {
@@ -31,19 +32,17 @@ class LogRegisteredUser
 
       $user = $event->user;
 
-      Setting::create([
-       'user_id' => $user->id,
-       'name' => 'first_login',
-       'value' => '1',
-      ]);
+      // Create initial settings
+      // for newly registered user
+      $user->createDefaultSettings();
 
-      Setting::create([
-        'user_id' => $user->id,
-        'name' => 'weight_units',
-        'value' => 'kg',
-      ]);
+      // Attach all default exercises to a user
+      // from exercises table
+      // /database/data/exercises_seed.json
+      $user->attachDefaultExercises();
 
-
+      // Create default starting programs
+      // from file /database/data/programs.json
       $user->createDefaultPrograms();
 
     }

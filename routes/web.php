@@ -17,4 +17,4 @@ Auth::routes();
 Route::get('/', 'PageController@index');
 Route::get('/{any}', 'PageController@index');
 
-Route::get('/test/a', 'ProgramController@index');
+Route::get('/api/exercises', 'ProgramController@index');

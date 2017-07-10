@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Jason Blaha ICF5x5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image_url": "https://asdasdasdasdasd",
+    "days": [
+        {
+          "name": "Day A",
+          "steps": [
+            { "exercise_id": 23, "reps": 5, "sets": 5 },
+            { "exercise_id": 3, "reps": 5, "sets": 5 },
+            { "exercise_id": 53, "reps": 5, "sets": 5 },
+            { "exercise_id": 66, "reps": 3, "sets": 12 },
+            { "exercise_id": 63, "reps": 3, "sets": 12 }
+          ]
+        },
+        {
+          "name": "Day B",
+          "steps": [
+            { "exercise_id": 3, "reps": 5, "sets": 5 },
+            { "exercise_id": 23, "reps": 5, "sets": 5 },
+            { "exercise_id": 63, "reps": 5, "sets": 5 },
+            { "exercise_id": 56, "reps": 3, "sets": 12 },
+            { "exercise_id": 83, "reps": 3, "sets": 12 }
+          ]
+        },
+        {
+          "name": "Day C",
+          "steps": [
+            { "exercise_id": 13, "reps": 5, "sets": 5 },
+            { "exercise_id": 23, "reps": 5, "sets": 5 },
+            { "exercise_id": 33, "reps": 5, "sets": 5 },
+            { "exercise_id": 46, "reps": 3, "sets": 12 },
+            { "exercise_id": 53, "reps": 2, "sets": 10 }
+          ]
+        }
+    ]
+  }
+]
