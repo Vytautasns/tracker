@@ -1,9 +1,23 @@
-
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic");
 
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~uikit/src/scss/uikit-theme.scss";
+
+// html {
+//   background: #eee url("http://www.rd.com/wp-content/uploads/sites/2/2017/01/02-know-reasons-hit-workout-plateau-505776960-BartekSzewczyk.jpg") no-repeat fixed center;
+//   // background-size: cover;
+//
+// }
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+}

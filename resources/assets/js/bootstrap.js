@@ -1,5 +1,13 @@
+import Vue from 'vue';
+import UIkit from 'uikit';
+
+window.Vue = Vue;
+window.UIkit = UIkit;
+
 
 window._ = require('lodash');
+
+require('uikit/dist/js/uikit-icons.min.js');
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -9,8 +17,6 @@ window._ = require('lodash');
 
 try {
     window.$ = window.jQuery = require('jquery');
-
-    require('bootstrap-sass');
 } catch (e) {}
 
 /**

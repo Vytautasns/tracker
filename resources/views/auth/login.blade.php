@@ -1,7 +1,62 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+  <img src="http://www.rd.com/wp-content/uploads/sites/2/2017/01/02-know-reasons-hit-workout-plateau-505776960-BartekSzewczyk.jpg" id="bg" alt="">
+
+<div class="uk-width-5-6 uk-width-1-3@m uk-position-center uk-overlay uk-overlay-default uk-margin-remove">
+  <div>
+    <form method="POST" action="{{ route('login') }}">
+      {{ csrf_field() }}
+
+        <fieldset class="uk-fieldset">
+
+            <legend class="uk-legend">Login</legend>
+
+            <div class="uk-margin">
+                  <div class="uk-inline uk-width-1-1">
+                      {{-- <span class="uk-form-icon" uk-icon="icon: user"></span> --}}
+                      <span class="uk-form-icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </span>
+                      <input id="email" type="email" name="email" class="uk-input {{ $errors->has('email') ? ' uk-form-danger' : '' }}" type="text" placeholder="Email">
+                  </div>
+                  @if ($errors->has('email'))
+                    <div class="uk-alert-warning" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </div>
+                  @endif
+              </div>
+
+              <div class="uk-margin">
+                    <div class="uk-inline uk-width-1-1">
+                        {{-- <span class="uk-form-icon" uk-icon="icon: user"></span> --}}
+                        <span class="uk-form-icon">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                        <input id="password" type="password" name="password" class="uk-input {{ $errors->has('password') ? ' uk-form-danger' : '' }}" type="password" placeholder="Password">
+                    </div>
+                    @if ($errors->has('password'))
+                      <div class="uk-alert-warning" uk-alert>
+                          <a class="uk-alert-close" uk-close></a>
+                          <strong>{{ $errors->first('password') }}</strong>
+                      </div>
+                    @endif
+                </div>
+
+                <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Login</button>
+
+
+        </fieldset>
+    </form>
+    <a href="/register">Register new account</a>
+   </div>
+</div>
+
+
+
+
+{{-- <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -64,5 +119,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
