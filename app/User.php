@@ -39,5 +39,11 @@ class User extends Authenticatable
     {
       return $this->hasMany(Setting::class);
     }
-    
+
+    // Programs Relationship
+    public function programs()
+    {
+      return $this->belongsToMany(Program::class);
+    }
+
 }

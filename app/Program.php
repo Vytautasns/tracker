@@ -14,4 +14,18 @@ class Program extends Model
   protected $guarded = [
 
   ];
+
+
+  /*
+   *
+   * Relationships
+   * *************************************************************************
+  */
+
+  // To user Relationships
+  public function users()
+  {
+    return $this->belongsToMany(User::class);
+  }
+  
 }

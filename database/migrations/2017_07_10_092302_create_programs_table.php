@@ -18,6 +18,7 @@ class CreateProgramsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('image_url');
+            $table->integer('default');
             $table->timestamps();
         });
 
