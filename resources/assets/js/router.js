@@ -54,6 +54,12 @@ export default new Router({
       component: require('./pages/programs/Days.vue'),
     },
 
+    {
+      path: '/settings',
+      name: 'settings',
+      component: require('./pages/app/Settings.vue'),
+    },
+
   ],
 
   scrollBehavior (to, from, savedPosition) {

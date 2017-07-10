@@ -6,7 +6,7 @@
           <span class="uk-margin-small-left" uk-icon="icon: menu"></span> <span class="uk-margin-small-left"></span>
         </a>
       </div>
-      <a class="uk-position-center uk-navbar-item uk-logo uk-padding-small" href="#">fitW3</a>
+      <!-- <a class="uk-position-center uk-navbar-item uk-logo uk-padding-small" href="#">fitW3</a> -->
 
       <div class="uk-navbar-left uk-visible@s">
         <ul class="uk-navbar-nav" v-for="item in menuItems" :key="item.title">
@@ -90,6 +90,12 @@ export default {
             title: 'Days',
             link: '/days',
             icon: 'calendar',
+          },
+
+          {
+            title: 'Settings',
+            link: '/settings',
+            icon: 'cog',
           },
         ],
     }

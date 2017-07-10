@@ -47149,6 +47149,10 @@ exports.default = new _vueRouter2.default({
     path: '/days',
     name: 'days',
     component: __webpack_require__(83)
+  }, {
+    path: '/settings',
+    name: 'settings',
+    component: __webpack_require__(105)
   }],
 
   scrollBehavior: function scrollBehavior(to, from, savedPosition) {
@@ -53943,6 +53947,10 @@ exports.default = {
         title: 'Days',
         link: '/days',
         icon: 'calendar'
+      }, {
+        title: 'Settings',
+        link: '/settings',
+        icon: 'cog'
       }]
     };
   },
@@ -53959,12 +53967,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "uk-navbar": ""
     }
-  }, [_vm._m(0), _vm._v(" "), _c('a', {
-    staticClass: "uk-position-center uk-navbar-item uk-logo uk-padding-small",
-    attrs: {
-      "href": "#"
-    }
-  }, [_vm._v("fitW3")]), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "uk-navbar-left uk-visible@s"
   }, _vm._l((_vm.menuItems), function(item) {
     return _c('ul', {
@@ -54082,6 +54085,173 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(106)
+}
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(108),
+  /* template */
+  __webpack_require__(109),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/home/vytautas/webProjects/tracker/resources/assets/js/pages/app/Settings.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Settings.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2384e9c5", Component.options)
+  } else {
+    hotAPI.reload("data-v-2384e9c5", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(107);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("8ae43132", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2384e9c5\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Settings.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2384e9c5\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Settings.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {};
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "uk-container"
+  }, [_c('h2', {
+    staticClass: "uk-heading-line uk-text-center uk-margin-top"
+  }, [_c('span', [_vm._v("Settings")])]), _vm._v(" "), _c('div', {
+    staticClass: "uk-card uk-card-default"
+  }, [_c('div', {
+    staticClass: "uk-card-body"
+  }, [_c('dl', {
+    staticClass: "uk-description-list"
+  }, [_c('dt', [_vm._v("Weight units")]), _vm._v(" "), _c('dd', [_c('div', {
+    staticClass: "uk-margin"
+  }, [_c('select', {
+    staticClass: "uk-select"
+  }, [_c('option', [_vm._v("Kilograms")]), _vm._v(" "), _c('option', [_vm._v("Pounds")])])])]), _vm._v(" "), _c('dt', [_vm._v("Reset app")]), _vm._v(" "), _c('dd', [_vm._v("\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n            "), _c('div', {
+    staticClass: "uk-text-right"
+  }, [_c('button', {
+    staticClass: "uk-button uk-button-danger"
+  }, [_vm._v("Reset")])])])]), _vm._v(" "), _c('hr', {
+    staticClass: "uk-hr"
+  })])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2384e9c5", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
