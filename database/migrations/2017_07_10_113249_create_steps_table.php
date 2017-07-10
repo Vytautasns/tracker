@@ -16,19 +16,12 @@ class CreateStepsTable extends Migration
       Schema::create('steps', function (Blueprint $table) {
           $table->increments('id');
           $table->integer('exercise_id');
-          $table->string('name');
+          $table->integer('day_id');
           $table->integer('reps');
           $table->integer('sets');
           $table->timestamps();
       });
 
-      // Create pivot table for user relationship
-      Schema::create('day_step', function (Blueprint $table) {
-          $table->increments('id');
-          $table->integer('day_id');
-          $table->integer('step_id');
-          $table->timestamps();
-      });
     }
 
     /**
@@ -39,8 +32,6 @@ class CreateStepsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('steps');
-        // Pivot
-        Schema::dropIfExists('day_step');
 
     }
 }

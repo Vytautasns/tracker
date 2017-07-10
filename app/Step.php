@@ -25,7 +25,7 @@ class Step extends Model
   // Day where step (Exercise) belongs
   public function day()
   {
-    return $this->belongsToMany(Day::class);
+    return $this->belongsTo(Day::class);
   }
 
 

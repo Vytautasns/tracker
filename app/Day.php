@@ -30,6 +30,6 @@ class Day extends Model
   // All steps for this day
   public function steps()
   {
-    return $this->belongsToMany(Step::class);
+    return $this->hasMany(Step::class);
   }
 }

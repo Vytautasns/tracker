@@ -16,21 +16,11 @@ class CreateProgramsTable extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('user_id');
             $table->string('description');
             $table->string('image_url');
-            $table->integer('default');
             $table->timestamps();
         });
-
-        // Create pivot table for user relationship
-        Schema::create('program_user', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('program_id');
-            $table->integer('user_id');
-            $table->timestamps();
-        });
-
-
 
     }
 
@@ -42,9 +32,5 @@ class CreateProgramsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('programs');
-
-        // Drop pivot table
-        Schema::dropIfExists('program_user');
-
     }
 }

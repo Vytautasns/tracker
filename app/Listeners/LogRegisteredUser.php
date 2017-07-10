@@ -6,6 +6,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Setting;
+use App\Program;
 
 class LogRegisteredUser
 {
@@ -41,6 +42,9 @@ class LogRegisteredUser
         'name' => 'weight_units',
         'value' => 'kg',
       ]);
+
+
+      $user->createDefaultPrograms();
 
     }
 }

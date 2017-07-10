@@ -29,7 +29,7 @@ $factory->define(App\Program::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'description' => $faker->text,
         'image_url' => 'some https',
-        'default' => 1,
+        'user_id' => 1,
     ];
 });
 
@@ -57,6 +57,7 @@ $factory->define(App\Step::class, function (Faker\Generator $faker) {
         'exercise_id' => rand(0,100),
         'reps' => rand(1,15),
         'sets' => rand(1,5),
+        'day_id' => 1,
     ];
 });
 

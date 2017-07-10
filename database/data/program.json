@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Good program",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image_url": "File",
+
+    "days": [
+        {
+          "name": "Leg day",
+          "steps": [
+            {
+              "exercise_id": 2,
+              "reps": 8,
+              "sets": 3
+            }
+          ]
+        },
+
+        {
+          "name": "Arms day",
+          "steps": [
+            {
+              "exercise_id": 2,
+              "reps": 8,
+              "sets": 3
+            }
+          ]
+        },
+
+        {
+          "name": "Back day",
+          "steps": [
+            {
+              "exercise_id": 2,
+              "reps": 8,
+              "sets": 3
+            }
+          ]
+        }
+    ]
+  },
+
+  {
+    "name": "Jason Blaha ICF5x5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "image_url": "https://asdasdasdasdasd",
+
+    "days": [
+        {
+          "name": "Day A",
+          "steps": [
+
+            {
+              "exercise_id": 23,
+              "reps": 5,
+              "sets": 5
+            },
+            {
+              "exercise_id": 32,
+              "reps": 5,
+              "sets": 5
+            },
+            {
+              "exercise_id": 15,
+              "reps": 5,
+              "sets": 5
+            },
+            {
+              "exercise_id": 6,
+              "reps": 8,
+              "sets": 3
+            },
+
+            {
+              "exercise_id": 13,
+              "reps": 3,
+              "sets": 8
+            }
+
+          ]
+        },
+
+        {
+          "name": "Day B",
+          "steps": [
+
+            {
+              "exercise_id": 23,
+              "reps": 5,
+              "sets": 5
+            },
+            {
+              "exercise_id": 57,
+              "reps": 5,
+              "sets": 5
+            },
+            {
+              "exercise_id": 55,
+              "reps": 5,
+              "sets": 5
+            },
+            {
+              "exercise_id": 4,
+              "reps": 8,
+              "sets": 3
+            }
+
+          ]
+        }
+    ]
+  }
+]

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Program extends Model
 {
   /**
@@ -22,16 +23,16 @@ class Program extends Model
    * *************************************************************************
   */
 
-  // To user Relationships
-  public function users()
+  // Get user for this program
+  public function user()
   {
-    return $this->belongsToMany(User::class);
+    return $this->belongsTo(User::class);
   }
 
-  // All days for the program Relationship
+  // Get training days for this program
   public function days()
   {
     return $this->hasMany(Day::class);
   }
-  
+
 }
