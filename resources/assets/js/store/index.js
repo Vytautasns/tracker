@@ -3,10 +3,10 @@ import Vuex from 'vuex';
 
 export default new Vuex.Store({
   actions: {
-    fetchExercises({commit}) {
+    initApp({commit}) {
       axios.get('/api/exercises')
       .then((response) => {
-        commit('set_exercises', response.data);
+        commit('set_app_state', response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -15,14 +15,14 @@ export default new Vuex.Store({
   },
 
   getters: {
-    exercisesList (state) {
-      return state.exercises;
+    mainState (state) {
+      return state.main;
     }
   },
 
   mutations: {
-    set_exercises(state, payload) {
-      state.exercises = payload;
+    set_app_state(state, payload) {
+      state.main = payload;
     }
   },
 
@@ -32,7 +32,7 @@ export default new Vuex.Store({
   },
 
   state: {
-    exercises: '',
+    main: '',
   }
 
 })

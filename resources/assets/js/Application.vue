@@ -20,19 +20,20 @@ export default {
   },
 
   created() {
-    this.fetchExercises();
+    this.initApp().then((resolve) => {
+      console.log(true);
+    });
   },
 
   computed: {
     ...mapGetters([
-      'exercisesList',
     ]),
 
   },
 
   methods: {
     ...mapActions([
-      'fetchExercises',
+      'initApp',
     ]),
 
   },
