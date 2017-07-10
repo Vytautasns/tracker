@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Step extends Model
+class Log extends Model
 {
   /**
    * The attributes that are not mass assignable.
@@ -22,16 +22,9 @@ class Step extends Model
    * *************************************************************************
   */
 
-  // Day where step (Exercise) belongs
-  public function day()
+  // Step for this log entry
+  public function step()
   {
-    return $this->belongsToMany(Day::class);
-  }
-
-
-  // All logs for this step
-  public function logs()
-  {
-    return $this->hasMany(Log::class);
+    return $this->belongsTo(Step::class);
   }
 }

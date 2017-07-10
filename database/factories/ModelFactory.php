@@ -59,3 +59,12 @@ $factory->define(App\Step::class, function (Faker\Generator $faker) {
         'sets' => rand(1,5),
     ];
 });
+
+$factory->define(App\Log::class, function (Faker\Generator $faker) {
+    return [
+        'step_id' => 1,
+        'weight' => rand(20,125),
+        'reps' => rand(1,15),
+        'set' => rand(1,5),
+    ];
+});
