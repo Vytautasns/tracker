@@ -49,3 +49,13 @@ $factory->define(App\Day::class, function (Faker\Generator $faker) {
         'program_id' => 1,
     ];
 });
+
+
+$factory->define(App\Step::class, function (Faker\Generator $faker) {
+    return [
+        'name' => 'Step ' . $faker->name,
+        'exercise_id' => rand(0,100),
+        'reps' => rand(1,15),
+        'sets' => rand(1,5),
+    ];
+});
