@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Program extends Model
+class Day extends Model
 {
   /**
    * The attributes that are not mass assignable.
@@ -15,23 +15,15 @@ class Program extends Model
 
   ];
 
-
   /*
    *
    * Relationships
    * *************************************************************************
   */
 
-  // To user Relationships
-  public function users()
+  // Relationship with Program
+  public function program()
   {
-    return $this->belongsToMany(User::class);
+    return $this->belongsTo(Program::class);
   }
-
-  // All days for the program Relationship
-  public function days()
-  {
-    return $this->hasMany(Day::class);
-  }
-  
 }

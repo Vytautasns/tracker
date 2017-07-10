@@ -42,3 +42,10 @@ $factory->define(App\Exercise::class, function (Faker\Generator $faker) {
         'default' => 1,
     ];
 });
+
+$factory->define(App\Day::class, function (Faker\Generator $faker) {
+    return [
+        'name' => 'Day ' . $faker->name,
+        'program_id' => 1,
+    ];
+});
