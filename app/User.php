@@ -46,4 +46,10 @@ class User extends Authenticatable
       return $this->belongsToMany(Program::class);
     }
 
+    // Exercises Relationship
+    public function exercises()
+    {
+      return $this->belongsToMany(Exercise::class);
+    }
+
 }

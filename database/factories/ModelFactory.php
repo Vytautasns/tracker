@@ -32,3 +32,13 @@ $factory->define(App\Program::class, function (Faker\Generator $faker) {
         'default' => 1,
     ];
 });
+
+$factory->define(App\Exercise::class, function (Faker\Generator $faker) {
+    return [
+        'name' => 'Exercise ' . $faker->name,
+        'category_id' => 0,
+        'description' => $faker->text,
+        'image_url' => 'some https',
+        'default' => 1,
+    ];
+});
