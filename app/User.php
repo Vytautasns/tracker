@@ -48,7 +48,7 @@ class User extends Authenticatable
         $this->exercises()->attach($exercise->id);
       }
     }
-    
+
     // Create initial settings
     // for newly registered user
     public function createDefaultSettings()
@@ -100,6 +100,14 @@ class User extends Authenticatable
 
            }
        }
+
+       // TODO let user choose program upon first start
+       // Temp take first created program
+       Setting::create([
+         'user_id' => $this->id,
+         'name' => 'selected_program',
+         'value' => $this->programs()->first()->id,
+       ]);
 
     }
 

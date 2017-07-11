@@ -17,5 +17,8 @@
   <Application></Application>
 </div>
 <!-- Scripts -->
+<script src="http://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+
+
 @endsection

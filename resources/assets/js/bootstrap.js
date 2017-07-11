@@ -5,6 +5,7 @@ window.Vue = Vue;
 window.UIkit = UIkit;
 
 
+
 window._ = require('lodash');
 
 require('uikit/dist/js/uikit-icons.min.js');

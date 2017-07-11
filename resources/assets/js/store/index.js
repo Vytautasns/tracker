@@ -1,38 +1,24 @@
 import Vuex from 'vuex';
+import main from './modules/main';
+import exercises from './modules/exercises';
+import logs from './modules/logs';
+import programs from './modules/programs';
+import application from './modules/application';
 
+import * as types from './mutation-types'
 
 export default new Vuex.Store({
   actions: {
-    initApp({commit}) {
-      axios.get('/api/exercises')
-      .then((response) => {
-        commit('set_app_state', response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    },
-  },
 
+  },
   getters: {
-    mainState (state) {
-      return state.main;
-    }
+
   },
-
-  mutations: {
-    set_app_state(state, payload) {
-      state.main = payload;
-    }
-  },
-
-
   modules: {
-
+    application,
+    exercises,
+    logs,
+    main,
+    programs,
   },
-
-  state: {
-    main: '',
-  }
-
-})
+});

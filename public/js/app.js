@@ -775,106 +775,6 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(26);
-
-var DEFAULT_CONTENT_TYPE = {
-  'Content-Type': 'application/x-www-form-urlencoded'
-};
-
-function setContentTypeIfUnset(headers, value) {
-  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
-    headers['Content-Type'] = value;
-  }
-}
-
-function getDefaultAdapter() {
-  var adapter;
-  if (typeof XMLHttpRequest !== 'undefined') {
-    // For browsers use XHR adapter
-    adapter = __webpack_require__(9);
-  } else if (typeof process !== 'undefined') {
-    // For node use HTTP adapter
-    adapter = __webpack_require__(9);
-  }
-  return adapter;
-}
-
-var defaults = {
-  adapter: getDefaultAdapter(),
-
-  transformRequest: [function transformRequest(data, headers) {
-    normalizeHeaderName(headers, 'Content-Type');
-    if (utils.isFormData(data) ||
-      utils.isArrayBuffer(data) ||
-      utils.isBuffer(data) ||
-      utils.isStream(data) ||
-      utils.isFile(data) ||
-      utils.isBlob(data)
-    ) {
-      return data;
-    }
-    if (utils.isArrayBufferView(data)) {
-      return data.buffer;
-    }
-    if (utils.isURLSearchParams(data)) {
-      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
-      return data.toString();
-    }
-    if (utils.isObject(data)) {
-      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
-      return JSON.stringify(data);
-    }
-    return data;
-  }],
-
-  transformResponse: [function transformResponse(data) {
-    /*eslint no-param-reassign:0*/
-    if (typeof data === 'string') {
-      try {
-        data = JSON.parse(data);
-      } catch (e) { /* Ignore */ }
-    }
-    return data;
-  }],
-
-  timeout: 0,
-
-  xsrfCookieName: 'XSRF-TOKEN',
-  xsrfHeaderName: 'X-XSRF-TOKEN',
-
-  maxContentLength: -1,
-
-  validateStatus: function validateStatus(status) {
-    return status >= 200 && status < 300;
-  }
-};
-
-defaults.headers = {
-  common: {
-    'Accept': 'application/json, text/plain, */*'
-  }
-};
-
-utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
-  defaults.headers[method] = {};
-});
-
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
-  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
-});
-
-module.exports = defaults;
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
-
-/***/ }),
-/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1686,6 +1586,106 @@ var index_esm = {
 
 /* harmony default export */ __webpack_exports__["default"] = (index_esm);
 
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+var utils = __webpack_require__(0);
+var normalizeHeaderName = __webpack_require__(26);
+
+var DEFAULT_CONTENT_TYPE = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+};
+
+function setContentTypeIfUnset(headers, value) {
+  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+    headers['Content-Type'] = value;
+  }
+}
+
+function getDefaultAdapter() {
+  var adapter;
+  if (typeof XMLHttpRequest !== 'undefined') {
+    // For browsers use XHR adapter
+    adapter = __webpack_require__(9);
+  } else if (typeof process !== 'undefined') {
+    // For node use HTTP adapter
+    adapter = __webpack_require__(9);
+  }
+  return adapter;
+}
+
+var defaults = {
+  adapter: getDefaultAdapter(),
+
+  transformRequest: [function transformRequest(data, headers) {
+    normalizeHeaderName(headers, 'Content-Type');
+    if (utils.isFormData(data) ||
+      utils.isArrayBuffer(data) ||
+      utils.isBuffer(data) ||
+      utils.isStream(data) ||
+      utils.isFile(data) ||
+      utils.isBlob(data)
+    ) {
+      return data;
+    }
+    if (utils.isArrayBufferView(data)) {
+      return data.buffer;
+    }
+    if (utils.isURLSearchParams(data)) {
+      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+      return data.toString();
+    }
+    if (utils.isObject(data)) {
+      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+      return JSON.stringify(data);
+    }
+    return data;
+  }],
+
+  transformResponse: [function transformResponse(data) {
+    /*eslint no-param-reassign:0*/
+    if (typeof data === 'string') {
+      try {
+        data = JSON.parse(data);
+      } catch (e) { /* Ignore */ }
+    }
+    return data;
+  }],
+
+  timeout: 0,
+
+  xsrfCookieName: 'XSRF-TOKEN',
+  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+  maxContentLength: -1,
+
+  validateStatus: function validateStatus(status) {
+    return status >= 200 && status < 300;
+  }
+};
+
+defaults.headers = {
+  common: {
+    'Accept': 'application/json, text/plain, */*'
+  }
+};
+
+utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+  defaults.headers[method] = {};
+});
+
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+});
+
+module.exports = defaults;
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
 /***/ }),
 /* 6 */
@@ -46861,7 +46861,7 @@ module.exports = __webpack_require__(22);
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(8);
 var Axios = __webpack_require__(24);
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(5);
 
 /**
  * Create an instance of Axios
@@ -46944,7 +46944,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(5);
 var utils = __webpack_require__(0);
 var InterceptorManager = __webpack_require__(34);
 var dispatchRequest = __webpack_require__(35);
@@ -47666,7 +47666,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(36);
 var isCancel = __webpack_require__(11);
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(5);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -50712,7 +50712,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 
-var _vuex = __webpack_require__(5);
+var _vuex = __webpack_require__(4);
 
 exports.default = {
   data: function data() {
@@ -51210,7 +51210,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -51225,6 +51225,12 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
+//
+//
 //
 //
 //
@@ -51286,7 +51292,21 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 
-exports.default = {};
+var _vuex = __webpack_require__(4);
+
+exports.default = {
+  data: function data() {
+    return {};
+  },
+  created: function created() {},
+  mounted: function mounted() {},
+
+
+  computed: _extends({}, (0, _vuex.mapGetters)([])),
+
+  methods: _extends({}, (0, _vuex.mapActions)([]))
+
+};
 
 /***/ }),
 /* 58 */
@@ -51295,31 +51315,40 @@ exports.default = {};
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "uk-container"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._l((5), function(n) {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._l((_vm.mainState.categories), function(category) {
     return _c('div', {
-      staticClass: "uk-card uk-grid-collapse uk-margin",
-      class: n == 99 ? 'uk-card-primary' : 'uk-card-default',
+      key: category.id,
+      staticClass: "uk-card uk-card-default uk-grid-collapse uk-margin",
       attrs: {
         "uk-grid": ""
       }
-    }, [_vm._m(2, true), _vm._v(" "), _c('div', {
+    }, [_c('div', {
+      staticClass: "uk-width-1-6@s uk-text-center"
+    }, [_c('img', {
+      attrs: {
+        "src": ("" + (category.image_url)),
+        "width": "120",
+        "height": "280",
+        "alt": ""
+      }
+    })]), _vm._v(" "), _c('div', {
       staticClass: "uk-width-expand@s"
     }, [_c('div', {
       staticClass: "uk-card-body"
     }, [_c('h4', {
-      staticClass: "uk-card-title",
-      on: {
-        "click": function($event) {
-          _vm.$router.push('/abs')
-        }
-      }
-    }, [_vm._v("Abdominals")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.")]), _vm._v(" "), _c('a', {
+      staticClass: "uk-card-title"
+    }, [_vm._v(_vm._s(category.name))]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")]), _vm._v(" "), _c('a', {
       staticClass: "uk-button uk-button-primary",
       attrs: {
         "href": "#modal-overflow",
         "uk-toggle": ""
+      },
+      on: {
+        "click": function($event) {
+          _vm.showExercises(category)
+        }
       }
-    }, [_vm._v("Show exercises (35)")])])])])
+    }, [_vm._v("Show exercises")])])])])
   }), _vm._v(" "), _c('div', {
     attrs: {
       "id": "modal-overflow",
@@ -51333,16 +51362,67 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button",
       "uk-close": ""
     }
-  }), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('div', {
+    staticClass: "uk-modal-header"
+  }, [_c('h2', {
+    staticClass: "uk-modal-title"
+  }, [_vm._v(_vm._s(_vm.selectedCategory))])]), _vm._v(" "), _c('form', {
+    staticClass: "uk-search uk-search-navbar"
+  }, [_c('span', {
+    attrs: {
+      "uk-search-icon": ""
+    }
+  }), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.searchQ),
+      expression: "searchQ"
+    }],
+    staticClass: "uk-search-input",
+    attrs: {
+      "type": "search",
+      "placeholder": "Search..."
+    },
+    domProps: {
+      "value": (_vm.searchQ)
+    },
+    on: {
+      "keyup": _vm.searchMethod,
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.searchQ = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-body uk-padding-remove",
     attrs: {
       "uk-overflow-auto": ""
     }
   }, [_c('ul', {
     staticClass: "uk-list uk-list-striped"
-  }, _vm._l((10), function(n) {
-    return _c('li', [_vm._m(4, true)])
-  }))]), _vm._v(" "), _vm._m(5)])])], 2)
+  }, _vm._l((_vm.showCategoryExercises), function(exercise) {
+    return (_vm.showCategoryExercises) ? _c('li', {
+      key: exercise.id
+    }, [_c('div', {
+      staticClass: "uk-grid-small",
+      attrs: {
+        "uk-grid": ""
+      }
+    }, [_c('div', {
+      staticClass: "uk-width-auto"
+    }, [_c('img', {
+      staticClass: "uk-icon-image",
+      attrs: {
+        "src": ("assets/exercise_thumbnail/" + (exercise.image_url) + "_1.png"),
+        "width": "60",
+        "height": "60",
+        "alt": ""
+      }
+    })]), _vm._v(" "), _c('div', {
+      staticClass: "uk-width-expand"
+    }, [_c('span', [_vm._v(_vm._s(exercise.name))])])])]) : _vm._e()
+  }))]), _vm._v(" "), _vm._m(2)])])], 2)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('h2', {
     staticClass: "uk-heading-line uk-text-center uk-margin-top"
@@ -51358,41 +51438,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "#"
     }
   }, [_vm._v("Create exercise")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "uk-width-1-6@s uk-text-center"
-  }, [_c('img', {
-    attrs: {
-      "src": "assets/categories/abs.png",
-      "width": "120",
-      "height": "280",
-      "alt": ""
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "uk-modal-header"
-  }, [_c('h2', {
-    staticClass: "uk-modal-title"
-  }, [_vm._v("Abdominals")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "uk-grid-small",
-    attrs: {
-      "uk-grid": ""
-    }
-  }, [_c('div', {
-    staticClass: "uk-width-auto"
-  }, [_c('img', {
-    attrs: {
-      "src": "assets/exercise_thumbnail/arnold_press_2.png",
-      "width": "40",
-      "height": "40",
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "uk-width-expand"
-  }, [_c('span', [_vm._v("exercises name")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "uk-modal-footer uk-text-right"
@@ -53748,43 +53793,48 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vuex = __webpack_require__(5);
+var _vuex = __webpack_require__(4);
 
 var _vuex2 = _interopRequireDefault(_vuex);
+
+var _main = __webpack_require__(112);
+
+var _main2 = _interopRequireDefault(_main);
+
+var _exercises = __webpack_require__(114);
+
+var _exercises2 = _interopRequireDefault(_exercises);
+
+var _logs = __webpack_require__(115);
+
+var _logs2 = _interopRequireDefault(_logs);
+
+var _programs = __webpack_require__(116);
+
+var _programs2 = _interopRequireDefault(_programs);
+
+var _application = __webpack_require__(117);
+
+var _application2 = _interopRequireDefault(_application);
+
+var _mutationTypes = __webpack_require__(113);
+
+var types = _interopRequireWildcard(_mutationTypes);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = new _vuex2.default.Store({
-  actions: {
-    initApp: function initApp(_ref) {
-      var commit = _ref.commit;
-
-      axios.get('/api/exercises').then(function (response) {
-        commit('set_app_state', response.data);
-      }).catch(function (error) {
-        console.log(error);
-      });
-    }
-  },
-
-  getters: {
-    mainState: function mainState(state) {
-      return state.main;
-    }
-  },
-
-  mutations: {
-    set_app_state: function set_app_state(state, payload) {
-      state.main = payload;
-    }
-  },
-
-  modules: {},
-
-  state: {
-    main: ''
+  actions: {},
+  getters: {},
+  modules: {
+    application: _application2.default,
+    exercises: _exercises2.default,
+    logs: _logs2.default,
+    main: _main2.default,
+    programs: _programs2.default
   }
-
 });
 
 /***/ }),
@@ -53931,7 +53981,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -53954,32 +54004,39 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
+//
+//
+//
 
 var _Navigation = __webpack_require__(100);
 
 var _Navigation2 = _interopRequireDefault(_Navigation);
 
-var _vuex = __webpack_require__(5);
+var _FirstRun = __webpack_require__(118);
+
+var _FirstRun2 = _interopRequireDefault(_FirstRun);
+
+var _vuex = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
 
-  components: { Navigation: _Navigation2.default },
+  components: { Navigation: _Navigation2.default, FirstRun: _FirstRun2.default },
 
   data: function data() {
     return {};
   },
   created: function created() {
-    this.initApp().then(function (resolve) {
-      console.log(true);
-    });
+    this.getUser();
   },
+  mounted: function mounted() {},
 
 
-  computed: _extends({}, (0, _vuex.mapGetters)([])),
+  computed: _extends({}, (0, _vuex.mapGetters)(['appState', 'user'])),
 
-  methods: _extends({}, (0, _vuex.mapActions)(['initApp']))
+  methods: _extends({}, (0, _vuex.mapActions)(['getUser']))
 
 };
 
@@ -54278,7 +54335,17 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "uk-offcanvas-content"
-  }, [_c('Navigation'), _vm._v(" "), _c('router-view')], 1)
+  }, [_c('Navigation'), _vm._v(" "), (_vm.appState.errorMessage) ? _c('div', {
+    staticClass: "uk-alert-danger",
+    attrs: {
+      "uk-alert": ""
+    }
+  }, [_c('a', {
+    staticClass: "uk-alert-close",
+    attrs: {
+      "uk-close": ""
+    }
+  }), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.appState.errorMessage))])]) : _vm._e(), _vm._v(" "), _c('router-view')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -54293,6 +54360,343 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mutations;
+
+var _mutationTypes = __webpack_require__(113);
+
+var types = _interopRequireWildcard(_mutationTypes);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// initial state
+var state = {
+  user: {}
+
+  // getters
+};var getters = {
+  user: function user(state) {
+    return state.user;
+  }
+};
+
+// actions
+var actions = {
+
+  // Get initial user data from database
+  getUser: function getUser(_ref) {
+    var commit = _ref.commit;
+
+    commit(types.START_LOADING);
+
+    axios.get('/app/user').then(function (response) {
+      commit(types.STOP_LOADING);
+      commit(types.RECEIVE_USER, response.data);
+    }).catch(function (err) {
+      commit(types.STOP_LOADING);
+      commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+    });
+  },
+  saveSetting: function saveSetting(_ref2, settings) {
+    var commit = _ref2.commit;
+
+    // commit(types.START_LOADING);
+    //
+    // axios.post('app/user', settings)
+    //   .then(response => {
+    //     commit(types.STOP_LOADING);
+    //     commit(types.CHANGE_SETTING, settings);
+    //   })
+    //   .catch(err => {
+    //     commit(types.STOP_LOADING);
+    //     commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+    //   });
+    commit(types.CHANGE_SETTING, { id: 1, value: false });
+  }
+};
+
+// mutations
+var mutations = (_mutations = {}, _defineProperty(_mutations, types.RECEIVE_USER, function (state, user) {
+
+  var changedUserObject = {};
+
+  changedUserObject.name = user.name;
+  changedUserObject.email = user.email;
+  changedUserObject.settings = {};
+
+  for (var i = 0; i < user.settings.length; i++) {
+    changedUserObject.settings[user.settings[i].name] = user.settings[i].value;
+  }
+
+  state.user = changedUserObject;
+}), _defineProperty(_mutations, types.CHANGE_SETTING, function (state, settings) {
+  state.user.settings.find(function (element) {
+    return element.id === settings.id;
+  }).value = settings.value;
+}), _mutations);
+
+exports.default = {
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var RECEIVE_USER = exports.RECEIVE_USER = 'RECEIVE_USER';
+var RECEIVE_CATEGORIES = exports.RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES';
+
+// Application
+
+var START_LOADING = exports.START_LOADING = 'START_LOADING';
+var STOP_LOADING = exports.STOP_LOADING = 'STOP_LOADING';
+var ERROR_TEXT = exports.ERROR_TEXT = 'ERROR_TEXT';
+var CHANGE_SETTING = exports.CHANGE_SETTING = 'CHANGE_SETTING';
+
+// Workout Programs
+
+var RECEIVE_PROGRAMS = exports.RECEIVE_PROGRAMS = 'RECEIVE_PROGRAMS';
+var SET_CURRENT_PROGRAM = exports.SET_CURRENT_PROGRAM = 'SET_CURRENT_PROGRAM';
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mutationTypes = __webpack_require__(113);
+
+var types = _interopRequireWildcard(_mutationTypes);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// initial state
+var state = {
+  categories: ''
+
+  // getters
+};var getters = {};
+
+// actions
+var actions = {};
+
+// mutations
+var mutations = _defineProperty({}, types.RECEIVE_CATEGORIES, function (state, categories) {
+  state.categories = categories;
+});
+
+exports.default = {
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mutationTypes = __webpack_require__(113);
+
+var types = _interopRequireWildcard(_mutationTypes);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+// initial state
+var state = {
+  totalProgress: ''
+
+  // getters
+};var getters = {};
+
+// actions
+var actions = {};
+
+// mutations
+var mutations = {};
+
+exports.default = {
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mutations;
+
+var _mutationTypes = __webpack_require__(113);
+
+var types = _interopRequireWildcard(_mutationTypes);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// initial state
+var state = {
+  currentProgram: '',
+  availableProgramsList: ''
+
+  // getters
+};var getters = {
+  availableProgramsList: function availableProgramsList(state) {
+    return state.availableProgramsList;
+  }
+};
+
+// actions
+var actions = {
+  getAvailablePrograms: function getAvailablePrograms(_ref) {
+    var commit = _ref.commit;
+
+    commit(types.START_LOADING);
+
+    axios.get('/app/programs').then(function (response) {
+      commit(types.STOP_LOADING);
+      commit(types.RECEIVE_PROGRAMS, response.data);
+    }).catch(function (err) {
+      commit(types.STOP_LOADING);
+      commit(types.ERROR_TEXT, 'There was problem getting programs. Try reloading.');
+    });
+  }
+};
+
+// mutations
+var mutations = (_mutations = {}, _defineProperty(_mutations, types.RECEIVE_PROGRAMS, function (state, programs) {
+  state.availableProgramsList = programs;
+}), _defineProperty(_mutations, types.SET_CURRENT_PROGRAM, function (state, id) {
+  state.currentProgram = id;
+}), _mutations);
+
+exports.default = {
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mutations;
+
+var _mutationTypes = __webpack_require__(113);
+
+var types = _interopRequireWildcard(_mutationTypes);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// initial state
+var state = {
+
+  errorMessage: '',
+  ajaxQueue: 0,
+  loading: false,
+  notification: false,
+  notificationMessage: ''
+
+  // getters
+};var getters = {
+  appState: function appState(state) {
+    return state;
+  }
+};
+
+// actions
+var actions = {};
+
+// mutations
+var mutations = (_mutations = {}, _defineProperty(_mutations, types.START_LOADING, function (state) {
+  // Add ajax to queue
+  state.ajaxQueue++;
+  // Set loading to true
+  state.loading = true;
+}), _defineProperty(_mutations, types.STOP_LOADING, function (state) {
+  // Remove one from queue
+  state.ajaxQueue--;
+  // Check if it was the last request in queue
+  if (state.ajaxQueue == 0) {
+    state.loading = false;
+  }
+}), _defineProperty(_mutations, types.ERROR_TEXT, function (state, error) {
+  // Set error message
+  state.errorMessage = error;
+}), _mutations);
+
+exports.default = {
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+};
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/home/vytautas/webProjects/tracker/resources/assets/js/components/FirstRun.vue'");
 
 /***/ })
 /******/ ]);

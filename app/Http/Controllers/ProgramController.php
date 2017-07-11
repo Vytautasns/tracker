@@ -6,9 +6,11 @@ use App\Program;
 use App\Exercise;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProgramController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -17,21 +19,7 @@ class ProgramController extends Controller
     public function index()
     {
       $user = Auth::user();
-
-      return $user->load([
-        'exercises',
-        'programs' => function ($q) {
-          $q->with([
-            'days' => function ($q) {
-              $q->with([
-                'steps' => function ($q) {
-                  $q->with(['logs']);
-                }
-              ]);
-            }
-          ]);
-        },
-      ]);
+      return $user->programs;
     }
 
     /**
@@ -52,7 +40,7 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // code..
     }
 
     /**
@@ -63,7 +51,12 @@ class ProgramController extends Controller
      */
     public function show(Program $program)
     {
-        //
+      $user = Auth::user();
+      return $program->load([
+        'days' => function ($query) {
+          $query->with('steps');
+        }
+      ]);
     }
 
     /**

@@ -6,18 +6,19 @@
   </ul>
 
 
-  <div :class="n == 99 ? 'uk-card-primary' : 'uk-card-default'" class="uk-card uk-grid-collapse uk-margin" uk-grid v-for="n in 5">
+  <div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid v-for="category in mainState.categories" :key="category.id">
       <div class="uk-width-1-6@s uk-text-center">
-          <img src="assets/categories/abs.png" width="120" height="280" alt="">
+          <img :src="`${category.image_url}`" width="120" height="280" alt="">
       </div>
       <div class="uk-width-expand@s">
           <div class="uk-card-body">
-              <h4 @click="$router.push('/abs')" class="uk-card-title">Abdominals</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-              <a class="uk-button uk-button-primary" href="#modal-overflow" uk-toggle>Show exercises (35)</a>
+              <h4 class="uk-card-title">{{ category.name }}</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <a @click="showExercises(category)" class="uk-button uk-button-primary" href="#modal-overflow" uk-toggle>Show exercises</a>
           </div>
       </div>
   </div>
+
 
 
 
@@ -28,19 +29,23 @@
         <button class="uk-modal-close-default" type="button" uk-close></button>
 
         <div class="uk-modal-header">
-            <h2 class="uk-modal-title">Abdominals</h2>
+            <h2 class="uk-modal-title">{{ selectedCategory }}</h2>
         </div>
+        <form class="uk-search uk-search-navbar">
+           <span uk-search-icon></span>
+           <input @keyup="searchMethod" class="uk-search-input" type="search" placeholder="Search..." v-model="searchQ">
+        </form>
 
         <div class="uk-modal-body uk-padding-remove" uk-overflow-auto>
 
           <ul class="uk-list uk-list-striped">
-            <li v-for="n in 10">
+            <li v-if="showCategoryExercises" v-for="exercise in showCategoryExercises" :key="exercise.id">
               <div class="uk-grid-small" uk-grid>
                     <div class="uk-width-auto">
-                        <img src="assets/exercise_thumbnail/arnold_press_2.png" width="40" height="40" alt="">
+                        <img class="uk-icon-image" :src="`assets/exercise_thumbnail/${exercise.image_url}_1.png`" width="60" height="60" alt="">
                     </div>
                     <div class="uk-width-expand">
-                        <span>exercises name</span>
+                        <span>{{ exercise.name }}</span>
                     </div>
                 </div>
             </li>
@@ -59,7 +64,36 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 export default {
+  data() {
+    return {
+
+    }
+  },
+
+  created() {
+
+  },
+
+  mounted() {
+
+  },
+
+  computed: {
+    ...mapGetters([
+    ]),
+
+  },
+
+
+  methods: {
+    ...mapActions([
+    ]),
+
+
+  },
+
 }
 </script>
 
