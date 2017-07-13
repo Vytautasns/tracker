@@ -35,7 +35,13 @@ class StepController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $step = Step::create([
+          'exercise_id' => $request->exercise_id,
+          'day_id' => $request->day_id,
+          'reps' => $request->reps,
+          'sets' => $request->sets,
+        ]);
+        return $step->id;
     }
 
     /**
@@ -78,8 +84,9 @@ class StepController extends Controller
      * @param  \App\Step  $step
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Step $step)
+    public function destroy(Request $request)
     {
-        //
+      $step = Step::find($request->id);
+      $step->delete();
     }
 }

@@ -17,6 +17,7 @@ class CreateDaysTable extends Migration
             $table->increments('id');
             $table->integer('program_id');
             $table->string('name');
+            $table->string('week_days')->nullable();
             $table->timestamps();
         });
     }

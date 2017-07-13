@@ -1,4 +1,5 @@
 <?php
+use App\Exercise;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,25 +18,34 @@ Auth::routes();
 Route::get('/', 'PageController@index');
 Route::get('/{any}', 'PageController@index');
 
-// Route::get('/api/exercises', 'ProgramController@index');
-// Route::post('/api/change', 'ProgramController@store');
-//
-// Route::get('/api/get/{id}', 'ProgramController@getByCat');
-//
-//
-// Route::get('/api/programs/available', 'ProgramController@getAvailablePrograms');
-
-
 /* App routes
 ********************************************************************************
 */
 
 // Get user info
-Route::get('app/user', 'AppController@getUser');
+Route::post('app/user', 'AppController@getUser');
 
 // Save settings
-Route::post('app/user', 'AppController@saveSetting');
-
+Route::post('app/settings/change', 'AppController@changeSetting');
 
 // Program routes
-Route::resource('app/programs', 'ProgramController');
+Route::post('app/programs', 'ProgramController@index');
+Route::post('/app/programs/selected', 'ProgramController@getSelectedProgram');
+Route::post('/app/programs/save', 'ProgramController@store');
+Route::post('/app/programs/remove', 'ProgramController@destroy');
+
+
+// Exercises routes
+Route::get('/app/exercises/categories', 'AppController@getCategories');
+Route::post('/app/exercises/show', 'ExerciseController@index');
+Route::post('/app/exercises/details', 'ExerciseController@getExerciseDetails');
+Route::get('/app/exercises/search/{hint}', 'ExerciseController@searchExercise');
+
+// Workout days
+Route::post('/app/days/show', 'DayController@getDayById');
+Route::post('/app/days/add', 'DayController@addNewDay');
+Route::post('/app/days/remove', 'DayController@removeDay');
+
+// Steps
+Route::post('/app/steps/save', 'StepController@store');
+Route::post('/app/steps/remove', 'StepController@destroy');

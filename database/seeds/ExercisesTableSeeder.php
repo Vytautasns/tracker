@@ -22,7 +22,7 @@ class ExercisesTableSeeder extends Seeder
          Exercise::create(array(
            'category_id' => $obj->category_id,
            'name' => $obj->name,
-           'image_url' => $obj->image,
+           'image_url' => $obj->image_url,
            'description' => $obj->description,
            'default' => 1,
          ));

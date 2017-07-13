@@ -86,6 +86,7 @@ class User extends Authenticatable
 
              $newDay = Day::create([
                'name' => $day->name,
+               'week_days' =>$day->week_days,
                'program_id' => $newProgram->id,
              ]);
 
@@ -109,6 +110,22 @@ class User extends Authenticatable
          'value' => $this->programs()->first()->id,
        ]);
 
+    }
+
+
+
+    // Return selected program
+    public function getSelectedProgram()
+    {
+      $selected = $this->settings()
+                        ->where('name', 'selected_program')
+                        ->pluck('value')->first();
+
+      return $this->programs()->find($selected)->load([
+        'days' => function ($query) {
+          $query->withCount('steps');
+        }
+      ]);
     }
 
 

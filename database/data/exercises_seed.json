@@ -1,1381 +1,2485 @@
 [{
-	"name": "Tate Press With Dumbbell",
-	"image": "tate_press_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Reverse Grips Bent Over Barbell Rows",
-	"image": "reverse_grips_bent_over_barbell_rows",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Barbell Neck Press",
-	"image": "barbell_neck_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bench Dips",
-	"image": "bench_dips",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Grip Standing Biceps Curl With Barbell",
-	"image": "wide_grip_standing_biceps_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Overhead Triceps Extension With Barbell",
-	"image": "seated_overhead_triceps_extension_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Arnold Press",
-	"image": "arnold_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Tricep Extension With Cable",
-	"image": "one_arm_tricep_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Cable Shoulder Shrugs",
-	"image": "cable_shoulder_shrugs",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Single Arm Pronated Triceps Extension With Dumbbell",
-	"image": "single_arm_pronated_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Flat Bench Cable Flys",
-	"image": "flat_bench_cable_flys",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Chest Press",
-	"image": "decline_chest_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Preacher Curl With Barbell",
-	"image": "preacher_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Hammer Curls With Rope And Cable",
-	"image": "hammer_curls_with_rope_and_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Bench Press",
-	"image": "incline_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lateral Lunge With Bicep Curl With Dumbbell",
-	"image": "lateral_lunge_with_bicep_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Rear Deltoid Row Dumbbell",
-	"image": "rear_deltoid_row_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Biceps Curl With Dumbbell",
-	"image": "incline_biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Knee Circles",
-	"image": "knee_circles",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Overhand Pull Down",
-	"image": "overhand_pull_down",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Close Grip Bench To Skull Crusher",
-	"image": "decline_close_grip_bench_to_skull_crusher",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Flexor Incline Curls With Dumbbell",
-	"image": "flexor_incline_curls_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Dumbbell Fly's",
-	"image": "incline_dumbbell_fly's",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Leg Press",
-	"image": "leg_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Ab Crunch With Cable",
-	"image": "seated_ab_crunch_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Jm Press",
-	"image": "jm_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Alternating Incline Curl With Dumbbell",
-	"image": "alternating_incline_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Ez Bar Triceps Extension With Barbell",
-	"image": "decline_ez_bar_triceps_extension_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Shoulder Press Machine",
-	"image": "seated_shoulder_press_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bosu Ball Push Up",
-	"image": "bosu_ball_push_up",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Close Triceps Pushup",
-	"image": "close_triceps_pushup",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Donkey Calf Raises",
-	"image": "donkey_calf_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Preacher Curl With Machine",
-	"image": "preacher_curl_with_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Barbell Lunges",
-	"image": "barbell_lunges",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Back Fly's With Exercise Band",
-	"image": "back_fly's_with_exercise_band",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Underhand Pull Down",
-	"image": "underhand_pull_down",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Push Ups With Feet On Exercise Ball",
-	"image": "push_ups_with_feet_on_exercise_ball",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Bicep Curl With Olympic Bar Or Barbell",
-	"image": "one_arm_bicep_curl_with_olympic_bar_or_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Grip Bench Press",
-	"image": "wide_grip_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Raise",
-	"image": "dumbbell_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Bench Press With Bands",
-	"image": "incline_bench_press_with_bands",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Fly's With A Twist",
-	"image": "incline_fly's_with_a_twist",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Rear Lateral Raise",
-	"image": "lying_rear_lateral_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bridging",
-	"image": "bridging",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Tricep Extension With Cable",
-	"image": "lying_tricep_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bent Arm Pullover",
-	"image": "bent_arm_pullover",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Weighted Sissy Squat With Weight Plate",
-	"image": "weighted_sissy_squat_with_weight_plate",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Front Dumbbell Raise",
-	"image": "front_dumbbell_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Crunches With Legs On Stability Ball",
-	"image": "crunches_with_legs_on_stability_ball",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Military Press",
-	"image": "seated_military_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bicep Hammer Curl With Dumbbell",
-	"image": "bicep_hammer_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Forward Lunge With Bicep Curl Using Dumbbell",
-	"image": "forward_lunge_with_bicep_curl_using_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Rear Lunges With Dumbbell",
-	"image": "rear_lunges_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Low Triceps Extension With Cable",
-	"image": "low_triceps_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Dead Lifts",
-	"image": "dumbbell_dead_lifts",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Triceps Press With Barbell",
-	"image": "lying_triceps_press_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Upright Barbell Rows",
-	"image": "upright_barbell_rows",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Dumbbell Press",
-	"image": "incline_dumbbell_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Triceps Extensions Using Machine",
-	"image": "triceps_extensions_using_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Old School Reverse Extensions",
-	"image": "old_school_reverse_extensions",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Flat Bench Fly's",
-	"image": "one_arm_flat_bench_fly's",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Stance Squat With Barbell",
-	"image": "wide_stance_squat_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Back Extension On Stability Ball",
-	"image": "back_extension_on_stability_ball",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Triceps Extension Across Face With Dumbbell",
-	"image": "lying_triceps_extension_across_face_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Leg Extensions",
-	"image": "leg_extensions",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing One Arm Curl Over Incline Bench With Dumbbell",
-	"image": "standing_one_arm_curl_over_incline_bench_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Alternating Hammer Curl With Dumbbell",
-	"image": "alternating_hammer_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Stability Ball Abdominal Crunch",
-	"image": "stability_ball_abdominal_crunch",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Rear Deltoid Row Barbell",
-	"image": "rear_deltoid_row_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Tricep Dips Using Machine",
-	"image": "tricep_dips_using_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Gironda Sternum Chins",
-	"image": "gironda_sternum_chins",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Prone Incline Biceps Curl With Dumbbell",
-	"image": "prone_incline_biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Quick Alternating Bicep Curls With Band",
-	"image": "quick_alternating_bicep_curls_with_band",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Overhead Squat With Barbell",
-	"image": "overhead_squat_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Preacher Hammer Curl With Dumbbell",
-	"image": "preacher_hammer_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Exercise Ball Pull In",
-	"image": "exercise_ball_pull_in",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Alternating Bicep Curl With Dumbbell",
-	"image": "alternating_bicep_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Static Neck Flexion And Extension",
-	"image": "static_neck_flexion_and_extension",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Squat",
-	"image": "lying_squat",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Barbell Bench Press",
-	"image": "decline_barbell_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Crossover With Bands",
-	"image": "crossover_with_bands",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Triceps Extension With Dumbbell",
-	"image": "decline_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Triceps Pushdown With Cable",
-	"image": "triceps_pushdown_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Flat Bench Leg Raises",
-	"image": "flat_bench_leg_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Ball Wall Circles",
-	"image": "ball_wall_circles",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Thigh Adductor",
-	"image": "thigh_adductor",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Triceps Extension With Barbell",
-	"image": "incline_triceps_extension_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Hip Adduction",
-	"image": "hip_adduction",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Triceps Pushdown With Rope",
-	"image": "triceps_pushdown_with_rope",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Front Raises",
-	"image": "front_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Pushdown With Cable",
-	"image": "incline_pushdown_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Bicep Cable Curl",
-	"image": "lying_bicep_cable_curl",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Medicine Ball Biceps Curl On Stability Ball",
-	"image": "medicine_ball_biceps_curl_on_stability_ball",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Front Barbell Raises",
-	"image": "front_barbell_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Drag Curl With Barbell",
-	"image": "drag_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Step Ups With Dumbbells",
-	"image": "step_ups_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Push Ups",
-	"image": "push_ups",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Triceps Extension With Dumbbells",
-	"image": "lying_triceps_extension_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Biceps Curl Squat With Dumbbell",
-	"image": "biceps_curl_squat_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Cable Fly's",
-	"image": "incline_cable_fly's",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Crunch",
-	"image": "decline_crunch",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Ab Rollout With Barbell",
-	"image": "ab_rollout_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Narrow Stance Hack Squats",
-	"image": "narrow_stance_hack_squats",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Side Bend With Dumbbell",
-	"image": "side_bend_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Biceps Curl V Sit On Dome With Dumbbells",
-	"image": "biceps_curl_v_sit_on_dome_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Cable Crossover",
-	"image": "cable_crossover",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bicep Curl With Machine",
-	"image": "bicep_curl_with_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Crunches",
-	"image": "crunches",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Straight Arm Dumbbell Pullover",
-	"image": "straight_arm_dumbbell_pullover",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bicep Curl On Stability Ball With Leg Raised",
-	"image": "bicep_curl_on_stability_ball_with_leg_raised",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Bench Press",
-	"image": "one_arm_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Upright Row",
-	"image": "smith_machine_upright_row",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bicep Curl With Deadlift With Barbell",
-	"image": "bicep_curl_with_deadlift_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Rear Lateral Cable Raise",
-	"image": "seated_rear_lateral_cable_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Body Leg Lifts",
-	"image": "body_leg_lifts",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": " Narrow Grip Bench Press",
-	"image": "__narrow_grip_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Zottman Curl With Dumbbells",
-	"image": "zottman_curl_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Armed Biased Push Up",
-	"image": "one_armed_biased_push_up",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Two Arm Preacher Curl With Dumbbell",
-	"image": "two_arm_preacher_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Grip Chin Up",
-	"image": "wide_grip_chin_up",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Reverse Grip Triceps Pushdown",
-	"image": "reverse_grip_triceps_pushdown",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Biceps Curl With Cable",
-	"image": "standing_biceps_curl_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Ab Rollout On Knees With Barbell",
-	"image": "ab_rollout_on_knees_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Grip Decline Barbell Pullover",
-	"image": "wide_grip_decline_barbell_pullover",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Grip Decline Bench Press",
-	"image": "wide_grip_decline_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Shoulder Shrugs",
-	"image": "shoulder_shrugs",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Weighted Ball Side Bend",
-	"image": "weighted_ball_side_bend",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Triceps Pushdown With V Bar",
-	"image": "triceps_pushdown_with_v_bar",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Balance Board",
-	"image": "balance_board",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Reverse Triceps Bench Press With Barbell",
-	"image": "reverse_triceps_bench_press_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Snatch With Barbell",
-	"image": "one_arm_snatch_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Triceps Kickback With Dumbbell",
-	"image": "triceps_kickback_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lateral Dumbbell Raises",
-	"image": "lateral_dumbbell_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Bicep Curl With Dumbbell",
-	"image": "seated_bicep_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "High Cable Curls",
-	"image": "high_cable_curls",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bench Press",
-	"image": "bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Squats",
-	"image": "smith_machine_squats",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Pile Squat With Dumbbell",
-	"image": "pile_squat_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Calf Raises Using Machine",
-	"image": "standing_calf_raises_using_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Upright Row",
-	"image": "dumbbell_upright_row",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Front Cable Raises",
-	"image": "front_cable_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Rocking Standing Calf Raise With Barbell",
-	"image": "rocking_standing_calf_raise_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Shoulder Press",
-	"image": "dumbbell_shoulder_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Biceps Curl With Overhead Extension Using Dumbbells On Stability Ball",
-	"image": "biceps_curl_with_overhead_extension_using_dumbbells_on_stability_ball",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "T Bar Rows",
-	"image": "t_bar_rows",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Calf Raises With Band",
-	"image": "calf_raises_with_band",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Close Grip Triceps Extension Behind The Head With Barbell",
-	"image": "lying_close_grip_triceps_extension_behind_the_head_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Narrow Parallel Grip Chin Ups",
-	"image": "narrow_parallel_grip_chin_ups",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Zottman Preacher Curl With Dumbbells",
-	"image": "zottman_preacher_curl_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Speed Squats With Barbell",
-	"image": "speed_squats_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Triceps Press With Dumbbell",
-	"image": "seated_triceps_press_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "V Bar Pull Down",
-	"image": "v_bar_pull_down",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Side Squats With Barbell",
-	"image": "side_squats_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated One Arm Triceps Extension With Dumbbell",
-	"image": "seated_one_arm_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Close Grip Concentration Curls With Barbell",
-	"image": "seated_close_grip_concentration_curls_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Walking Lunges",
-	"image": "walking_lunges",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Chin Ups",
-	"image": "chin_ups",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Close Grip Biceps Curls With Cable",
-	"image": "lying_close_grip_biceps_curls_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Romanian Dead Lift",
-	"image": "romanian_dead_lift",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Reverse Calf Raises",
-	"image": "smith_machine_reverse_calf_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Straight Arm Push Down",
-	"image": "straight_arm_push_down",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Cross Body Hammer Curl With Dumbbell",
-	"image": "cross_body_hammer_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Supine Biceps Curl With Dumbbell",
-	"image": "lying_supine_biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Single Arm Supinated Triceps Extension With Dumbbell",
-	"image": "single_arm_supinated_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Oblique Crunch",
-	"image": "decline_oblique_crunch",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Overhead Triceps Extension With Barbell",
-	"image": "standing_overhead_triceps_extension_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Supermans",
-	"image": "supermans",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Stationary Abdominal Draw In",
-	"image": "stationary_abdominal_draw_in",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Upright Band Rows",
-	"image": "upright_band_rows",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Upright Cable Row",
-	"image": "upright_cable_row",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Chest Press",
-	"image": "incline_chest_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Triceps Extension With Dumbbell",
-	"image": "one_arm_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Biceps Curl Reverse With Dumbbells",
-	"image": "biceps_curl_reverse_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Squat To Bench With Barbell",
-	"image": "squat_to_bench_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Leg Squat With Barbell",
-	"image": "one_leg_squat_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Barbell Floor Press",
-	"image": "one_arm_barbell_floor_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bent Over Rear Deltoid Raise With Head On Bench",
-	"image": "bent_over_rear_deltoid_raise_with_head_on_bench",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Biceps Curl With Dumbbell",
-	"image": "biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Dumbbell Shoulder Press",
-	"image": "one_arm_dumbbell_shoulder_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Barbell Front Raise And Pullover",
-	"image": "barbell_front_raise_and_pullover",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bent Knee Hip Raise",
-	"image": "bent_knee_hip_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying High Bench Biceps Curl With Barbell",
-	"image": "lying_high_bench_biceps_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Cuban Dumbbell Press",
-	"image": "cuban_dumbbell_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Triceps Extension",
-	"image": "standing_triceps_extension",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Single Leg Squat With Barbell",
-	"image": "single_leg_squat_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bent Over Lateral Cable Raises",
-	"image": "bent_over_lateral_cable_raises",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Calf Raise Using Machine",
-	"image": "seated_calf_raise_using_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Kneeling Triceps Extension With Cable",
-	"image": "kneeling_triceps_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Front Squat With Barbell",
-	"image": "front_squat_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Ankle Circles",
-	"image": "ankle_circles",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Bent Arm Pullover",
-	"image": "dumbbell_bent_arm_pullover",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Upright Row",
-	"image": "one_arm_upright_row",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Close Grip Triceps Press To Chin With Barbell",
-	"image": "lying_close_grip_triceps_press_to_chin_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Rear Lunges With Barbell",
-	"image": "rear_lunges_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Calf Raise With Barbell",
-	"image": "seated_calf_raise_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Machine Bench Press",
-	"image": "machine_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Low Pulley Triceps Extension With Cable",
-	"image": "one_arm_low_pulley_triceps_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Internal Cable Rotation",
-	"image": "internal_cable_rotation",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Hack Squat Machine",
-	"image": "hack_squat_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Triceps Extension With Towel",
-	"image": "standing_triceps_extension_with_towel",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Bicep Concentration On Stability Ball With Dumbbell",
-	"image": "one_arm_bicep_concentration_on_stability_ball_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bicep Curl Lunge With Bowling Motion",
-	"image": "bicep_curl_lunge_with_bowling_motion",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Chest Dips",
-	"image": "chest_dips",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Dumbbell Fly's",
-	"image": "decline_dumbbell_fly's",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Incline Bench Press",
-	"image": "smith_machine_incline_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing One Arm Bicep Curl With Cable",
-	"image": "standing_one_arm_bicep_curl_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Close Grip Standing Bicep Curls With Barbell",
-	"image": "close_grip_standing_bicep_curls_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Flutter Kicks",
-	"image": "flutter_kicks",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Calves Press On Leg Machine",
-	"image": "calves_press_on_leg_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Zecher Squats",
-	"image": "zecher_squats",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Leg Curls",
-	"image": "standing_leg_curls",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Static Neck Side Flexion",
-	"image": "static_neck_side_flexion",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Push Ups Close And Wide Hand Versions",
-	"image": "push_ups_close_and_wide_hand_versions",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Squat To Bench With Dumbbells",
-	"image": "squat_to_bench_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Inner Biceps Curl With Dumbbell",
-	"image": "incline_inner_biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Cable Rows",
-	"image": "seated_cable_rows",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Step Ups With Barbell",
-	"image": "step_ups_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying One Arm Rear Lateral Raise",
-	"image": "lying_one_arm_rear_lateral_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Spider Curl With Barbell",
-	"image": "spider_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Inner Biceps Curl With Dumbbell",
-	"image": "standing_inner_biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Decline Dumbbell Bench Press",
-	"image": "decline_dumbbell_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Ez Bar Curl With Barbell",
-	"image": "ez_bar_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Two Arm Triceps Extension With Dumbbell",
-	"image": "lying_two_arm_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Lunges",
-	"image": "dumbbell_lunges",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Front Squat To Bench With Barbells",
-	"image": "front_squat_to_bench_with_barbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Barbell Shrugs",
-	"image": "barbell_shrugs",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Thigh Abductor",
-	"image": "thigh_abductor",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Close Grip Bench Press",
-	"image": "smith_machine_close_grip_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Kneeling Triceps Concentration Extension With Cable",
-	"image": "kneeling_triceps_concentration_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Dead Lifts",
-	"image": "smith_machine_dead_lifts",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Lying Incline Curl With Barbell",
-	"image": "lying_incline_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Triceps Extensions With Dumbbell",
-	"image": "incline_triceps_extensions_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Hack Squat With Barbell",
-	"image": "hack_squat_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Close Grip Ez Bar Curl With Barbell",
-	"image": "close_grip_ez_bar_curl_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Stork Stance Bicep Curl With Dumbbells",
-	"image": "stork_stance_bicep_curl_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Good Mornings",
-	"image": "smith_machine_good_mornings",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Wide Grip Lat Pull Down",
-	"image": "wide_grip_lat_pull_down",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Leg Curl",
-	"image": "seated_leg_curl",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Barbell Squat",
-	"image": "barbell_squat",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Legged Cable Kickback",
-	"image": "one_legged_cable_kickback",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": " Standing Triceps Extension",
-	"image": "__standing_triceps_extension",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Cross Body Crunch",
-	"image": "cross_body_crunch",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Preacher Curl With Cable",
-	"image": "preacher_curl_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated Inner Biceps Curl With Dumbbell",
-	"image": "seated_inner_biceps_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Squats With Exercise Bands",
-	"image": "squats_with_exercise_bands",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Flys",
-	"image": "dumbbell_flys",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Dumbbell Incline Bench Press",
-	"image": "dumbbell_incline_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Biceps Curl Seated On Stability Ball With Dumbbell",
-	"image": "biceps_curl_seated_on_stability_ball_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Incline Triceps Extension With Cable",
-	"image": "incline_triceps_extension_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Step Up Single Leg Balance With Bicep Curl Using Dumbbells",
-	"image": "step_up_single_leg_balance_with_bicep_curl_using_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Hack Squat",
-	"image": "smith_machine_hack_squat",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Concentration Curls With Dumbbell",
-	"image": "concentration_curls_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Squats Using Dumbbells",
-	"image": "squats_using_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Tricep Dips Using Body Weight",
-	"image": "tricep_dips_using_body_weight",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Hammer Grip Incline Bench Press",
-	"image": "hammer_grip_incline_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Iron Cross With Dumbbells",
-	"image": "iron_cross_with_dumbbells",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Jefferson Squats With Barbell",
-	"image": "jefferson_squats_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Overhead Curl With Cable",
-	"image": "overhead_curl_with_cable",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Reverse Plate Curls With Weight",
-	"image": "reverse_plate_curls_with_weight",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Rear Deltoid Row",
-	"image": "smith_machine_rear_deltoid_row",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Hyperextensions",
-	"image": "hyperextensions",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing Barbell Calf Raise",
-	"image": "standing_barbell_calf_raise",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bicep Curls With Barbell",
-	"image": "bicep_curls_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Bench Press Dumbbell",
-	"image": "bench_press_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Standing One Arm Triceps Extension With Dumbbell",
-	"image": "standing_one_arm_triceps_extension_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Butterfly Machine",
-	"image": "butterfly_machine",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Preacher Curl With Dumbbell",
-	"image": "one_arm_preacher_curl_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "One Arm Side Deadlift With Barbell",
-	"image": "one_arm_side_deadlift_with_barbell",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Body Row",
-	"image": "body_row",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Barbell Good Mornings",
-	"image": "barbell_good_mornings",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Bench Press",
-	"image": "smith_machine_bench_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Smith Machine Shoulder Shrugs",
-	"image": "smith_machine_shoulder_shrugs",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Pullover On Stability Ball With Weight",
-	"image": "pullover_on_stability_ball_with_weight",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Side Plank",
-	"image": "side_plank",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Narrow Stance Leg Press",
-	"image": "narrow_stance_leg_press",
-	"category_id": 1,
-	"description": "No description"
-}, {
-	"name": "Seated One Leg Calf Raise With Dumbbell",
-	"image": "seated_one_leg_calf_raise_with_dumbbell",
-	"category_id": 1,
-	"description": "No description"
+  "id": 1,
+  "category_id": "1",
+  "name": "Tate Press With Dumbbell",
+  "image_url": "tate_press_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-10 17:53:50"
+}, {
+  "id": 2,
+  "category_id": "4",
+  "name": "Reverse Grips Bent Over Barbell Rows",
+  "image_url": "reverse_grips_bent_over_barbell_rows",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:22:54"
+}, {
+  "id": 3,
+  "category_id": "6",
+  "name": "Barbell Neck Press",
+  "image_url": "barbell_neck_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:22:19"
+}, {
+  "id": 4,
+  "category_id": "3",
+  "name": "Bench Dips",
+  "image_url": "bench_dips",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:00"
+}, {
+  "id": 5,
+  "category_id": "3",
+  "name": "Wide Grip Standing Biceps Curl With Barbell",
+  "image_url": "wide_grip_standing_biceps_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:04"
+}, {
+  "id": 6,
+  "category_id": "3",
+  "name": "Seated Overhead Triceps Extension With Barbell",
+  "image_url": "seated_overhead_triceps_extension_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:08"
+}, {
+  "id": 7,
+  "category_id": "8",
+  "name": "Arnold Press",
+  "image_url": "arnold_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:13"
+}, {
+  "id": 8,
+  "category_id": "1",
+  "name": "One Arm Tricep Extension With Cable",
+  "image_url": "one_arm_tricep_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-10 17:53:50"
+}, {
+  "id": 9,
+  "category_id": "8",
+  "name": "Cable Shoulder Shrugs",
+  "image_url": "cable_shoulder_shrugs",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:24"
+}, {
+  "id": 10,
+  "category_id": "1",
+  "name": "Single Arm Pronated Triceps Extension With Dumbbell",
+  "image_url": "single_arm_pronated_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-10 17:53:50"
+}, {
+  "id": 11,
+  "category_id": "6",
+  "name": "Flat Bench Cable Flys",
+  "image_url": "flat_bench_cable_flys",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:32"
+}, {
+  "id": 12,
+  "category_id": "6",
+  "name": "Decline Chest Press",
+  "image_url": "decline_chest_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:36"
+}, {
+  "id": 13,
+  "category_id": "3",
+  "name": "Preacher Curl With Barbell",
+  "image_url": "preacher_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:38"
+}, {
+  "id": 14,
+  "category_id": "3",
+  "name": "Hammer Curls With Rope And Cable",
+  "image_url": "hammer_curls_with_rope_and_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:42"
+}, {
+  "id": 15,
+  "category_id": "6",
+  "name": "Incline Bench Press",
+  "image_url": "incline_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:45"
+}, {
+  "id": 16,
+  "category_id": "3",
+  "name": "Lateral Lunge With Bicep Curl With Dumbbell",
+  "image_url": "lateral_lunge_with_bicep_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:50"
+}, {
+  "id": 17,
+  "category_id": "4",
+  "name": "Rear Deltoid Row Dumbbell",
+  "image_url": "rear_deltoid_row_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:54"
+}, {
+  "id": 18,
+  "category_id": "3",
+  "name": "Incline Biceps Curl With Dumbbell",
+  "image_url": "incline_biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:23:57"
+}, {
+  "id": 19,
+  "category_id": "7",
+  "name": "Knee Circles",
+  "image_url": "knee_circles",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:02"
+}, {
+  "id": 20,
+  "category_id": "4",
+  "name": "Overhand Pull Down",
+  "image_url": "overhand_pull_down",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:06"
+}, {
+  "id": 21,
+  "category_id": "3",
+  "name": "Decline Close Grip Bench To Skull Crusher",
+  "image_url": "decline_close_grip_bench_to_skull_crusher",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:17"
+}, {
+  "id": 22,
+  "category_id": "3",
+  "name": "Flexor Incline Curls With Dumbbell",
+  "image_url": "flexor_incline_curls_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:23"
+}, {
+  "id": 23,
+  "category_id": "6",
+  "name": "Incline Dumbbell Fly's",
+  "image_url": "incline_dumbbell_fly's",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:26"
+}, {
+  "id": 24,
+  "category_id": "7",
+  "name": "Leg Press",
+  "image_url": "leg_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:29"
+}, {
+  "id": 25,
+  "category_id": "2",
+  "name": "Seated Ab Crunch With Cable",
+  "image_url": "seated_ab_crunch_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:33"
+}, {
+  "id": 26,
+  "category_id": "6",
+  "name": "Jm Press",
+  "image_url": "jm_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:37"
+}, {
+  "id": 27,
+  "category_id": "3",
+  "name": "Alternating Incline Curl With Dumbbell",
+  "image_url": "alternating_incline_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:39"
+}, {
+  "id": 28,
+  "category_id": "3",
+  "name": "Decline Ez Bar Triceps Extension With Barbell",
+  "image_url": "decline_ez_bar_triceps_extension_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:47"
+}, {
+  "id": 29,
+  "category_id": "8",
+  "name": "Seated Shoulder Press Machine",
+  "image_url": "seated_shoulder_press_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:49"
+}, {
+  "id": 30,
+  "category_id": "6",
+  "name": "Bosu Ball Push Up",
+  "image_url": "bosu_ball_push_up",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:54"
+}, {
+  "id": 31,
+  "category_id": "3",
+  "name": "Close Triceps Pushup",
+  "image_url": "close_triceps_pushup",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:24:58"
+}, {
+  "id": 32,
+  "category_id": "5",
+  "name": "Donkey Calf Raises",
+  "image_url": "donkey_calf_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:02"
+}, {
+  "id": 33,
+  "category_id": "3",
+  "name": "Preacher Curl With Machine",
+  "image_url": "preacher_curl_with_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:05"
+}, {
+  "id": 34,
+  "category_id": "7",
+  "name": "Barbell Lunges",
+  "image_url": "barbell_lunges",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:08"
+}, {
+  "id": 35,
+  "category_id": "4",
+  "name": "Back Fly's With Exercise Band",
+  "image_url": "back_fly's_with_exercise_band",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:12"
+}, {
+  "id": 36,
+  "category_id": "4",
+  "name": "Underhand Pull Down",
+  "image_url": "underhand_pull_down",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:15"
+}, {
+  "id": 37,
+  "category_id": "6",
+  "name": "Push Ups With Feet On Exercise Ball",
+  "image_url": "push_ups_with_feet_on_exercise_ball",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:21"
+}, {
+  "id": 38,
+  "category_id": "3",
+  "name": "One Arm Bicep Curl With Olympic Bar Or Barbell",
+  "image_url": "one_arm_bicep_curl_with_olympic_bar_or_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:24"
+}, {
+  "id": 39,
+  "category_id": "6",
+  "name": "Wide Grip Bench Press",
+  "image_url": "wide_grip_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:27"
+}, {
+  "id": 40,
+  "category_id": "1",
+  "name": "Dumbbell Raise",
+  "image_url": "dumbbell_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-10 17:53:50"
+}, {
+  "id": 41,
+  "category_id": "6",
+  "name": "Incline Bench Press With Bands",
+  "image_url": "incline_bench_press_with_bands",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:37"
+}, {
+  "id": 42,
+  "category_id": "6",
+  "name": "Incline Fly's With A Twist",
+  "image_url": "incline_fly's_with_a_twist",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:39"
+}, {
+  "id": 43,
+  "category_id": "1",
+  "name": "Lying Rear Lateral Raise",
+  "image_url": "lying_rear_lateral_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-10 17:53:50"
+}, {
+  "id": 44,
+  "category_id": "2",
+  "name": "Bridging",
+  "image_url": "bridging",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:49"
+}, {
+  "id": 45,
+  "category_id": "3",
+  "name": "Lying Tricep Extension With Cable",
+  "image_url": "lying_tricep_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:25:51"
+}, {
+  "id": 46,
+  "category_id": "3",
+  "name": "Bent Arm Pullover",
+  "image_url": "bent_arm_pullover",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:02"
+}, {
+  "id": 47,
+  "category_id": "7",
+  "name": "Weighted Sissy Squat With Weight Plate",
+  "image_url": "weighted_sissy_squat_with_weight_plate",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:05"
+}, {
+  "id": 48,
+  "category_id": "3",
+  "name": "Front Dumbbell Raise",
+  "image_url": "front_dumbbell_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:11"
+}, {
+  "id": 49,
+  "category_id": "2",
+  "name": "Crunches With Legs On Stability Ball",
+  "image_url": "crunches_with_legs_on_stability_ball",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:13"
+}, {
+  "id": 50,
+  "category_id": "8",
+  "name": "Seated Military Press",
+  "image_url": "seated_military_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:16"
+}, {
+  "id": 51,
+  "category_id": "3",
+  "name": "Bicep Hammer Curl With Dumbbell",
+  "image_url": "bicep_hammer_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:20"
+}, {
+  "id": 52,
+  "category_id": "7",
+  "name": "Forward Lunge With Bicep Curl Using Dumbbell",
+  "image_url": "forward_lunge_with_bicep_curl_using_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:27"
+}, {
+  "id": 53,
+  "category_id": "7",
+  "name": "Rear Lunges With Dumbbell",
+  "image_url": "rear_lunges_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:33"
+}, {
+  "id": 54,
+  "category_id": "3",
+  "name": "Low Triceps Extension With Cable",
+  "image_url": "low_triceps_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:39"
+}, {
+  "id": 55,
+  "category_id": "7",
+  "name": "Dumbbell Dead Lifts",
+  "image_url": "dumbbell_dead_lifts",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:44"
+}, {
+  "id": 56,
+  "category_id": "3",
+  "name": "Lying Triceps Press With Barbell",
+  "image_url": "lying_triceps_press_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:51"
+}, {
+  "id": 57,
+  "category_id": "1",
+  "name": "Upright Barbell Rows",
+  "image_url": "upright_barbell_rows",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-10 17:53:50"
+}, {
+  "id": 58,
+  "category_id": "6",
+  "name": "Incline Dumbbell Press",
+  "image_url": "incline_dumbbell_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:56"
+}, {
+  "id": 59,
+  "category_id": "3",
+  "name": "Triceps Extensions Using Machine",
+  "image_url": "triceps_extensions_using_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:26:58"
+}, {
+  "id": 60,
+  "category_id": "3",
+  "name": "Old School Reverse Extensions",
+  "image_url": "old_school_reverse_extensions",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:05"
+}, {
+  "id": 61,
+  "category_id": "6",
+  "name": "One Arm Flat Bench Fly's",
+  "image_url": "one_arm_flat_bench_fly's",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:10"
+}, {
+  "id": 62,
+  "category_id": "7",
+  "name": "Wide Stance Squat With Barbell",
+  "image_url": "wide_stance_squat_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:12"
+}, {
+  "id": 63,
+  "category_id": "4",
+  "name": "Back Extension On Stability Ball",
+  "image_url": "back_extension_on_stability_ball",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:18"
+}, {
+  "id": 64,
+  "category_id": "3",
+  "name": "Lying Triceps Extension Across Face With Dumbbell",
+  "image_url": "lying_triceps_extension_across_face_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:20"
+}, {
+  "id": 65,
+  "category_id": "7",
+  "name": "Leg Extensions",
+  "image_url": "leg_extensions",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:22"
+}, {
+  "id": 66,
+  "category_id": "3",
+  "name": "Standing One Arm Curl Over Incline Bench With Dumbbell",
+  "image_url": "standing_one_arm_curl_over_incline_bench_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:29"
+}, {
+  "id": 67,
+  "category_id": "3",
+  "name": "Alternating Hammer Curl With Dumbbell",
+  "image_url": "alternating_hammer_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:31"
+}, {
+  "id": 68,
+  "category_id": "2",
+  "name": "Stability Ball Abdominal Crunch",
+  "image_url": "stability_ball_abdominal_crunch",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:34"
+}, {
+  "id": 69,
+  "category_id": "4",
+  "name": "Rear Deltoid Row Barbell",
+  "image_url": "rear_deltoid_row_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:36"
+}, {
+  "id": 70,
+  "category_id": "3",
+  "name": "Tricep Dips Using Machine",
+  "image_url": "tricep_dips_using_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:38"
+}, {
+  "id": 71,
+  "category_id": "4",
+  "name": "Gironda Sternum Chins",
+  "image_url": "gironda_sternum_chins",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:43"
+}, {
+  "id": 72,
+  "category_id": "3",
+  "name": "Prone Incline Biceps Curl With Dumbbell",
+  "image_url": "prone_incline_biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:50",
+  "updated_at": "2017-07-11 09:27:51"
+}, {
+  "id": 73,
+  "category_id": "3",
+  "name": "Quick Alternating Bicep Curls With Band",
+  "image_url": "quick_alternating_bicep_curls_with_band",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:27:53"
+}, {
+  "id": 74,
+  "category_id": "7",
+  "name": "Overhead Squat With Barbell",
+  "image_url": "overhead_squat_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:27:55"
+}, {
+  "id": 75,
+  "category_id": "3",
+  "name": "Preacher Hammer Curl With Dumbbell",
+  "image_url": "preacher_hammer_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:27:58"
+}, {
+  "id": 76,
+  "category_id": "2",
+  "name": "Exercise Ball Pull In",
+  "image_url": "exercise_ball_pull_in",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:05"
+}, {
+  "id": 77,
+  "category_id": "3",
+  "name": "Alternating Bicep Curl With Dumbbell",
+  "image_url": "alternating_bicep_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:09"
+}, {
+  "id": 78,
+  "category_id": "1",
+  "name": "Static Neck Flexion And Extension",
+  "image_url": "static_neck_flexion_and_extension",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 79,
+  "category_id": "7",
+  "name": "Lying Squat",
+  "image_url": "lying_squat",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:22"
+}, {
+  "id": 80,
+  "category_id": "6",
+  "name": "Decline Barbell Bench Press",
+  "image_url": "decline_barbell_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:29"
+}, {
+  "id": 81,
+  "category_id": "6",
+  "name": "Crossover With Bands",
+  "image_url": "crossover_with_bands",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:31"
+}, {
+  "id": 82,
+  "category_id": "3",
+  "name": "Decline Triceps Extension With Dumbbell",
+  "image_url": "decline_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:34"
+}, {
+  "id": 83,
+  "category_id": "3",
+  "name": "Triceps Pushdown With Cable",
+  "image_url": "triceps_pushdown_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:36"
+}, {
+  "id": 84,
+  "category_id": "2",
+  "name": "Flat Bench Leg Raises",
+  "image_url": "flat_bench_leg_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:38"
+}, {
+  "id": 85,
+  "category_id": "8",
+  "name": "Ball Wall Circles",
+  "image_url": "ball_wall_circles",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:48"
+}, {
+  "id": 86,
+  "category_id": "7",
+  "name": "Thigh Adductor",
+  "image_url": "thigh_adductor",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:51"
+}, {
+  "id": 87,
+  "category_id": "3",
+  "name": "Incline Triceps Extension With Barbell",
+  "image_url": "incline_triceps_extension_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:28:58"
+}, {
+  "id": 88,
+  "category_id": "7",
+  "name": "Hip Adduction",
+  "image_url": "hip_adduction",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:00"
+}, {
+  "id": 89,
+  "category_id": "3",
+  "name": "Triceps Pushdown With Rope",
+  "image_url": "triceps_pushdown_with_rope",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:04"
+}, {
+  "id": 90,
+  "category_id": "8",
+  "name": "Front Raises",
+  "image_url": "front_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:07"
+}, {
+  "id": 91,
+  "category_id": "8",
+  "name": "Incline Pushdown With Cable",
+  "image_url": "incline_pushdown_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:15"
+}, {
+  "id": 92,
+  "category_id": "3",
+  "name": "Lying Bicep Cable Curl",
+  "image_url": "lying_bicep_cable_curl",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:25"
+}, {
+  "id": 93,
+  "category_id": "3",
+  "name": "Medicine Ball Biceps Curl On Stability Ball",
+  "image_url": "medicine_ball_biceps_curl_on_stability_ball",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:29"
+}, {
+  "id": 94,
+  "category_id": "1",
+  "name": "Front Barbell Raises",
+  "image_url": "front_barbell_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 95,
+  "category_id": "1",
+  "name": "Drag Curl With Barbell",
+  "image_url": "drag_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 96,
+  "category_id": "7",
+  "name": "Step Ups With Dumbbells",
+  "image_url": "step_ups_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:44"
+}, {
+  "id": 97,
+  "category_id": "6",
+  "name": "Push Ups",
+  "image_url": "push_ups",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:47"
+}, {
+  "id": 98,
+  "category_id": "3",
+  "name": "Lying Triceps Extension With Dumbbells",
+  "image_url": "lying_triceps_extension_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:49"
+}, {
+  "id": 99,
+  "category_id": "7",
+  "name": "Biceps Curl Squat With Dumbbell",
+  "image_url": "biceps_curl_squat_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:52"
+}, {
+  "id": 100,
+  "category_id": "6",
+  "name": "Incline Cable Fly's",
+  "image_url": "incline_cable_fly's",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:54"
+}, {
+  "id": 101,
+  "category_id": "2",
+  "name": "Decline Crunch",
+  "image_url": "decline_crunch",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:57"
+}, {
+  "id": 102,
+  "category_id": "2",
+  "name": "Ab Rollout With Barbell",
+  "image_url": "ab_rollout_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:29:58"
+}, {
+  "id": 103,
+  "category_id": "7",
+  "name": "Narrow Stance Hack Squats",
+  "image_url": "narrow_stance_hack_squats",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:02"
+}, {
+  "id": 104,
+  "category_id": "2",
+  "name": "Side Bend With Dumbbell",
+  "image_url": "side_bend_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:09"
+}, {
+  "id": 105,
+  "category_id": "3",
+  "name": "Biceps Curl V Sit On Dome With Dumbbells",
+  "image_url": "biceps_curl_v_sit_on_dome_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:13"
+}, {
+  "id": 106,
+  "category_id": "6",
+  "name": "Cable Crossover",
+  "image_url": "cable_crossover",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:15"
+}, {
+  "id": 107,
+  "category_id": "3",
+  "name": "Bicep Curl With Machine",
+  "image_url": "bicep_curl_with_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:18"
+}, {
+  "id": 108,
+  "category_id": "2",
+  "name": "Crunches",
+  "image_url": "crunches",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:19"
+}, {
+  "id": 109,
+  "category_id": "3",
+  "name": "Straight Arm Dumbbell Pullover",
+  "image_url": "straight_arm_dumbbell_pullover",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:50"
+}, {
+  "id": 110,
+  "category_id": "3",
+  "name": "Bicep Curl On Stability Ball With Leg Raised",
+  "image_url": "bicep_curl_on_stability_ball_with_leg_raised",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:56"
+}, {
+  "id": 111,
+  "category_id": "6",
+  "name": "One Arm Bench Press",
+  "image_url": "one_arm_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:30:58"
+}, {
+  "id": 112,
+  "category_id": "1",
+  "name": "Smith Machine Upright Row",
+  "image_url": "smith_machine_upright_row",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 113,
+  "category_id": "7",
+  "name": "Bicep Curl With Deadlift With Barbell",
+  "image_url": "bicep_curl_with_deadlift_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:11"
+}, {
+  "id": 114,
+  "category_id": "1",
+  "name": "Seated Rear Lateral Cable Raise",
+  "image_url": "seated_rear_lateral_cable_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 115,
+  "category_id": "7",
+  "name": "Body Leg Lifts",
+  "image_url": "body_leg_lifts",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:15"
+}, {
+  "id": 116,
+  "category_id": "6",
+  "name": " Narrow Grip Bench Press",
+  "image_url": "__narrow_grip_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:19"
+}, {
+  "id": 117,
+  "category_id": "3",
+  "name": "Zottman Curl With Dumbbells",
+  "image_url": "zottman_curl_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:23"
+}, {
+  "id": 118,
+  "category_id": "6",
+  "name": "One Armed Biased Push Up",
+  "image_url": "one_armed_biased_push_up",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:27"
+}, {
+  "id": 119,
+  "category_id": "3",
+  "name": "Two Arm Preacher Curl With Dumbbell",
+  "image_url": "two_arm_preacher_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:31"
+}, {
+  "id": 120,
+  "category_id": "3",
+  "name": "Wide Grip Chin Up",
+  "image_url": "wide_grip_chin_up",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:36"
+}, {
+  "id": 121,
+  "category_id": "3",
+  "name": "Reverse Grip Triceps Pushdown",
+  "image_url": "reverse_grip_triceps_pushdown",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:40"
+}, {
+  "id": 122,
+  "category_id": "3",
+  "name": "Standing Biceps Curl With Cable",
+  "image_url": "standing_biceps_curl_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:44"
+}, {
+  "id": 123,
+  "category_id": "2",
+  "name": "Ab Rollout On Knees With Barbell",
+  "image_url": "ab_rollout_on_knees_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:31:51"
+}, {
+  "id": 124,
+  "category_id": "6",
+  "name": "Wide Grip Decline Barbell Pullover",
+  "image_url": "wide_grip_decline_barbell_pullover",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:01"
+}, {
+  "id": 125,
+  "category_id": "6",
+  "name": "Wide Grip Decline Bench Press",
+  "image_url": "wide_grip_decline_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:03"
+}, {
+  "id": 126,
+  "category_id": "8",
+  "name": "Shoulder Shrugs",
+  "image_url": "shoulder_shrugs",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:06"
+}, {
+  "id": 127,
+  "category_id": "2",
+  "name": "Weighted Ball Side Bend",
+  "image_url": "weighted_ball_side_bend",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:10"
+}, {
+  "id": 128,
+  "category_id": "3",
+  "name": "Triceps Pushdown With V Bar",
+  "image_url": "triceps_pushdown_with_v_bar",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:13"
+}, {
+  "id": 129,
+  "category_id": "1",
+  "name": "Balance Board",
+  "image_url": "balance_board",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 130,
+  "category_id": "6",
+  "name": "Reverse Triceps Bench Press With Barbell",
+  "image_url": "reverse_triceps_bench_press_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:25"
+}, {
+  "id": 131,
+  "category_id": "3",
+  "name": "One Arm Snatch With Barbell",
+  "image_url": "one_arm_snatch_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:31"
+}, {
+  "id": 132,
+  "category_id": "4",
+  "name": "Triceps Kickback With Dumbbell",
+  "image_url": "triceps_kickback_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:38"
+}, {
+  "id": 133,
+  "category_id": "1",
+  "name": "Lateral Dumbbell Raises",
+  "image_url": "lateral_dumbbell_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 134,
+  "category_id": "3",
+  "name": "Seated Bicep Curl With Dumbbell",
+  "image_url": "seated_bicep_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:44"
+}, {
+  "id": 135,
+  "category_id": "3",
+  "name": "High Cable Curls",
+  "image_url": "high_cable_curls",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:53"
+}, {
+  "id": 136,
+  "category_id": "6",
+  "name": "Bench Press",
+  "image_url": "bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:55"
+}, {
+  "id": 137,
+  "category_id": "7",
+  "name": "Smith Machine Squats",
+  "image_url": "smith_machine_squats",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:32:58"
+}, {
+  "id": 138,
+  "category_id": "7",
+  "name": "Pile Squat With Dumbbell",
+  "image_url": "pile_squat_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:00"
+}, {
+  "id": 139,
+  "category_id": "5",
+  "name": "Standing Calf Raises Using Machine",
+  "image_url": "standing_calf_raises_using_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:03"
+}, {
+  "id": 140,
+  "category_id": "1",
+  "name": "Dumbbell Upright Row",
+  "image_url": "dumbbell_upright_row",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 141,
+  "category_id": "3",
+  "name": "Front Cable Raises",
+  "image_url": "front_cable_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:13"
+}, {
+  "id": 142,
+  "category_id": "5",
+  "name": "Rocking Standing Calf Raise With Barbell",
+  "image_url": "rocking_standing_calf_raise_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:17"
+}, {
+  "id": 143,
+  "category_id": "8",
+  "name": "Dumbbell Shoulder Press",
+  "image_url": "dumbbell_shoulder_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:19"
+}, {
+  "id": 144,
+  "category_id": "3",
+  "name": "Biceps Curl With Overhead Extension Using Dumbbells On Stability Ball",
+  "image_url": "biceps_curl_with_overhead_extension_using_dumbbells_on_stability_ball",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:26"
+}, {
+  "id": 145,
+  "category_id": "4",
+  "name": "T Bar Rows",
+  "image_url": "t_bar_rows",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:29"
+}, {
+  "id": 146,
+  "category_id": "5",
+  "name": "Calf Raises With Band",
+  "image_url": "calf_raises_with_band",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:32"
+}, {
+  "id": 147,
+  "category_id": "3",
+  "name": "Lying Close Grip Triceps Extension Behind The Head With Barbell",
+  "image_url": "lying_close_grip_triceps_extension_behind_the_head_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:37"
+}, {
+  "id": 148,
+  "category_id": "3",
+  "name": "Narrow Parallel Grip Chin Ups",
+  "image_url": "narrow_parallel_grip_chin_ups",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:40"
+}, {
+  "id": 149,
+  "category_id": "3",
+  "name": "Zottman Preacher Curl With Dumbbells",
+  "image_url": "zottman_preacher_curl_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:43"
+}, {
+  "id": 150,
+  "category_id": "7",
+  "name": "Speed Squats With Barbell",
+  "image_url": "speed_squats_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:46"
+}, {
+  "id": 151,
+  "category_id": "3",
+  "name": "Seated Triceps Press With Dumbbell",
+  "image_url": "seated_triceps_press_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:49"
+}, {
+  "id": 152,
+  "category_id": "4",
+  "name": "V Bar Pull Down",
+  "image_url": "v_bar_pull_down",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:51"
+}, {
+  "id": 153,
+  "category_id": "7",
+  "name": "Side Squats With Barbell",
+  "image_url": "side_squats_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:54"
+}, {
+  "id": 154,
+  "category_id": "3",
+  "name": "Seated One Arm Triceps Extension With Dumbbell",
+  "image_url": "seated_one_arm_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:33:59"
+}, {
+  "id": 155,
+  "category_id": "3",
+  "name": "Seated Close Grip Concentration Curls With Barbell",
+  "image_url": "seated_close_grip_concentration_curls_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:07"
+}, {
+  "id": 156,
+  "category_id": "7",
+  "name": "Walking Lunges",
+  "image_url": "walking_lunges",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:08"
+}, {
+  "id": 157,
+  "category_id": "3",
+  "name": "Chin Ups",
+  "image_url": "chin_ups",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:10"
+}, {
+  "id": 158,
+  "category_id": "3",
+  "name": "Lying Close Grip Biceps Curls With Cable",
+  "image_url": "lying_close_grip_biceps_curls_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:18"
+}, {
+  "id": 159,
+  "category_id": "6",
+  "name": "Romanian Dead Lift",
+  "image_url": "romanian_dead_lift",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:20"
+}, {
+  "id": 160,
+  "category_id": "5",
+  "name": "Smith Machine Reverse Calf Raises",
+  "image_url": "smith_machine_reverse_calf_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:23"
+}, {
+  "id": 161,
+  "category_id": "3",
+  "name": "Straight Arm Push Down",
+  "image_url": "straight_arm_push_down",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:25"
+}, {
+  "id": 162,
+  "category_id": "3",
+  "name": "Cross Body Hammer Curl With Dumbbell",
+  "image_url": "cross_body_hammer_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:28"
+}, {
+  "id": 163,
+  "category_id": "3",
+  "name": "Lying Supine Biceps Curl With Dumbbell",
+  "image_url": "lying_supine_biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:31"
+}, {
+  "id": 164,
+  "category_id": "3",
+  "name": "Single Arm Supinated Triceps Extension With Dumbbell",
+  "image_url": "single_arm_supinated_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:35"
+}, {
+  "id": 165,
+  "category_id": "2",
+  "name": "Decline Oblique Crunch",
+  "image_url": "decline_oblique_crunch",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:37"
+}, {
+  "id": 166,
+  "category_id": "3",
+  "name": "Standing Overhead Triceps Extension With Barbell",
+  "image_url": "standing_overhead_triceps_extension_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:40"
+}, {
+  "id": 167,
+  "category_id": "2",
+  "name": "Supermans",
+  "image_url": "supermans",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:42"
+}, {
+  "id": 168,
+  "category_id": "2",
+  "name": "Stationary Abdominal Draw In",
+  "image_url": "stationary_abdominal_draw_in",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:44"
+}, {
+  "id": 169,
+  "category_id": "3",
+  "name": "Upright Band Rows",
+  "image_url": "upright_band_rows",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:49"
+}, {
+  "id": 170,
+  "category_id": "1",
+  "name": "Upright Cable Row",
+  "image_url": "upright_cable_row",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 171,
+  "category_id": "6",
+  "name": "Incline Chest Press",
+  "image_url": "incline_chest_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:54"
+}, {
+  "id": 172,
+  "category_id": "3",
+  "name": "One Arm Triceps Extension With Dumbbell",
+  "image_url": "one_arm_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:34:57"
+}, {
+  "id": 173,
+  "category_id": "3",
+  "name": "Biceps Curl Reverse With Dumbbells",
+  "image_url": "biceps_curl_reverse_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:00"
+}, {
+  "id": 174,
+  "category_id": "7",
+  "name": "Squat To Bench With Barbell",
+  "image_url": "squat_to_bench_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:03"
+}, {
+  "id": 175,
+  "category_id": "7",
+  "name": "One Leg Squat With Barbell",
+  "image_url": "one_leg_squat_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:06"
+}, {
+  "id": 176,
+  "category_id": "6",
+  "name": "One Arm Barbell Floor Press",
+  "image_url": "one_arm_barbell_floor_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:12"
+}, {
+  "id": 177,
+  "category_id": "4",
+  "name": "Bent Over Rear Deltoid Raise With Head On Bench",
+  "image_url": "bent_over_rear_deltoid_raise_with_head_on_bench",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:17"
+}, {
+  "id": 178,
+  "category_id": "3",
+  "name": "Biceps Curl With Dumbbell",
+  "image_url": "biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:19"
+}, {
+  "id": 179,
+  "category_id": "8",
+  "name": "One Arm Dumbbell Shoulder Press",
+  "image_url": "one_arm_dumbbell_shoulder_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:21"
+}, {
+  "id": 180,
+  "category_id": "3",
+  "name": "Barbell Front Raise And Pullover",
+  "image_url": "barbell_front_raise_and_pullover",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:26"
+}, {
+  "id": 181,
+  "category_id": "2",
+  "name": "Bent Knee Hip Raise",
+  "image_url": "bent_knee_hip_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:30"
+}, {
+  "id": 182,
+  "category_id": "6",
+  "name": "Lying High Bench Biceps Curl With Barbell",
+  "image_url": "lying_high_bench_biceps_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:36"
+}, {
+  "id": 183,
+  "category_id": "4",
+  "name": "Cuban Dumbbell Press",
+  "image_url": "cuban_dumbbell_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:47"
+}, {
+  "id": 184,
+  "category_id": "3",
+  "name": "Standing Triceps Extension",
+  "image_url": "standing_triceps_extension",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:50"
+}, {
+  "id": 185,
+  "category_id": "7",
+  "name": "Single Leg Squat With Barbell",
+  "image_url": "single_leg_squat_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:53"
+}, {
+  "id": 186,
+  "category_id": "6",
+  "name": "Bent Over Lateral Cable Raises",
+  "image_url": "bent_over_lateral_cable_raises",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:56"
+}, {
+  "id": 187,
+  "category_id": "5",
+  "name": "Seated Calf Raise Using Machine",
+  "image_url": "seated_calf_raise_using_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:35:58"
+}, {
+  "id": 188,
+  "category_id": "3",
+  "name": "Kneeling Triceps Extension With Cable",
+  "image_url": "kneeling_triceps_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:01"
+}, {
+  "id": 189,
+  "category_id": "7",
+  "name": "Front Squat With Barbell",
+  "image_url": "front_squat_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:03"
+}, {
+  "id": 190,
+  "category_id": "1",
+  "name": "Ankle Circles",
+  "image_url": "ankle_circles",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 191,
+  "category_id": "3",
+  "name": "Dumbbell Bent Arm Pullover",
+  "image_url": "dumbbell_bent_arm_pullover",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:10"
+}, {
+  "id": 192,
+  "category_id": "3",
+  "name": "One Arm Upright Row",
+  "image_url": "one_arm_upright_row",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:14"
+}, {
+  "id": 193,
+  "category_id": "3",
+  "name": "Lying Close Grip Triceps Press To Chin With Barbell",
+  "image_url": "lying_close_grip_triceps_press_to_chin_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:17"
+}, {
+  "id": 194,
+  "category_id": "7",
+  "name": "Rear Lunges With Barbell",
+  "image_url": "rear_lunges_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:19"
+}, {
+  "id": 195,
+  "category_id": "5",
+  "name": "Seated Calf Raise With Barbell",
+  "image_url": "seated_calf_raise_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:22"
+}, {
+  "id": 196,
+  "category_id": "6",
+  "name": "Machine Bench Press",
+  "image_url": "machine_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:28"
+}, {
+  "id": 197,
+  "category_id": "3",
+  "name": "One Arm Low Pulley Triceps Extension With Cable",
+  "image_url": "one_arm_low_pulley_triceps_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:32"
+}, {
+  "id": 198,
+  "category_id": "3",
+  "name": "Internal Cable Rotation",
+  "image_url": "internal_cable_rotation",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:36"
+}, {
+  "id": 199,
+  "category_id": "7",
+  "name": "Hack Squat Machine",
+  "image_url": "hack_squat_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:38"
+}, {
+  "id": 200,
+  "category_id": "3",
+  "name": "Standing Triceps Extension With Towel",
+  "image_url": "standing_triceps_extension_with_towel",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:43"
+}, {
+  "id": 201,
+  "category_id": "3",
+  "name": "One Arm Bicep Concentration On Stability Ball With Dumbbell",
+  "image_url": "one_arm_bicep_concentration_on_stability_ball_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:45"
+}, {
+  "id": 202,
+  "category_id": "7",
+  "name": "Bicep Curl Lunge With Bowling Motion",
+  "image_url": "bicep_curl_lunge_with_bowling_motion",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:51"
+}, {
+  "id": 203,
+  "category_id": "6",
+  "name": "Chest Dips",
+  "image_url": "chest_dips",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:54"
+}, {
+  "id": 204,
+  "category_id": "6",
+  "name": "Decline Dumbbell Fly's",
+  "image_url": "decline_dumbbell_fly's",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:36:58"
+}, {
+  "id": 205,
+  "category_id": "6",
+  "name": "Smith Machine Incline Bench Press",
+  "image_url": "smith_machine_incline_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:01"
+}, {
+  "id": 206,
+  "category_id": "3",
+  "name": "Standing One Arm Bicep Curl With Cable",
+  "image_url": "standing_one_arm_bicep_curl_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:03"
+}, {
+  "id": 207,
+  "category_id": "3",
+  "name": "Close Grip Standing Bicep Curls With Barbell",
+  "image_url": "close_grip_standing_bicep_curls_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:06"
+}, {
+  "id": 208,
+  "category_id": "2",
+  "name": "Flutter Kicks",
+  "image_url": "flutter_kicks",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:09"
+}, {
+  "id": 209,
+  "category_id": "5",
+  "name": "Calves Press On Leg Machine",
+  "image_url": "calves_press_on_leg_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:12"
+}, {
+  "id": 210,
+  "category_id": "7",
+  "name": "Zecher Squats",
+  "image_url": "zecher_squats",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:14"
+}, {
+  "id": 211,
+  "category_id": "7",
+  "name": "Standing Leg Curls",
+  "image_url": "standing_leg_curls",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:17"
+}, {
+  "id": 212,
+  "category_id": "1",
+  "name": "Static Neck Side Flexion",
+  "image_url": "static_neck_side_flexion",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 213,
+  "category_id": "6",
+  "name": "Push Ups Close And Wide Hand Versions",
+  "image_url": "push_ups_close_and_wide_hand_versions",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:23"
+}, {
+  "id": 214,
+  "category_id": "7",
+  "name": "Squat To Bench With Dumbbells",
+  "image_url": "squat_to_bench_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:28"
+}, {
+  "id": 215,
+  "category_id": "3",
+  "name": "Incline Inner Biceps Curl With Dumbbell",
+  "image_url": "incline_inner_biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:31"
+}, {
+  "id": 216,
+  "category_id": "4",
+  "name": "Seated Cable Rows",
+  "image_url": "seated_cable_rows",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:33"
+}, {
+  "id": 217,
+  "category_id": "7",
+  "name": "Step Ups With Barbell",
+  "image_url": "step_ups_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:38"
+}, {
+  "id": 218,
+  "category_id": "4",
+  "name": "Lying One Arm Rear Lateral Raise",
+  "image_url": "lying_one_arm_rear_lateral_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:41"
+}, {
+  "id": 219,
+  "category_id": "3",
+  "name": "Spider Curl With Barbell",
+  "image_url": "spider_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:45"
+}, {
+  "id": 220,
+  "category_id": "3",
+  "name": "Standing Inner Biceps Curl With Dumbbell",
+  "image_url": "standing_inner_biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:51"
+}, {
+  "id": 221,
+  "category_id": "3",
+  "name": "Decline Dumbbell Bench Press",
+  "image_url": "decline_dumbbell_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:37:58"
+}, {
+  "id": 222,
+  "category_id": "3",
+  "name": "Ez Bar Curl With Barbell",
+  "image_url": "ez_bar_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:00"
+}, {
+  "id": 223,
+  "category_id": "3",
+  "name": "Lying Two Arm Triceps Extension With Dumbbell",
+  "image_url": "lying_two_arm_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:02"
+}, {
+  "id": 224,
+  "category_id": "7",
+  "name": "Dumbbell Lunges",
+  "image_url": "dumbbell_lunges",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:05"
+}, {
+  "id": 225,
+  "category_id": "7",
+  "name": "Front Squat To Bench With Barbells",
+  "image_url": "front_squat_to_bench_with_barbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:07"
+}, {
+  "id": 226,
+  "category_id": "8",
+  "name": "Barbell Shrugs",
+  "image_url": "barbell_shrugs",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:09"
+}, {
+  "id": 227,
+  "category_id": "7",
+  "name": "Thigh Abductor",
+  "image_url": "thigh_abductor",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:14"
+}, {
+  "id": 228,
+  "category_id": "6",
+  "name": "Smith Machine Close Grip Bench Press",
+  "image_url": "smith_machine_close_grip_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:19"
+}, {
+  "id": 229,
+  "category_id": "3",
+  "name": "Kneeling Triceps Concentration Extension With Cable",
+  "image_url": "kneeling_triceps_concentration_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:21"
+}, {
+  "id": 230,
+  "category_id": "7",
+  "name": "Smith Machine Dead Lifts",
+  "image_url": "smith_machine_dead_lifts",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:24"
+}, {
+  "id": 231,
+  "category_id": "3",
+  "name": "Lying Incline Curl With Barbell",
+  "image_url": "lying_incline_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:28"
+}, {
+  "id": 232,
+  "category_id": "3",
+  "name": "Incline Triceps Extensions With Dumbbell",
+  "image_url": "incline_triceps_extensions_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:30"
+}, {
+  "id": 233,
+  "category_id": "7",
+  "name": "Hack Squat With Barbell",
+  "image_url": "hack_squat_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:34"
+}, {
+  "id": 234,
+  "category_id": "3",
+  "name": "Close Grip Ez Bar Curl With Barbell",
+  "image_url": "close_grip_ez_bar_curl_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:47"
+}, {
+  "id": 235,
+  "category_id": "3",
+  "name": "Stork Stance Bicep Curl With Dumbbells",
+  "image_url": "stork_stance_bicep_curl_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:38:54"
+}, {
+  "id": 236,
+  "category_id": "4",
+  "name": "Smith Machine Good Mornings",
+  "image_url": "smith_machine_good_mornings",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:20"
+}, {
+  "id": 237,
+  "category_id": "4",
+  "name": "Wide Grip Lat Pull Down",
+  "image_url": "wide_grip_lat_pull_down",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:23"
+}, {
+  "id": 238,
+  "category_id": "7",
+  "name": "Seated Leg Curl",
+  "image_url": "seated_leg_curl",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:25"
+}, {
+  "id": 239,
+  "category_id": "7",
+  "name": "Barbell Squat",
+  "image_url": "barbell_squat",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:27"
+}, {
+  "id": 240,
+  "category_id": "7",
+  "name": "One Legged Cable Kickback",
+  "image_url": "one_legged_cable_kickback",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:46"
+}, {
+  "id": 241,
+  "category_id": "3",
+  "name": " Standing Triceps Extension",
+  "image_url": "__standing_triceps_extension",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:48"
+}, {
+  "id": 242,
+  "category_id": "2",
+  "name": "Cross Body Crunch",
+  "image_url": "cross_body_crunch",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:50"
+}, {
+  "id": 243,
+  "category_id": "3",
+  "name": "Preacher Curl With Cable",
+  "image_url": "preacher_curl_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:39:52"
+}, {
+  "id": 244,
+  "category_id": "3",
+  "name": "Seated Inner Biceps Curl With Dumbbell",
+  "image_url": "seated_inner_biceps_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:00"
+}, {
+  "id": 245,
+  "category_id": "7",
+  "name": "Squats With Exercise Bands",
+  "image_url": "squats_with_exercise_bands",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:02"
+}, {
+  "id": 246,
+  "category_id": "6",
+  "name": "Dumbbell Flys",
+  "image_url": "dumbbell_flys",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:03"
+}, {
+  "id": 247,
+  "category_id": "6",
+  "name": "Dumbbell Incline Bench Press",
+  "image_url": "dumbbell_incline_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:08"
+}, {
+  "id": 248,
+  "category_id": "3",
+  "name": "Biceps Curl Seated On Stability Ball With Dumbbell",
+  "image_url": "biceps_curl_seated_on_stability_ball_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:16"
+}, {
+  "id": 249,
+  "category_id": "3",
+  "name": "Incline Triceps Extension With Cable",
+  "image_url": "incline_triceps_extension_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:21"
+}, {
+  "id": 250,
+  "category_id": "7",
+  "name": "Step Up Single Leg Balance With Bicep Curl Using Dumbbells",
+  "image_url": "step_up_single_leg_balance_with_bicep_curl_using_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:23"
+}, {
+  "id": 251,
+  "category_id": "7",
+  "name": "Smith Machine Hack Squat",
+  "image_url": "smith_machine_hack_squat",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:25"
+}, {
+  "id": 252,
+  "category_id": "3",
+  "name": "Concentration Curls With Dumbbell",
+  "image_url": "concentration_curls_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:30"
+}, {
+  "id": 253,
+  "category_id": "7",
+  "name": "Squats Using Dumbbells",
+  "image_url": "squats_using_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:39"
+}, {
+  "id": 254,
+  "category_id": "3",
+  "name": "Tricep Dips Using Body Weight",
+  "image_url": "tricep_dips_using_body_weight",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:42"
+}, {
+  "id": 255,
+  "category_id": "6",
+  "name": "Hammer Grip Incline Bench Press",
+  "image_url": "hammer_grip_incline_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:48"
+}, {
+  "id": 256,
+  "category_id": "1",
+  "name": "Iron Cross With Dumbbells",
+  "image_url": "iron_cross_with_dumbbells",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 257,
+  "category_id": "7",
+  "name": "Jefferson Squats With Barbell",
+  "image_url": "jefferson_squats_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:53"
+}, {
+  "id": 258,
+  "category_id": "3",
+  "name": "Overhead Curl With Cable",
+  "image_url": "overhead_curl_with_cable",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:40:57"
+}, {
+  "id": 259,
+  "category_id": "1",
+  "name": "Reverse Plate Curls With Weight",
+  "image_url": "reverse_plate_curls_with_weight",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-10 17:53:51"
+}, {
+  "id": 260,
+  "category_id": "4",
+  "name": "Smith Machine Rear Deltoid Row",
+  "image_url": "smith_machine_rear_deltoid_row",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:07"
+}, {
+  "id": 261,
+  "category_id": "4",
+  "name": "Hyperextensions",
+  "image_url": "hyperextensions",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:10"
+}, {
+  "id": 262,
+  "category_id": "5",
+  "name": "Standing Barbell Calf Raise",
+  "image_url": "standing_barbell_calf_raise",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:13"
+}, {
+  "id": 263,
+  "category_id": "3",
+  "name": "Bicep Curls With Barbell",
+  "image_url": "bicep_curls_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:16"
+}, {
+  "id": 264,
+  "category_id": "6",
+  "name": "Bench Press Dumbbell",
+  "image_url": "bench_press_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:20"
+}, {
+  "id": 265,
+  "category_id": "3",
+  "name": "Standing One Arm Triceps Extension With Dumbbell",
+  "image_url": "standing_one_arm_triceps_extension_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:25"
+}, {
+  "id": 266,
+  "category_id": "6",
+  "name": "Butterfly Machine",
+  "image_url": "butterfly_machine",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:28"
+}, {
+  "id": 267,
+  "category_id": "3",
+  "name": "One Arm Preacher Curl With Dumbbell",
+  "image_url": "one_arm_preacher_curl_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:31"
+}, {
+  "id": 268,
+  "category_id": "7",
+  "name": "One Arm Side Deadlift With Barbell",
+  "image_url": "one_arm_side_deadlift_with_barbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:34"
+}, {
+  "id": 269,
+  "category_id": "4",
+  "name": "Body Row",
+  "image_url": "body_row",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:36"
+}, {
+  "id": 270,
+  "category_id": "4",
+  "name": "Barbell Good Mornings",
+  "image_url": "barbell_good_mornings",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:41"
+}, {
+  "id": 271,
+  "category_id": "6",
+  "name": "Smith Machine Bench Press",
+  "image_url": "smith_machine_bench_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:43"
+}, {
+  "id": 272,
+  "category_id": "8",
+  "name": "Smith Machine Shoulder Shrugs",
+  "image_url": "smith_machine_shoulder_shrugs",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:46"
+}, {
+  "id": 273,
+  "category_id": "3",
+  "name": "Pullover On Stability Ball With Weight",
+  "image_url": "pullover_on_stability_ball_with_weight",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:49"
+}, {
+  "id": 274,
+  "category_id": "2",
+  "name": "Side Plank",
+  "image_url": "side_plank",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:51"
+}, {
+  "id": 275,
+  "category_id": "7",
+  "name": "Narrow Stance Leg Press",
+  "image_url": "narrow_stance_leg_press",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:54"
+}, {
+  "id": 276,
+  "category_id": "5",
+  "name": "Seated One Leg Calf Raise With Dumbbell",
+  "image_url": "seated_one_leg_calf_raise_with_dumbbell",
+  "description": "No description",
+  "default": "1",
+  "created_at": "2017-07-10 17:53:51",
+  "updated_at": "2017-07-11 09:41:57"
 }]

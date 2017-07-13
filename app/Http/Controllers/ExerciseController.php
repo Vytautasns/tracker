@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exercise;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ExerciseController extends Controller
 {
@@ -12,74 +13,32 @@ class ExerciseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+      return $request->user()->exercises()->where('category_id', $request->category_id)->get();
+
+
+      // ->getByCategory($request->category_id);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    // Get exercise details
+    public function getExerciseDetails(Request $request)
     {
-        //
+      // $a = 0;
+      // while ($a <= 600000000) {
+      //   # code...
+      //   $a++;
+      // }
+      return $request->user()->exercises()->find($request->exercise_id);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    // Search for exercise
+    public function searchExercise($hint)
     {
-        //
+      $user = Auth::user();
+
+      $search = $user->exercises()->where('name', 'LIKE', '%' . $hint . '%')->get();
+      return $search;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Exercise  $exercise
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Exercise $exercise)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Exercise  $exercise
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Exercise $exercise)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Exercise  $exercise
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Exercise $exercise)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Exercise  $exercise
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Exercise $exercise)
-    {
-        //
-    }
 }

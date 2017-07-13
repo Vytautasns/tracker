@@ -8,6 +8,7 @@ import Application from './Application';
 sync(store, router);
 
 
+
 const app = new Vue({
     components: { Application },
     el: '#app',

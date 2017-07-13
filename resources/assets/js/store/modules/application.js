@@ -20,30 +20,34 @@ const getters = {
 
 // actions
 const actions = {
-
+  makeNotification({commit}, payload) {
+    commit(types.MAKE_NOTIFICATION, payload);
+  },
 }
 
 // mutations
 const mutations = {
   [types.START_LOADING] (state) {
-    // Add ajax to queue
-    state.ajaxQueue++;
-    // Set loading to true
-    state.loading = true;
+    state.ajaxQueue += 1;
   },
 
   [types.STOP_LOADING] (state) {
-    // Remove one from queue
-    state.ajaxQueue--;
-    // Check if it was the last request in queue
-    if (state.ajaxQueue == 0) {
-      state.loading = false;
+    if (state.ajaxQueue > 0) {
+      state.ajaxQueue -= 1;
     }
   },
 
   [types.ERROR_TEXT] (state, error) {
     // Set error message
     state.errorMessage = error;
+  },
+
+  [types.MAKE_NOTIFICATION] (state, text) {
+    state.notification = true;
+    state.notificationMessage = text;
+    setTimeout(() => {
+      state.notification = false;
+    },500);
   },
 
 }

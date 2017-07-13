@@ -7,79 +7,29 @@ use Illuminate\Http\Request;
 
 class DayController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+  // Get program day by its id
+  public function getDayById(Request $request)
+  {
+    return $request->user()->getSelectedProgram()->days()->find($request->day_id)->getSteps();
+  }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+  // Save new day to program
+  public function addNewDay(Request $request)
+  {
+    $newDay = Day::create([
+      'program_id' => $request->program_id,
+      'name' => $request->name,
+      'week_days' => implode(',', $request->week_days),
+    ]);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    return $newDay;
+  }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Day  $day
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Day $day)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Day  $day
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Day $day)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Day  $day
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Day $day)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Day  $day
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Day $day)
-    {
-        //
-    }
+  // delete day
+  public function removeDay(Request $request)
+  {
+    $day = Day::find($request->id);
+    $day->steps()->delete();
+    $day->delete();
+  }
 }

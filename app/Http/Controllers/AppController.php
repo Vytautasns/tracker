@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Program;
 use App\Exercise;
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -11,15 +12,22 @@ use Illuminate\Support\Facades\DB;
 class AppController extends Controller
 {
     // Display user and settings
-    public function getUser()
+    public function getUser(Request $request)
     {
-      $user = Auth::user();
-      return $user->load('settings');
+      return $request->user()->load('settings');
     }
 
     // Save setting
-    public function saveSetting(Request $request)
+    public function changeSetting(Request $request)
     {
-      dd($request->user);
+      $settings = $request->user()->settings()->where('name', $request->name)->first();
+      $settings->value = $request->value;
+      $settings->save();
+    }
+
+    // Get all categories
+    public function getCategories()
+    {
+      return Category::all();
     }
 }

@@ -16,10 +16,16 @@ class ProgramController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $user = Auth::user();
-      return $user->programs;
+      return $request->user()->programs;
+    }
+
+
+    // Get all programs for the user
+    public function getSelectedProgram(Request $request)
+    {
+      return $request->user()->getSelectedProgram();
     }
 
     /**
@@ -40,23 +46,29 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
-      // code..
+      $createdProgram = Program::create([
+        'name' => $request->name,
+        'user_id' => $request->user()->id,
+        'description' => $request->description,
+        'image_url' => 'No image',
+      ]);
+      return $createdProgram;
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Program  $program
-     * @return \Illuminate\Http\Response
+     * @return \App\Program
      */
     public function show(Program $program)
     {
-      $user = Auth::user();
-      return $program->load([
-        'days' => function ($query) {
-          $query->with('steps');
-        }
-      ]);
+//      $user = Auth::user();
+//      return $user->programs()->load([
+//        'days' => function ($query) {
+//          $query->with('steps');
+//        }
+//      ]);
     }
 
     /**
@@ -88,8 +100,13 @@ class ProgramController extends Controller
      * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Program $program)
+    public function destroy(Request $request)
     {
-        //
+      $program = Program::find($request->id);
+      foreach ($program->days as $day) {
+        $day->steps()->delete();
+      }
+      $program->days()->delete();
+      $program->delete();
     }
 }

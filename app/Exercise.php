@@ -17,6 +17,15 @@ class Exercise extends Model
 
   /*
    *
+   * Metods
+   * *************************************************************************
+  */
+  public function getByCategory($categoryId)
+  {
+    return $this->where('category_id', $categoryId)->get();
+  }
+  /*
+   *
    * Relationships
    * *************************************************************************
   */

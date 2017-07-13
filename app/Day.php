@@ -17,6 +17,21 @@ class Day extends Model
 
   /*
    *
+   * Method
+   * *************************************************************************
+  */
+  public function getSteps()
+  {
+    return $this->load([
+      'steps' => function ($query) {
+        $query->join('exercises', 'steps.exercise_id', 'exercises.id')
+        ->select('steps.*', 'exercises.name', 'exercises.image_url');
+      }
+    ]);
+  }
+
+  /*
+   *
    * Relationships
    * *************************************************************************
   */
