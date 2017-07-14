@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Step;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StepController extends Controller
 {
@@ -12,9 +13,9 @@ class StepController extends Controller
     // Step id - request->id
     public function getTodaysLogs(Request $request)
     {
-
+      $user = Auth::user();
       return
-      $request->user()->logs()
+      $user->logs()
       ->where('step_id', $request->id)
       ->where('created_at', '>=', \Carbon\Carbon::today()
       ->toDateString())

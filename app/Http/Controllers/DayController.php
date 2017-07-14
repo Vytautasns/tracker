@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Day;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DayController extends Controller
 {
   // Get program day by its id
   public function getDayById(Request $request)
   {
-    return $request->user()->getSelectedProgram()->days()->find($request->day_id)->getSteps();
+    $user = Auth::user();
+    return $user->getSelectedProgram()->days()->find($request->day_id)->getSteps();
   }
 
   // Save new day to program

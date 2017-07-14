@@ -15,8 +15,9 @@ class ExerciseController extends Controller
      */
     public function index(Request $request)
     {
-      // return $request->user()->exercises()->where('category_id', $request->category_id)->get();
-      return Exercise::where('category_id', '=', $request->id)->get();
+      $user = Auth::user();
+      return $user->exercises()->where('category_id', $request->category_id)->get();
+      // return Exercise::where('category_id', '=', $request->id)->get();
     }
 
     // Get exercise details
@@ -27,8 +28,10 @@ class ExerciseController extends Controller
       //   # code...
       //   $a++;
       // }
-      // return $request->user()->exercises()->find($request->exercise_id);
-      return Exercise::find($request->exercise_id);
+
+      $user = Auth::user();
+      return $user->exercises()->find($request->exercise_id);
+      // return Exercise::find($request->exercise_id);
     }
 
     // Search for exercise

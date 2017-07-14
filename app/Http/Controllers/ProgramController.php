@@ -46,9 +46,11 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
+      $user = Auth::user();
+
       $createdProgram = Program::create([
         'name' => $request->name,
-        'user_id' => $request->user()->id,
+        'user_id' => $user->id,
         'description' => $request->description,
         'image_url' => 'No image',
       ]);
