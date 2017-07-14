@@ -16,9 +16,6 @@ class ExerciseController extends Controller
     public function index(Request $request)
     {
       return $request->user()->exercises()->where('category_id', $request->category_id)->get();
-
-
-      // ->getByCategory($request->category_id);
     }
 
     // Get exercise details
