@@ -39,11 +39,10 @@ export default {
   props: ['category'],
 
   created() {
-    this.getExercises(this.category);
   },
 
   mounted() {
-
+    this.getExercises(this.category);
   },
 
   computed: {
