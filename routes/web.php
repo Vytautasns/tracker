@@ -1,3 +1,4 @@
+
 <?php
 use App\Exercise;
 
@@ -23,13 +24,13 @@ Route::get('/{any}', 'PageController@index');
 */
 
 // Get user info
-Route::post('app/user', 'AppController@getUser');
+Route::post('/app/user', 'AppController@getUser');
 
 // Save settings
-Route::post('app/settings/change', 'AppController@changeSetting');
+Route::post('/app/settings/change', 'AppController@changeSetting');
 
 // Program routes
-Route::post('app/programs', 'ProgramController@index');
+Route::post('/app/programs', 'ProgramController@index');
 Route::post('/app/programs/selected', 'ProgramController@getSelectedProgram');
 Route::post('/app/programs/save', 'ProgramController@store');
 Route::post('/app/programs/remove', 'ProgramController@destroy');
