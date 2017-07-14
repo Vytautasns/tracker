@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="">
-                  <button @click.prevent="selected.sets > 0 ? selected.sets-- : ''" class="uk-button uk-button-danger uk-button-large">-</button>
+                  <button @click.prevent="selected.sets > 1 ? selected.sets-- : ''" class="uk-button uk-button-danger uk-button-large">-</button>
                 </div>
                 <div class="">
                   <div class="uk-margin">
@@ -107,7 +107,7 @@
                   <span>Reps</span>
                 </div>
                 <div class="">
-                  <button @click.prevent="selected.reps > 0 ? selected.reps-- : ''" class="uk-button uk-button-danger uk-button-large">-</button>
+                  <button @click.prevent="selected.reps > 1 ? selected.reps-- : ''" class="uk-button uk-button-danger uk-button-large">-</button>
                 </div>
                 <div class="">
                   <div class="uk-margin">
@@ -218,8 +218,8 @@ export default {
       searching: false,
       step: 1,
       selected: {
-        sets: 0,
-        reps: 0,
+        sets: 1,
+        reps: 1,
       },
       stepsToCommit: [],
     }

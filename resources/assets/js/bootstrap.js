@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import UIkit from 'uikit';
+import moment from 'moment';
 
 window.Vue = Vue;
 window.UIkit = UIkit;
+window.moment = moment;
 
 
 

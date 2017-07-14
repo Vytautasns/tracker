@@ -7,6 +7,23 @@ use Illuminate\Http\Request;
 
 class StepController extends Controller
 {
+
+    // Get todays log for step
+    // Step id - request->id
+    public function getTodaysLogs(Request $request)
+    {
+
+      return
+      $request->user()->logs()
+      ->where('step_id', $request->id)
+      ->where('created_at', '>=', \Carbon\Carbon::today()
+      ->toDateString())
+      ->orderBy('created_at', 'desc')
+      ->get();
+
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -87,6 +104,7 @@ class StepController extends Controller
     public function destroy(Request $request)
     {
       $step = Step::find($request->id);
+      $step->logs()->delete();
       $step->delete();
     }
 }

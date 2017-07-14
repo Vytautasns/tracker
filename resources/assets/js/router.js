@@ -10,6 +10,7 @@ import ExerciseBrowse from './pages/exercises/ExerciseBrowse';
 import ExerciseDetails from './pages/exercises/ExerciseDetails';
 
 import WorkoutShow from './pages/workouts/WorkoutShow';
+import WorkoutLog from './pages/workouts/WorkoutLog';
 
 Vue.use(Router);
 
@@ -67,6 +68,13 @@ export default new Router({
       component: WorkoutShow,
     },
 
+    {
+      path: '/days/:day/step/:step/:stepId',
+      props: true,
+      name: 'log-step',
+      component: WorkoutLog,
+    },
+
 
     // Programs routes
     // *************************************************************************
@@ -87,12 +95,6 @@ export default new Router({
 
     // Temp routes
     // *************************************************************************
-
-    {
-      path: '/log',
-      name: 'log',
-      component: require('./pages/workouts/Logger.vue'),
-    },
 
 
     {

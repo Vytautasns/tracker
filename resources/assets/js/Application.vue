@@ -3,9 +3,11 @@
     <Navigation></Navigation>
 
     <transition name="fade" mode="in-out">
-      <div class="loading-screen" v-if="appState.ajaxQueue">
-        <div class="uk-position-center uk-padding uk-margin">
-          <h1><div uk-spinner></div> Loading...</h1>
+      <div class="loading-container" v-if="appState.ajaxQueue">
+        <div class="loading-screen uk-overlay-primary uk-position-center uk-card uk-card-default">
+          <div class="uk-card-body">
+            <h3>Loading...</h3>
+          </div>
         </div>
       </div>
     </transition>
@@ -68,7 +70,8 @@ export default {
         UIkit.notification({
             message: this.appState.notificationMessage,
             status: 'primary',
-            pos: 'top-center'
+            pos: 'bottom-center',
+            timeout: 1000,
         });
       }
     },
@@ -80,14 +83,26 @@ export default {
 </script>
 
 <style lang="css">
-  .loading-screen {
+
+  /*.loading-screen {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 5%; left: 5%;
+    width: 80%;
+    height: 80%;
     background-color: #fff;
     z-index: 9999;
+    -webkit-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.55);
+    box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.55);
+  }*/
+
+  .loading-container {
+    position: fixed;
+    z-index: 99999999;
+    width: 100vw;
+    height: 100vh;
   }
+
 
   .fade-enter-active, .fade-leave-active {
   transition: opacity 0.8s

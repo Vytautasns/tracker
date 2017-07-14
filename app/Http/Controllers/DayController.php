@@ -29,6 +29,9 @@ class DayController extends Controller
   public function removeDay(Request $request)
   {
     $day = Day::find($request->id);
+    foreach ($day->steps() as $step) {
+      $step->logs()->delete();
+    }
     $day->steps()->delete();
     $day->delete();
   }

@@ -6,7 +6,7 @@
     </ul>
     <div :class="program.id == settings.selected_program ? 'uk-card-primary' : 'uk-card-default'" class="uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid v-for="program in availableProgramsList" :key="program.id">
         <div class="uk-card-media-left uk-cover-container">
-            <img src="http://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/chairdip_5.jpg" alt="" uk-cover>
+            <img :src="program.image_url" alt="" uk-cover>
             <div class="uk-position-bottom uk-overlay uk-overlay-primary" v-if="program.id == settings.selected_program ">
                 <p class="uk-h4 uk-margin-remove">
                   <i class="fa fa-star" aria-hidden="true"></i>

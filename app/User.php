@@ -153,4 +153,10 @@ class User extends Authenticatable
       return $this->belongsToMany(Exercise::class);
     }
 
+    // All user weight logs
+    public function logs()
+    {
+      return $this->hasMany(Log::class);
+    }
+
 }

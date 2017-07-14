@@ -26,6 +26,15 @@ export const REMOVE_PROGRAM = "REMOVE_PROGRAM";
 
 
 // Days
+
 export const SET_CURRENT_DAY = 'SET_CURRENT_DAY';
 export const ADD_STEPS = 'ADD_STEPS';
 export const REMOVE_STEP = 'REMOVE_STEP';
+export const SET_STEP_SHOWN = 'SET_STEP_SHOWN';
+
+// Logs
+
+export const ADD_NEW_LOG = 'ADD_NEW_LOG';
+export const RECEIVE_TODAYS_LOGS = 'RECEICE_TODAYS_LOGS';
+export const REMOVE_LOG = 'REMOVE_LOG';
+export const RECEIVE_DAY_LOG = 'RECEIVE_DAY_LOG';

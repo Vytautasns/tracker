@@ -3,7 +3,7 @@
     <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Program details</span></h2>
     <div class="uk-card-primary uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
-            <img src="http://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/chairdip_5.jpg" alt="" uk-cover>
+            <img :src="programShown.image_url" alt="" uk-cover>
             <canvas width="300" height="200"></canvas>
         </div>
         <div>

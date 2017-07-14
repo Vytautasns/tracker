@@ -10,6 +10,10 @@ const getters = {
   dayShown (state) {
     return state.dayShown;
   },
+
+  stepShown (state) {
+    return state.stepShown;
+  },
 }
 
 // actions
@@ -61,7 +65,6 @@ const actions = {
 
 // mutations
 const mutations = {
-
   [types.SET_CURRENT_DAY] (state, day) {
     state.dayShown = day;
   },

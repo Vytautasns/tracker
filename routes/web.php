@@ -49,3 +49,9 @@ Route::post('/app/days/remove', 'DayController@removeDay');
 // Steps
 Route::post('/app/steps/save', 'StepController@store');
 Route::post('/app/steps/remove', 'StepController@destroy');
+
+// Logs
+Route::post('/app/logs/today', 'StepController@getTodaysLogs');
+Route::post('/app/logs/save', 'LogController@store');
+Route::post('/app/logs/remove', 'LogController@destroy');
+Route::post('/app/logs/day', 'LogController@getDayLog');

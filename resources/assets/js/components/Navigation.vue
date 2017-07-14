@@ -68,18 +68,6 @@ export default {
             icon: 'thumbnails',
           },
 
-
-
-
-
-          {
-            title: 'Logger',
-            link: '/log',
-            icon: 'history',
-          },
-
-
-
           {
             title: 'Settings',
             link: '/settings',

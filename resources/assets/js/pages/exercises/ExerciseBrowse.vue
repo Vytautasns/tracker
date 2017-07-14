@@ -12,7 +12,7 @@
             </button>
         </div>
 
-        <div class="uk-width-expand@s  uk-height-large uk-overflow-auto">
+        <div class="uk-width-expand@s ">
             <div class="uk-card-body uk-padding-remove">
                 <ul class="uk-list uk-list-striped">
                   <li @click="$router.push(`/exercises/${exercise.id}`)" v-if="exercises" v-for="exercise in exercises" :key="exercise.id">
