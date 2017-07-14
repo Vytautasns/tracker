@@ -1,9 +1,24 @@
 import Router from 'vue-router';
+import Home from './pages/Home';
+
+import Programs from './pages/programs/Programs';
+import ProgramShow from './pages/programs/ProgramShow';
+import ProgramCreate from './pages/programs/ProgramCreate';
+
+import Exercises from './pages/exercises/Exercises';
+import ExerciseBrowse from './pages/exercises/ExerciseBrowse';
+import ExerciseDetails from './pages/exercises/ExerciseDetails';
+
+import WorkoutShow from './pages/workouts/WorkoutShow';
+import WorkoutLog from './pages/workouts/WorkoutLog';
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
 
   routes: [
 
@@ -12,53 +27,84 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: require('./pages/Home.vue'),
+      component: Home,
     },
-
-
 
     {
       path: '/programs',
       name: 'programs',
-      component: require('./pages/programs/Index.vue'),
+      component: Programs,
     },
 
+    // Exercise routes
+    // *************************************************************************
 
     {
       path: '/exercises',
       name: 'exercises',
-      component: require('./pages/exercises/Index.vue'),
+      component: Exercises,
     },
 
     {
-      path: '/details',
-      name: 'details',
-      component: require('./pages/exercises/Details.vue'),
+      path: '/category/:category',
+      props: true,
+      name: 'show-category',
+      component: ExerciseBrowse,
     },
 
     {
-      path: '/workout',
-      name: 'workout',
-      component: require('./pages/workouts/Show.vue'),
+      path: '/exercises/:exercise',
+      props: true,
+      name: 'show-exercise',
+      component: ExerciseDetails,
+    },
+
+    // Workout routes
+    // *************************************************************************
+    {
+      path: '/days/:day',
+      props: true,
+      name: 'show-day',
+      component: WorkoutShow,
     },
 
     {
-      path: '/log',
-      name: 'log',
-      component: require('./pages/workouts/Logger.vue'),
+      path: '/days/:day/step/:step/:stepId',
+      props: true,
+      name: 'log-step',
+      component: WorkoutLog,
+    },
+
+
+    // Programs routes
+    // *************************************************************************
+
+    {
+      path: '/programs/:program',
+      props: true,
+      name: 'show-program',
+      component: ProgramShow,
     },
 
     {
-      path: '/days',
-      name: 'days',
-      component: require('./pages/programs/Days.vue'),
+      path: '/create/program',
+      name: 'program-create',
+      component: ProgramCreate,
+    },
+
+
+    // Temp routes
+    // *************************************************************************
+
+
+    {
+      path: '/settings',
+      name: 'settings',
+      component: require('./pages/app/Settings.vue'),
     },
 
   ],
 
-  scrollBehavior (to, from, savedPosition) {
 
-    return { x: 0, y: 0 }
 
-  },
 })

@@ -1,40 +1,36 @@
 <template lang="html">
   <div class="uk-container">
 
-    <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Bench press</span></h2>
+    <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>{{ exerciseDetails.name }}</span></h2>
     <ul class="uk-subnav" uk-margin>
-        <li><a href="#edit-exercise" uk-toggle>Edit</a></li>
-        <li><a href="#delete-confirm" uk-toggle>Delete</a></li>
+        <!-- <li><a href="#edit-exercise" uk-toggle>Edit</a></li>
+        <li><a href="#delete-confirm" uk-toggle>Delete</a></li> -->
 
     </ul>
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
             <div class="uk-text-center" uk-toggle="target: .toggle; mode: click">
-                    <img class="toggle" src="assets/exercise_image/biceps_curl_v_sit_on_dome_with_dumbbells_1.png" alt="">
-                    <img class="toggle" hidden src="assets/exercise_image/biceps_curl_v_sit_on_dome_with_dumbbells_2.png" alt="">
+                    <img class="toggle" :src="`assets/exercise_image/${exerciseDetails.image_url}_1.png`" alt="">
+                    <img class="toggle" hidden :src="`assets/exercise_image/${exerciseDetails.image_url}_2.png`" alt="">
             </div>
           </div>
           <div>
               <div class="uk-card-body">
                   <h3 class="uk-card-title">Details</h3>
                   <dl class="uk-description-list">
-                      <dt>Description term</dt>
-                      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
-                      <dt>Description term</dt>
-                      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-                      <dt>Description term</dt>
-                      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+                      <dt>Description</dt>
+                      <dd>{{ exerciseDetails.description }}</dd>
                   </dl>
               </div>
           </div>
       </div>
 
-      <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>History log</span></h2>
+      <!-- <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>History log</span></h2>
 
 
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
             <div class="uk-card-media-left uk-cover-container">
-              <div class="uk-text-center" uk-toggle="target: .toggle; mode: click">
+              <div class="uk-text-center">
                 <img src="http://www.excel-easy.com/data-analysis/images/charts/line-chart.png" alt="">
               </div>
             </div>
@@ -51,7 +47,7 @@
                     </dl>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div id="edit-exercise" uk-modal>
             <div class="uk-modal-dialog">
@@ -96,7 +92,32 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 export default {
+  props: ['exercise'],
+
+  created() {
+    this.getExerciseDetails(this.exercise);
+  },
+
+  mounted() {
+
+  },
+
+  computed: {
+    ...mapGetters([
+      'exerciseDetails',
+    ]),
+
+  },
+
+
+  methods: {
+    ...mapActions([
+      'getExerciseDetails'
+    ]),
+
+  },
 }
 </script>
 

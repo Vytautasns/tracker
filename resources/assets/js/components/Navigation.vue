@@ -2,11 +2,11 @@
   <div>
     <nav class="uk-navbar-container uk-box-shadow-small" uk-navbar>
       <div class="uk-navbar-left uk-hidden@s" uk-sticky="animation: uk-animation-slide-top; top: 0;">
-        <a class="uk-navbar-toggle floating-hamburger" href="#" uk-toggle="target: #offcanvas-push">
+        <a class="uk-navbar-toggle floating-hamburger" href="#" uk-toggle="target: #mobile-menu">
           <span class="uk-margin-small-left" uk-icon="icon: menu"></span> <span class="uk-margin-small-left"></span>
         </a>
       </div>
-      <a class="uk-position-center uk-navbar-item uk-logo uk-padding-small" href="#">fitW3</a>
+      <!-- <a class="uk-position-center uk-navbar-item uk-logo uk-padding-small" href="#">fitW3</a> -->
 
       <div class="uk-navbar-left uk-visible@s">
         <ul class="uk-navbar-nav" v-for="item in menuItems" :key="item.title">
@@ -24,21 +24,20 @@
 
 
 
-    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
-      <div class="uk-offcanvas-bar">
 
-        <ul class="uk-nav uk-nav-default">
-          <li class="uk-nav-header">Menu</li>
+
+    <div id="mobile-menu" uk-offcanvas="mode: push; overlay: true">
+      <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <span class="uk-h2">Menu</span>
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-text-left" v-for="item in menuItems" :key="item.title">
+          <li @click="closeMenu" class="menu-item"><router-link :to="item.link" exact><span class="uk-margin-small-right" :uk-icon="`icon: ${item.icon}`"></span> {{ item.title }}</router-link></li>
         </ul>
 
-        <ul class="uk-nav uk-nav-default" v-for="item in menuItems" :key="item.title">
-          <li class="menu-item"><router-link :to="item.link" exact><span class="uk-margin-small-right" :uk-icon="`icon: ${item.icon}`"></span> {{ item.title }}</router-link></li>
-        </ul>
-
-        <ul class="uk-nav uk-nav-default">
+        <!-- <ul class="uk-nav uk-nav-default">
           <li class="uk-nav-divider"></li>
           <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Log out</a></li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </div>
@@ -51,7 +50,7 @@ export default {
     return {
         menuItems: [
           {
-            title: 'Dashboard',
+            title: 'Home',
             link: '/',
             icon: 'home',
           },
@@ -68,35 +67,23 @@ export default {
             icon: 'thumbnails',
           },
 
-          {
-            title: 'Show',
-            link: '/workout',
-            icon: 'happy',
-          },
-
-          {
-            title: 'Exercise details',
-            link: '/details',
-            icon: 'check',
-          },
-
-          {
-            title: 'Logger',
-            link: '/log',
-            icon: 'history',
-          },
-
-          {
-            title: 'Days',
-            link: '/days',
-            icon: 'calendar',
-          },
+          // {
+          //   title: 'Settings',
+          //   link: '/settings',
+          //   icon: 'cog',
+          // },
         ],
     }
   },
 
   mounted() {
   },
+
+  methods: {
+    closeMenu () {
+      UIkit.offcanvas('#mobile-menu').toggle();
+    },
+  }
 }
 </script>
 

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Beginners program",
+    "description": "The following training routine is typical or basic and not designed for specialized training. Other specialized routines that can be used are listed in my Reverse Pyramid Training book. Selecting a routine should best fit your experience, level of fitness, goal(s) and allotted time (weekly schedule). https://www.bodybuilding.com/content/the-ultimate-beginner-3-day-full-body-routine.html",
+    "image_url": "http://www.rd.com/wp-content/uploads/sites/2/2017/05/01_liftingweights_Use-This-Science-Backed-Weight-Lifting-Trick-to-Get-Stronger-Faster-In-Zero-Extra-Time_245026915_hxdbzxy-1024x683.jpg",
+    "days": [
+        {
+          "name": "Monday",
+          "week_days": "mon",
+          "steps": [
+            { "exercise_id": 108, "reps": 12, "sets": 3 },
+            { "exercise_id": 136, "reps": 8, "sets": 2 },
+            { "exercise_id": 246, "reps": 8, "sets": 2 },
+            { "exercise_id": 237, "reps": 8, "sets": 2 },
+            { "exercise_id": 237, "reps": 8, "sets": 2 },
+            { "exercise_id": 143, "reps": 8, "sets": 3 },
+            { "exercise_id": 5, "reps": 8, "sets": 3 },
+            { "exercise_id": 83, "reps": 8, "sets": 3 },
+            { "exercise_id": 239, "reps": 8, "sets": 2 },
+            { "exercise_id": 65, "reps": 8, "sets": 2 },
+            { "exercise_id": 187, "reps": 8, "sets": 3 }
+          ]
+        },
+        {
+          "name": "Wednesday",
+          "week_days": "wed",
+          "steps": [
+            { "exercise_id": 108, "reps": 12, "sets": 3 },
+            { "exercise_id": 136, "reps": 8, "sets": 2 },
+            { "exercise_id": 246, "reps": 8, "sets": 2 },
+            { "exercise_id": 237, "reps": 8, "sets": 2 },
+            { "exercise_id": 237, "reps": 8, "sets": 2 },
+            { "exercise_id": 143, "reps": 8, "sets": 3 },
+            { "exercise_id": 5, "reps": 8, "sets": 3 },
+            { "exercise_id": 83, "reps": 8, "sets": 3 },
+            { "exercise_id": 239, "reps": 8, "sets": 2 },
+            { "exercise_id": 65, "reps": 8, "sets": 2 },
+            { "exercise_id": 187, "reps": 8, "sets": 3 }
+          ]
+        },
+        {
+          "name": "Friday",
+          "week_days": "fri",
+          "steps": [
+            { "exercise_id": 108, "reps": 12, "sets": 3 },
+            { "exercise_id": 136, "reps": 8, "sets": 2 },
+            { "exercise_id": 246, "reps": 8, "sets": 2 },
+            { "exercise_id": 237, "reps": 8, "sets": 2 },
+            { "exercise_id": 237, "reps": 8, "sets": 2 },
+            { "exercise_id": 143, "reps": 8, "sets": 3 },
+            { "exercise_id": 5, "reps": 8, "sets": 3 },
+            { "exercise_id": 83, "reps": 8, "sets": 3 },
+            { "exercise_id": 239, "reps": 8, "sets": 2 },
+            { "exercise_id": 65, "reps": 8, "sets": 2 },
+            { "exercise_id": 187, "reps": 8, "sets": 3 }
+          ]
+        }
+    ]
+  },
+
+  {
+    "name": "Jason Blaha's Ice Cream Fitness 5x5 Novice Program",
+    "description": "A potent and proven novice muscle and strength building program from Jason Blaha & Ice Cream Fitness. Testimonials continue to pour in touting its effectiveness.",
+    "image_url": "http://fitby50.net/wp-content/uploads/2016/10/Ice-Cream-Fitness.jpg",
+    "days": [
+        {
+          "name": "First day",
+          "week_days": "mon,wed,thu",
+          "steps": [
+            { "exercise_id": 239, "reps": 5, "sets": 5 },
+            { "exercise_id": 136, "reps": 5, "sets": 5 },
+            { "exercise_id": 69, "reps": 5, "sets": 5 },
+            { "exercise_id": 226, "reps": 3, "sets": 8 },
+            { "exercise_id": 28, "reps": 3, "sets": 8 },
+            { "exercise_id": 18, "reps": 3, "sets": 8 },
+            { "exercise_id": 261, "reps": 2, "sets": 10 },
+            { "exercise_id": 25, "reps": 3, "sets": 10 }
+
+          ]
+        },
+        {
+          "name": "Second day",
+          "week_days": "tue,fri",
+          "steps": [
+            { "exercise_id": 239, "reps": 5, "sets": 5 },
+            { "exercise_id": 55, "reps": 5, "sets": 1 },
+            { "exercise_id": 143, "reps": 5, "sets": 5 },
+            { "exercise_id": 69, "reps": 5, "sets": 5 },
+            { "exercise_id": 116, "reps": 3, "sets": 8 },
+            { "exercise_id": 18, "reps": 3, "sets": 8 },
+            { "exercise_id": 25, "reps": 3, "sets": 10 }
+
+          ]
+        }
+    ]
+  }
+]

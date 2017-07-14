@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Other",
+    "image_url": "https://www.undercoverwaterwear.com/content/skins/undercover_27Apr2016/images/no-image.gif"
+  },
+  {
+    "name": "Abs",
+    "image_url": "/assets/categories/abs.png"
+  },
+  {
+    "name": "Arms",
+    "image_url": "/assets/categories/arms.png"
+  },
+  {
+    "name": "Back",
+    "image_url": "/assets/categories/back.png"
+  },
+  {
+    "name": "Calves",
+    "image_url": "/assets/categories/calves.png"
+
+  },
+  {
+    "name": "Chest",
+    "image_url": "/assets/categories/chest.png"
+  },
+  {
+    "name": "Legs",
+    "image_url": "/assets/categories/legs.png"
+
+  },
+  {
+    "name": "Shoulders",
+    "image_url": "/assets/categories/shoulders.png"
+  }
+]

@@ -3,13 +3,12 @@
   <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Current program</span></h2>
   <div class="uk-card-primary uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
       <div class="uk-card-media-left uk-cover-container">
-          <img src="http://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/chairdip_5.jpg" alt="" uk-cover>
-          <canvas width="300" height="200"></canvas>
+          <img :src="currentProgram.image_url" alt="" uk-cover>
+          <canvas width="150" height="100"></canvas>
       </div>
       <div>
           <div class="uk-card-body">
-              <h3 class="uk-card-title">6 weeks abs</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <h3 class="uk-card-title">{{ currentProgram.name }}</h3>
           </div>
       </div>
   </div>
@@ -17,39 +16,49 @@
       <li><a @click="$router.push('/programs')">Change</a></li>
   </ul>
 
-
+  <!-- TODO!! Show no workout message -->
   <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Todays workout</span></h2>
-  <div class="uk-card uk-card-default uk-card-body uk-width-auto">
-      <h3 class="uk-card-title">Koju diena</h3>
-      <p><span uk-icon="icon: check"></span> 3 Exercises</p>
-      <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Go to workout</button>
-
+  <div v-if="currentProgram.days.length > 0" v-for="day in currentProgram.days">
+    <div class="uk-card uk-card-default uk-card-body uk-width-auto" v-if="day.week_days.includes(today)">
+      <h3 class="uk-card-title">{{ day.name }}</h3>
+      <p><span uk-icon="icon: check"></span> {{ day.steps_count }} Exercises</p>
+      <button @click="$router.push(`days/${day.id}`)" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">
+        Go to workout
+      </button>
+    </div>
   </div>
 
   <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Program days</span></h2>
-  <ul class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
-      <li v-for="n in 5" :key="n">
-          <div class="uk-card uk-card-default uk-card-body uk-padding-small">
-              <span class="uk-sortable-handle uk-margin-small-right"></span>Day {{ n }}
-              <span class="uk-float-right" uk-icon="icon: trash;"></span>
+  <ul class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s" v-if="currentProgram.days.length > 0" uk-grid>
+      <li class="ppp" @click="$router.push(`days/${day.id}`)" v-for="day in currentProgram.days" :key="day.name">
+          <div :class="day.week_days.includes(today) ? 'uk-card-primary' : 'uk-card-default'" class="uk-card uk-card-body uk-padding-small">
+              <span class="uk-display-block">{{ day.name }}</span>
+              <span class="uk-text-meta">{{ day.week_days }}</span>
+              <span @click.prevent.stop="confirmDelete(day.id)" class="uk-float-right" uk-icon="icon: trash;"></span>
           </div>
       </li>
   </ul>
+  <div class="uk-text-center" v-else>
+    <i class="fa fa-info fa-3x uk-text-primary" aria-hidden="true"></i>
+    <p>There is no workout days for this program.</p>
+  </div>
+
   <ul class="uk-subnav" uk-margin>
-      <li><a href="#modal-overflow" uk-toggle>Add new</a></li>
+      <li>
+        <a href="#add-new-day" uk-toggle>
+          <i class="fa fa-plus" aria-hidden="true"></i> Add new day
+        </a>
+      </li>
   </ul>
 
 
   <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Total progress</span></h2>
   <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-margin-bottom">
-      <div class="uk-card-badge uk-label">Badge</div>
-      <h3 class="uk-card-title">Title</h3>
-      <img src="http://www.excel-easy.com/data-analysis/images/charts/line-chart.png" alt="">
-
+    <Stats></Stats>
   </div>
 
 
-  <div id="modal-overflow" uk-modal>
+  <div id="add-new-day" uk-modal>
       <div class="uk-modal-dialog">
           <button class="uk-modal-close-default" type="button" uk-close></button>
           <div class="uk-modal-header">
@@ -57,36 +66,35 @@
           </div>
           <div class="uk-modal-body uk-padding-small">
 
-            <form>
+            <!-- <form> -->
                 <fieldset class="uk-fieldset">
 
 
                     <div class="uk-margin">
-                        <input class="uk-input" type="text" placeholder="Day name">
+                        <input class="uk-input" type="text" placeholder="Day name" v-model="newDay.name" required>
                     </div>
 
 
                     <div class="uk-margin uk-grid-small uk-child-width-1-3@s uk-child-width-1-2" uk-grid>
-                        <label><input class="uk-checkbox" type="checkbox" checked> Monday</label>
-                        <label><input class="uk-checkbox" type="checkbox"> Tuesday</label>
-                        <label><input class="uk-checkbox" type="checkbox"> Wednesday</label>
-                        <label><input class="uk-checkbox" type="checkbox"> Thursday</label>
-                        <label><input class="uk-checkbox" type="checkbox"> Friday</label>
-                        <label><input class="uk-checkbox" type="checkbox"> Saturday</label>
-                        <label><input class="uk-checkbox" type="checkbox"> Sunday</label>
+                        <label><input value="mon" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Monday</label>
+                        <label><input value="tue" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Tuesday</label>
+                        <label><input value="wed" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Wednesday</label>
+                        <label><input value="thu" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Thursday</label>
+                        <label><input value="fri" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Friday</label>
+                        <label><input value="sat" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Saturday</label>
+                        <label><input value="sun" class="uk-checkbox" type="checkbox" v-model="newDay.week_days"> Sunday</label>
 
 
                     </div>
 
                 </fieldset>
-            </form>
+            <!-- </form> -->
 
           </div>
           <div class="uk-modal-footer uk-text-right">
-            <button class="uk-button uk-button-primary uk-modal-close" type="button">Save</button>
+            <button @click.prevent="saveNewDay"  class="uk-button uk-modal-close" :class="newDay.name ? 'uk-button-primary' : 'uk-button-primary, uk-disabled'" type="button">Save</button>
             <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
           </div>
-
       </div>
   </div>
 
@@ -94,17 +102,81 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+import Stats from '../components/Stats';
 export default {
+  components: { Stats },
 
   data() {
     return {
       edit: true,
+      today: '',
+      currentDays: [],
+      newDay: {
+        name: '',
+        week_days: [],
+      },
     }
   },
 
-  mounted() {
+  created() {
+    this.getCurrentProgram();
+    this.today = moment().format("ddd").toLowerCase();
+  },
+
+  computed: {
+    ...mapGetters([
+      'currentProgram',
+    ]),
+
+
 
   },
+
+  methods: {
+    ...mapActions([
+      'getCurrentProgram',
+      'makeNotification',
+      'addDay',
+      'removeDay',
+
+    ]),
+
+    saveNewDay() {
+
+      let day = {
+        name: this.newDay.name,
+        program_id: this.currentProgram.id,
+        week_days: this.newDay.week_days,
+      }
+
+      this.addDay(day);
+
+      this.newDay = {
+        name: '',
+        week_days: [],
+      }
+
+    },
+
+    confirmDelete(dayId) {
+      let self = this;
+      UIkit.modal.confirm(`
+        <h3>Do you really want to delete this day?</h3>
+        <p>All related history and exercises will also be removed.</p>
+        `).then(function() {
+
+        self.removeDay(dayId);
+
+      }, function () {
+
+
+      });
+    },
+
+  },
+
+
 }
 </script>
 

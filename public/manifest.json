@@ -1,0 +1,16 @@
+{
+  "short_name": "fitW3",
+  "name": "fitW3",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3d556b",
+  "background_color": "#fafafa"
+}

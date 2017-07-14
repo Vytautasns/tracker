@@ -1,14 +1,14 @@
 <template lang="html">
   <div class="uk-container">
-    <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Summer body program</span></h2>
+    <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Program details</span></h2>
     <div class="uk-card-primary uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
-            <img src="http://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/chairdip_5.jpg" alt="" uk-cover>
+            <img :src="programShown.image_url" alt="" uk-cover>
             <canvas width="300" height="200"></canvas>
         </div>
         <div>
             <div class="uk-card-body">
-                <h3 class="uk-card-title">Summer body</h3>
+                <h3 class="uk-card-title">{{ programShown.name }}</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             </div>
         </div>
@@ -44,7 +44,38 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 export default {
+  props: ['program'],
+
+  created() {
+    if (!this.availableProgramsList) {
+      this.getAvailablePrograms();
+    }
+  },
+
+  computed: {
+    ...mapGetters([
+      'availableProgramsList'
+    ]),
+
+    programShown: function () {
+      let result;
+      for (var i = 0; i < this.availableProgramsList.length; i++) {
+        if (this.availableProgramsList[i].id == this.program) {
+          result = this.availableProgramsList[i];
+        }
+      }
+      return result;
+    },
+
+  },
+
+  methods: {
+    ...mapActions([
+      'getAvailablePrograms'
+    ]),
+  },
 }
 </script>
 
