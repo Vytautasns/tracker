@@ -45,7 +45,7 @@
 <!-- Categories -->
 
     <ul class="uk-list uk-list-striped" v-if="step === 1">
-      <li @click.prevent="selectCategory(category.id)" v-for="(category, index) in categories" :key="category.name">
+      <li class="ppp" @click.prevent="selectCategory(category.id)" v-for="(category, index) in categories" :key="category.name">
         <div class="uk-grid-small" uk-grid>
               <div class="uk-width-auto">
                   <img :src="category.image_url" width="50" height="50" alt="">
@@ -71,7 +71,7 @@
         </div>
       </li>
 
-      <li v-for="(item, index) in exercises" :key="index + 'key'" v-if="step == 2">
+      <li class="ppp" v-for="(item, index) in exercises" :key="index + 'key'" v-if="step == 2">
 
         <div class="uk-grid-small uk-padding-small uk-accordion-title" uk-grid>
               <div class="uk-width-auto uk-background-contain" :style="`background-image: url(assets/exercise_thumbnail/${item.image_url}_1.png);`">
@@ -132,7 +132,7 @@
 
 
 
-      <li v-for="(item, index) in searchResults" :key="index + 'key'" v-if="step == 3">
+      <li class="ppp" v-for="(item, index) in searchResults" :key="index + 'key'" v-if="step == 3">
 
 
 
@@ -141,7 +141,7 @@
                 <canvas width="60" height="60"></canvas>
               </div>
               <div class="uk-width-expand">
-                  <span class="uk-h5">{{ item.name }}</span>
+                  <span class="uk-h5">{{ item.name }} {{item.id}}</span>
               </div>
           </div>
 
@@ -205,12 +205,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import Search from './Search';
 export default {
   props: ['dayId'],
-  components: {
-    Search,
-  },
+
   data() {
     return {
       searchQ: '',

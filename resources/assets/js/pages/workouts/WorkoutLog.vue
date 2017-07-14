@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="uk-container">
 
-  <button @click="$router.go(-1)" class="uk-button uk-width-1-1 uk-button-default uk-margin-small-top">
+  <button @click="$router.go(-1)" class="uk-button uk-width-1-1 uk-button-secondary uk-margin-small-top">
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
     Back to workout
   </button>
@@ -45,7 +45,7 @@
           </h3>
         </div>
         <div class="uk-margin-small-bottom uk-text-center" v-else>
-          <i class="fa fa-check fa-3x uk-text-primary" aria-hidden="true"></i>
+          <i class="fa fa-check fa-4x uk-text-primary" aria-hidden="true"></i>
           <p>All sets done</p>
         </div>
 

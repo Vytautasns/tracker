@@ -55,3 +55,5 @@ Route::post('/app/logs/today', 'StepController@getTodaysLogs');
 Route::post('/app/logs/save', 'LogController@store');
 Route::post('/app/logs/remove', 'LogController@destroy');
 Route::post('/app/logs/day', 'LogController@getDayLog');
+
+Route::get('/app/logs/stats', 'LogController@getStats');

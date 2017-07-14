@@ -35,4 +35,10 @@ class Program extends Model
     return $this->hasMany(Day::class);
   }
 
+  // Get logs
+  public function logs()
+  {
+    return $this->hasMany(Log::class);
+  }
+
 }

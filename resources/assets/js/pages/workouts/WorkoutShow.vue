@@ -39,20 +39,22 @@
     <a href="#add-exercise" class="uk-display-block" uk-toggle>Add new exercise</a>
   </p>
 
-  <ul class="uk-list uk-list-striped">
-    <li @click="$router.push(`/days/${day}/step/${index}/${step.id}`)" v-for="(step, index) in dayShown.steps" :key="step.id">
-      <div class="uk-grid-small uk-padding-small" uk-grid>
-            <div class="uk-width-auto uk-background-contain" :style="`background-image: url(assets/exercise_thumbnail/${step.image_url}_1.png);`">
-              <canvas width="60" height="60"></canvas>
-            </div>
-            <div class="uk-width-expand">
-                <span class="uk-h4">{{ step.name }}</span>
-                <span class="uk-display-block uk-text-meta">{{ step.sets }} x {{ step.reps }}</span>
-                <span @click.prevent.stop="deleteStep(step.id)" class="uk-float-right" uk-icon="icon: trash;"></span>
-            </div>
-        </div>
-    </li>
-  </ul>
+  <div class="uk-card uk-card-default">
+    <ul class="uk-list uk-list-striped">
+      <li class="ppp" @click="$router.push(`/days/${day}/step/${index}/${step.id}`)" v-for="(step, index) in dayShown.steps" :key="step.id">
+        <div class="uk-grid-small uk-padding-small" uk-grid>
+              <div class="uk-width-auto uk-background-contain" :style="`background-image: url(assets/exercise_thumbnail/${step.image_url}_1.png);`">
+                <canvas width="60" height="60"></canvas>
+              </div>
+              <div class="uk-width-expand">
+                  <span class="uk-h4">{{ step.name }}</span>
+                  <span class="uk-display-block uk-text-meta">{{ step.sets }} x {{ step.reps }}</span>
+                  <span @click.prevent.stop="deleteStep(step.id)" class="uk-float-right" uk-icon="icon: trash;"></span>
+              </div>
+          </div>
+      </li>
+    </ul>
+  </div>
 
 
 

@@ -129,6 +129,22 @@ class User extends Authenticatable
     }
 
 
+    // Return all logs
+    public function getStatistics()
+    {
+      $selected = $this->settings()
+                        ->where('name', 'selected_program')
+                        ->pluck('value')->first();
+
+
+      $weekLog = $this->programs()->find($selected)->logs()->get()
+      ->groupBy(function($item){ return $item->created_at->format('d-M'); });
+
+      return $weekLog;
+
+    }
+
+
     /*
      *
      * Relationships

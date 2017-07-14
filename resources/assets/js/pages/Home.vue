@@ -30,7 +30,7 @@
 
   <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Program days</span></h2>
   <ul class="uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s" v-if="currentProgram.days.length > 0" uk-grid>
-      <li @click="$router.push(`days/${day.id}`)" v-for="day in currentProgram.days" :key="day.name">
+      <li class="ppp" @click="$router.push(`days/${day.id}`)" v-for="day in currentProgram.days" :key="day.name">
           <div :class="day.week_days.includes(today) ? 'uk-card-primary' : 'uk-card-default'" class="uk-card uk-card-body uk-padding-small">
               <span class="uk-display-block">{{ day.name }}</span>
               <span class="uk-text-meta">{{ day.week_days }}</span>
@@ -51,14 +51,11 @@
       </li>
   </ul>
 
-<!--
+
   <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Total progress</span></h2>
   <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-margin-bottom">
-      <div class="uk-card-badge uk-label">Badge</div>
-      <h3 class="uk-card-title">Title</h3>
-      <img src="http://www.excel-easy.com/data-analysis/images/charts/line-chart.png" alt="">
-
-  </div> -->
+    <Stats></Stats>
+  </div>
 
 
   <div id="add-new-day" uk-modal>
@@ -106,8 +103,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-
+import Stats from '../components/Stats';
 export default {
+  components: { Stats },
 
   data() {
     return {

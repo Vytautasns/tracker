@@ -35,8 +35,9 @@ const actions = {
       });
   },
 
-  addNewLog({ commit }, log) {
+  addNewLog({ commit, rootState }, log) {
     commit(types.START_LOADING);
+    log.program_id = rootState.main.settings.selected_program;
     axios.post('/app/logs/save', log)
       .then(response => {
         commit(types.STOP_LOADING);

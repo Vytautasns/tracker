@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Log;
 use App\Step;
 use App\Day;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class LogController extends Controller
@@ -24,6 +25,7 @@ class LogController extends Controller
         'set' => $request->set,
         'user_id' => $request->user()->id,
         'day_id' => $request->day_id,
+        'program_id' => $request->program_id,
       ]);
       return $log->id;
   }
@@ -47,19 +49,14 @@ class LogController extends Controller
     */
     public function getDayLog(Request $request)
     {
-      $logs = $request->user()->logs()->where('day_id', $request->day_id);
+      $logs = $request->user()->logs()->where('day_id', $request->day_id)->where('created_at', '>=', \Carbon\Carbon::today()
+      ->toDateString());
 
-      if ($logs->count() > 1) {
-        $workoutVolume = $logs
-          ->where('created_at', '>=', \Carbon\Carbon::today()
-          ->toDateString());
-
-        $lastUpdated = $logs->latest()->select('created_at')->first();
+      if ($logs->count() >= 1) {
 
         $daysLog = [
-          'volume' => $workoutVolume->sum('weight'),
-          'average' => $workoutVolume->avg('weight'),
-          'last_updated' => $lastUpdated->created_at,
+          'volume' => $logs->sum('weight'),
+          'average' => $logs->avg('weight'),
         ];
         return $daysLog;
       } else {
@@ -69,6 +66,14 @@ class LogController extends Controller
 
       // return $logs;
 
+    }
+
+
+    // Get all statistics
+    public function getStats()
+    {
+      $user = Auth::user();
+      return $user->getStatistics();
     }
 
 

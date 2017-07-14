@@ -15,7 +15,7 @@
         <div class="uk-width-expand@s ">
             <div class="uk-card-body uk-padding-remove">
                 <ul class="uk-list uk-list-striped">
-                  <li @click="$router.push(`/exercises/${exercise.id}`)" v-if="exercises" v-for="exercise in exercises" :key="exercise.id">
+                  <li class="ppp" @click="$router.push(`/exercises/${exercise.id}`)" v-if="exercises" v-for="exercise in exercises" :key="exercise.id">
                     <div class="uk-grid-small uk-padding-small" uk-grid>
                           <div class="uk-width-auto uk-background-contain" :style="`background-image: url(assets/exercise_thumbnail/${exercise.image_url}_1.png);`">
                             <canvas width="60" height="60"></canvas>

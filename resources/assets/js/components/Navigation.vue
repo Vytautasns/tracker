@@ -24,21 +24,20 @@
 
 
 
+
+
     <div id="mobile-menu" uk-offcanvas="mode: push; overlay: true">
-      <div class="uk-offcanvas-bar">
+      <div class="uk-offcanvas-bar uk-flex uk-flex-column">
 
-        <ul class="uk-nav uk-nav-default">
-          <li class="uk-nav-header">Menu</li>
-        </ul>
-
-        <ul class="uk-nav uk-nav-default" v-for="item in menuItems" :key="item.title">
+        <span class="uk-h2">Menu</span>
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-text-left" v-for="item in menuItems" :key="item.title">
           <li @click="closeMenu" class="menu-item"><router-link :to="item.link" exact><span class="uk-margin-small-right" :uk-icon="`icon: ${item.icon}`"></span> {{ item.title }}</router-link></li>
         </ul>
 
-        <ul class="uk-nav uk-nav-default">
+        <!-- <ul class="uk-nav uk-nav-default">
           <li class="uk-nav-divider"></li>
           <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Log out</a></li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </div>
@@ -51,7 +50,7 @@ export default {
     return {
         menuItems: [
           {
-            title: 'Dashboard',
+            title: 'Home',
             link: '/',
             icon: 'home',
           },
@@ -68,11 +67,11 @@ export default {
             icon: 'thumbnails',
           },
 
-          {
-            title: 'Settings',
-            link: '/settings',
-            icon: 'cog',
-          },
+          // {
+          //   title: 'Settings',
+          //   link: '/settings',
+          //   icon: 'cog',
+          // },
         ],
     }
   },
