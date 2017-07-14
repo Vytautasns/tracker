@@ -17,7 +17,7 @@ class CreateExercisesTable extends Migration
           $table->increments('id');
           $table->integer('category_id');
           $table->string('name');
-          $table->string('image_url')->nullable();
+          $table->text('image_url')->nullable();
           $table->string('description')->nullable();
           $table->integer('default');
           $table->timestamps();
