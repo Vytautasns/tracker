@@ -38,7 +38,7 @@ const actions = {
   getAvailablePrograms({ commit, rootState }) {
     commit(types.START_LOADING);
 
-    axios.post('/app/programs/')
+    axios.post('/app/programs')
       .then(response => {
         commit(types.STOP_LOADING);
         commit(types.RECEIVE_PROGRAMS, response.data);
