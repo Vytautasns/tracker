@@ -1,5 +1,11 @@
 <template lang="html">
   <div class="uk-container">
+    <div class="uk-margin-top uk-margin-bottom">
+      <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
+        <h3 class="uk-heading-bullet uk-text-left"><span>Progress</span></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi tempora, rem ipsa dolores quaerat. Suscipit illum, tenetur sequi fuga veritatis sunt dolorem beatae itaque, exercitationem, sit earum saepe numquam commodi.</p>
+      </div>
+    </div>
     <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Program details</span></h2>
     <div class="uk-card-primary uk-card uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-card-media-left uk-cover-container">
@@ -30,7 +36,6 @@
         <div class="uk-grid-small" uk-grid>
               <div class="uk-width-auto">
                 <i class="fa fa-cloud-download fa-3x" aria-hidden="true"></i>
-                  <!-- <img src="assets/exercise_thumbnail/arnold_press_2.png" width="50" height="50" alt=""> -->
               </div>
               <div class="uk-width-expand">
                   <span class="uk-text-lead">Day nr. {{ n }}</span>

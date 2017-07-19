@@ -46,6 +46,8 @@ Route::get('/app/exercises/search/{hint}', 'ExerciseController@searchExercise');
 Route::post('/app/days/show', 'DayController@getDayById');
 Route::post('/app/days/add', 'DayController@addNewDay');
 Route::post('/app/days/remove', 'DayController@removeDay');
+Route::post('/app/days/update', 'DayController@update');
+
 
 // Steps
 Route::post('/app/steps/save', 'StepController@store');
@@ -56,5 +58,9 @@ Route::post('/app/logs/today', 'StepController@getTodaysLogs');
 Route::post('/app/logs/save', 'LogController@store');
 Route::post('/app/logs/remove', 'LogController@destroy');
 Route::post('/app/logs/day', 'LogController@getDayLog');
+Route::post('/app/logs/step', 'LogController@getStepLogs');
 
 Route::get('/app/logs/stats', 'LogController@getStats');
+
+
+Route::get('/app/workout/today', 'DayController@getTodaysWorkout');

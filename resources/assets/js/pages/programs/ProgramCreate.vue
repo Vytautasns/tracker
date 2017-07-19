@@ -1,38 +1,42 @@
 <template lang="html">
 <div class="uk-container">
-  <h2 class="uk-heading-line uk-text-center uk-margin-top"><span>Create new workout program</span></h2>
-  <div class="uk-card uk-card-default">
-    <div class="uk-card-body">
+  <div class="uk-margin-top uk-margin-bottom">
+    <div class="uk-card uk-card-default uk-padding-small">
+      <h3 class="uk-heading-bullet uk-text-left"><span>Create a new program</span></h3>
+      <div class="uk-card uk-card-default">
+        <div class="uk-card-body">
 
-      <form class="uk-form-stacked">
-          <div class="uk-margin">
-              <label class="uk-form-label" for="form-program-name">Program name</label>
-              <div class="uk-form-controls">
-                  <input class="uk-input" name="form-program-name" type="text" placeholder="Name" v-model="newProgram.name">
+          <form class="uk-form-stacked">
+              <div class="uk-margin">
+                  <label class="uk-form-label" for="form-program-name">Program name</label>
+                  <div class="uk-form-controls">
+                      <input class="uk-input" name="form-program-name" type="text" placeholder="Name" v-model="newProgram.name">
+                  </div>
               </div>
-          </div>
+<!-- 
+              <div class="uk-margin">
+                  <div uk-form-custom>
 
-          <div class="uk-margin">
-              <div uk-form-custom>
+                      <button class="uk-button uk-button-default" type="button" disabled>
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        Upload program photo
+                      </button>
+                  </div>
+              </div> -->
 
-                  <button class="uk-button uk-button-default" type="button" disabled>
-                    <i class="fa fa-picture-o" aria-hidden="true"></i>
-                    Upload program photo
-                  </button>
+              <div class="uk-margin">
+                <label class="uk-form-label" for="form-program-description">Program description</label>
+                  <textarea class="uk-textarea" name="form-program-description" rows="5" placeholder="Description" v-model="newProgram.description"></textarea>
               </div>
-          </div>
 
-          <div class="uk-margin">
-            <label class="uk-form-label" for="form-program-description">Program description</label>
-              <textarea class="uk-textarea" name="form-program-description" rows="5" placeholder="Description" v-model="newProgram.description"></textarea>
-          </div>
-
-          <button @click.prevent="performSave(newProgram)" class="uk-button uk-button-primary" :disabled="newProgram.name.length < 3">Save</button>
+              <button @click.prevent="performSave(newProgram)" class="uk-button uk-button-primary" :disabled="newProgram.name.length < 3">Save</button>
 
 
 
-      </form>
+          </form>
 
+        </div>
+      </div>
     </div>
   </div>
 </div>

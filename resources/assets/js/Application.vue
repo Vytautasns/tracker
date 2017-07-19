@@ -1,21 +1,27 @@
 <template lang="html">
+  <!-- <div class="uk-offcanvas-content background-image"> -->
   <div class="uk-offcanvas-content">
+    <img src="assets/back.jpg" class="bg" alt="">
     <Navigation></Navigation>
 
     <transition name="fade" mode="in-out">
       <div class="loading-container" v-if="appState.ajaxQueue">
         <div class="loading-screen uk-overlay-primary uk-position-center uk-card uk-card-default">
           <div class="uk-card-body">
-            <h3>Loading...</h3>
+            <h3>
+              <div uk-spinner></div>
+              Loading...
+            </h3>
+            <div class="uk-alert-danger" uk-alert v-if="appState.errorMessage">
+                <a class="uk-alert-close" uk-close></a>
+                <p>{{ appState.errorMessage }}</p>
+            </div>
           </div>
         </div>
       </div>
     </transition>
 
-    <div class="uk-alert-danger" uk-alert v-if="appState.errorMessage">
-        <a class="uk-alert-close" uk-close></a>
-        <p>{{ appState.errorMessage }}</p>
-    </div>
+
     <transition name="slide-fade" mode="out-in">
       <router-view></router-view>
     </transition>

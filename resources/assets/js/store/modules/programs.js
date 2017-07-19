@@ -63,6 +63,20 @@ const actions = {
       });
   },
 
+  updateDay({ commit, dispatch }, day) {
+    commit(types.UPDATE_DAY, day);
+    commit(types.START_LOADING);
+    axios.post('/app/days/update', day)
+      .then(response => {
+        commit(types.STOP_LOADING);
+        dispatch('makeNotification', 'Information updated.');
+      })
+      .catch(err => {
+        commit(types.STOP_LOADING);
+        dispatch('makeNotification', 'There was a problem updating day.');
+      });
+  },
+
   removeDay({ commit, dispatch }, dayId) {
     commit(types.START_LOADING);
     axios.post('/app/days/remove', { id: dayId })
@@ -131,6 +145,16 @@ const mutations = {
       for (var i = 0; i < state.currentProgram.days.length; i++) {
         if (state.currentProgram.days[i].id == dayId) {
           state.currentProgram.days.splice(i, 1);
+        }
+      }
+    }
+  },
+
+  [types.UPDATE_DAY] (state, day) {
+    if (state.currentProgram) {
+      for (var i = 0; i < state.currentProgram.days.length; i++) {
+        if (state.currentProgram.days[i].id == day.id) {
+          state.currentProgram.days[i] = day;
         }
       }
     }

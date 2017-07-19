@@ -13,7 +13,7 @@ class StepController extends Controller
     // Step id - request->id
     public function getTodaysLogs(Request $request)
     {
-      $user = Auth::user();
+      $user = $request->user();
       return
       $user->logs()
       ->where('step_id', $request->id)

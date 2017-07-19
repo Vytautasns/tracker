@@ -18,14 +18,12 @@ class LogController extends Controller
    */
   public function store(Request $request)
   {
-    $user = Auth::user();
-
       $log = Log::create([
         'step_id' => $request->step_id,
         'weight' => $request->weight,
         'reps' => $request->reps,
         'set' => $request->set,
-        'user_id' => $user->id,
+        'user_id' => $request->user()->id,
         'day_id' => $request->day_id,
         'program_id' => $request->program_id,
       ]);
@@ -40,7 +38,7 @@ class LogController extends Controller
    */
    public function destroy(Request $request)
    {
-     $user = Auth::user();
+     $user = $request->user();
 
      $user->logs()->find($request->id)->delete();
    }
@@ -53,7 +51,7 @@ class LogController extends Controller
     */
     public function getDayLog(Request $request)
     {
-      $user = Auth::user();
+      $user = $request->user();
 
       $logs = $user->logs()->where('day_id', $request->day_id)->where('created_at', '>=', \Carbon\Carbon::today()
       ->toDateString());
@@ -80,6 +78,13 @@ class LogController extends Controller
     {
       $user = Auth::user();
       return $user->getStatistics();
+    }
+
+    // Get logs for the step_id
+    public function getStepLogs(Request $request)
+    {
+      $user = $request->user();
+      return $user->logs()->where('step_id', $request->step_id)->first();
     }
 
 

@@ -21,6 +21,7 @@ export const RECEIVE_PROGRAMS = 'RECEIVE_PROGRAMS';
 export const SET_CURRENT_PROGRAM = 'SET_CURRENT_PROGRAM';
 export const ADD_NEW_DAY = 'ADD_NEW_DAY';
 export const REMOVE_DAY = 'REMOVE_DAY';
+export const UPDATE_DAY = "UPDATE_DAY"
 export const ADD_NEW_PROGRAM = "ADD_NEW_PROGRAM";
 export const REMOVE_PROGRAM = "REMOVE_PROGRAM";
 
@@ -38,3 +39,5 @@ export const ADD_NEW_LOG = 'ADD_NEW_LOG';
 export const RECEIVE_TODAYS_LOGS = 'RECEICE_TODAYS_LOGS';
 export const REMOVE_LOG = 'REMOVE_LOG';
 export const RECEIVE_DAY_LOG = 'RECEIVE_DAY_LOG';
+export const RECEIVE_STATS = 'RECEIVE_STATS';
+export const RECEIVE_STEP_LOGS = 'RECEIVE_STEP_LOGS';

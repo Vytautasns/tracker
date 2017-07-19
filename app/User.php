@@ -123,7 +123,7 @@ class User extends Authenticatable
 
       return $this->programs()->find($selected)->load([
         'days' => function ($query) {
-          $query->withCount('steps');
+          $query->with('steps');
         }
       ]);
     }
@@ -141,6 +141,13 @@ class User extends Authenticatable
       ->groupBy(function($item){ return $item->created_at->format('d-M'); });
 
       return $weekLog;
+
+    }
+
+
+    // Get todays workout
+    public function getTodaysWorkout()
+    {
 
     }
 

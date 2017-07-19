@@ -11,7 +11,7 @@ class DayController extends Controller
   // Get program day by its id
   public function getDayById(Request $request)
   {
-    $user = Auth::user();
+    $user = $request->user();
     return $user->getSelectedProgram()->days()->find($request->day_id)->getSteps();
   }
 
@@ -31,10 +31,26 @@ class DayController extends Controller
   public function removeDay(Request $request)
   {
     $day = Day::find($request->id);
-    foreach ($day->steps() as $step) {
+    foreach ($day->steps as $step) {
       $step->logs()->delete();
     }
     $day->steps()->delete();
     $day->delete();
+  }
+
+  // Update day
+  public function update(Request $request)
+  {
+    $day = Day::find($request->id);
+    $day->name = $request->name;
+    $day->week_days = $request->week_days;
+    $day->save();
+  }
+
+  // Get todays workout
+  public function getTodaysWorkout()
+  {
+    $user = Auth::user();
+    return $user->getTodaysWorkout();
   }
 }

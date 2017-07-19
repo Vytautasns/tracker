@@ -2,11 +2,13 @@ import Vue from 'vue';
 import UIkit from 'uikit';
 import moment from 'moment';
 import Highcharts from 'highcharts';
+import Hammer from 'hammerjs';
 
 window.Vue = Vue;
 window.UIkit = UIkit;
 window.moment = moment;
 window.Highcharts = Highcharts;
+window.Hammer = Hammer;
 
 
 

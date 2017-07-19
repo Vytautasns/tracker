@@ -20,7 +20,7 @@ class AppController extends Controller
     // Save setting
     public function changeSetting(Request $request)
     {
-      $user = Auth::user();
+      $user = $request->user();
       $settings = $user->settings()->where('name', $request->name)->first();
       $settings->value = $request->value;
       $settings->save();

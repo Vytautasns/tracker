@@ -48,7 +48,7 @@ const actions = {
       });
   },
 
-  removeStep({ commit }, stepId) {
+  removeStep({ commit, dispatch }, stepId) {
     commit(types.START_LOADING);
     axios.post('/app/steps/remove', { id: stepId })
       .then(response => {

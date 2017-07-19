@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   data() {
     return {
@@ -18,60 +20,59 @@ export default {
       },
     }
   },
-  created() {
-
-    axios.get('/app/logs/stats')
-      .then((response) => {
-        for (var variable in response.data) {
-          if (response.data.hasOwnProperty(variable)) {
-            let temp = 0;
-            for (var i = 0; i < response.data[variable].length; i++) {
-              temp += parseInt(response.data[variable][i].weight);
-            }
-            this.points.data.push(temp);
-
-          }
-        }
+  mounted() {
+    this.getStatistics();
 
 
-        Highcharts.chart('container', {
 
-            title: {
-                text: ''
-            },
+    Highcharts.chart('container', {
 
-            subtitle: {
-                text: 'Counted by total workouts volume by day'
-            },
+          title: {
+              text: ''
+          },
 
-            yAxis: {
-                title: {
-                    text: 'Weight lifted'
-                }
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle'
-            },
+          subtitle: {
+              text: 'Counted by total workouts volume by day'
+          },
 
-            plotOptions: {
-                series: {
-                    pointStart: response.data[0]
-                }
-            },
+          yAxis: {
+              title: {
+                  text: 'Weight lifted'
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'middle'
+          },
 
-            series: [this.points]
+          plotOptions: {
+              series: {
+                  pointStart: 0
+              }
+          },
 
-        });
+          series: [0,5,3,6]
 
       });
 
+  },
 
+  computed: {
+    ...mapGetters([
+      'statistics',
+    ]),
 
 
 
   },
+
+  methods: {
+    ...mapActions([
+      'getStatistics',
+    ]),
+  },
+
 }
 </script>
 

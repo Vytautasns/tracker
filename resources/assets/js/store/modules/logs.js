@@ -5,6 +5,8 @@ const state = {
   totalProgress: '',
   todaysLogs: [],
   dayLog: '',
+  statistics: '',
+  stepLogs: '',
 }
 
 // getters
@@ -14,11 +16,42 @@ const getters = {
   },
   dayLog (state) {
     return state.dayLog;
+  },
+  statistics (state) {
+    return state.statistics;
+  },
+  stepLogs (state) {
+    return state.stepLogs;
   }
+
 }
 
 // actions
 const actions = {
+
+  getStatistics({ commit }) {
+    commit(types.START_LOADING);
+    axios.get('/app/logs/stats')
+      .then((response) => {
+        commit(types.STOP_LOADING);
+
+        let tempStats = [];
+
+        for (var variable in response.data) {
+          if (response.data.hasOwnProperty(variable)) {
+            let temp = 0;
+            for (var i = 0; i < response.data[variable].length; i++) {
+              temp += parseInt(response.data[variable][i].weight);
+            }
+            tempStats.push(temp);
+          }
+        }
+
+        commit(types.RECEIVE_STATS, tempStats);
+
+      });
+
+  },
 
   getTodaysLogs({ commit }, stepId) {
     commit(types.RECEIVE_TODAYS_LOGS, {});
@@ -77,10 +110,33 @@ const actions = {
       });
   },
 
+  getStepLogs({ commit, dispatch }, stepId) {
+    commit(types.RECEIVE_STEP_LOGS, {});
+    commit(types.START_LOADING);
+    axios.post('/app/logs/step', { step_id: stepId })
+      .then(response => {
+        commit(types.STOP_LOADING);
+        commit(types.RECEIVE_STEP_LOGS, response.data);
+      })
+      .catch(err => {
+        commit(types.STOP_LOADING);
+        commit(types.ERROR_TEXT, 'Cannot get this step logs. Try reloading.');
+      });
+  },
+
 }
 
 // mutations
 const mutations = {
+
+  [types.RECEIVE_STEP_LOGS] (state, stepLogs) {
+    state.stepLogs = stepLogs;
+  },
+
+  [types.RECEIVE_STATS] (state, statsData) {
+    state.statistics = statsData;
+  },
+
   [types.RECEIVE_DAY_LOG] (state, dayLogs) {
     state.dayLog = dayLogs;
   },

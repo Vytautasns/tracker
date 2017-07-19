@@ -1,7 +1,7 @@
 <?php
 
 // Database configuration
-if ($url = env('CLEARDB_DATABASE_URL', false)) {
+if ($url = env('JAWSDB_URL', false)) {
     $parts = parse_url($url);
     $host = $parts["host"];
     $username = $parts["user"];

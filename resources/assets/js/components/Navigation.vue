@@ -1,12 +1,16 @@
 <template lang="html">
   <div>
-    <nav class="uk-navbar-container uk-box-shadow-small" uk-navbar>
+    <nav class="uk-navbar-container uk-box-shadow-large" uk-navbar>
       <div class="uk-navbar-left uk-hidden@s" uk-sticky="animation: uk-animation-slide-top; top: 0;">
         <a class="uk-navbar-toggle floating-hamburger" href="#" uk-toggle="target: #mobile-menu">
           <span class="uk-margin-small-left" uk-icon="icon: menu"></span> <span class="uk-margin-small-left"></span>
         </a>
       </div>
-      <!-- <a class="uk-position-center uk-navbar-item uk-logo uk-padding-small" href="#">fitW3</a> -->
+      <a class="uk-position-center uk-navbar-item uk-logo uk-padding uk-text-bold uk-text-primary" href="#">
+        <i class="fa fa-bolt" aria-hidden="true"></i>
+
+        <em>fitW3</em>
+      </a>
 
       <div class="uk-navbar-left uk-visible@s">
         <ul class="uk-navbar-nav" v-for="item in menuItems" :key="item.title">
@@ -89,7 +93,7 @@ export default {
 
 <style lang="css" scoped>
   .floating-hamburger {
-      background-color: #e1e1e1;
+      background-color: #0e1e1e;
       opacity: 0.8;
   }
 
