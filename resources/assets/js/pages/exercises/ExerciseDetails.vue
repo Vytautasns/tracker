@@ -85,7 +85,6 @@ export default {
   created() {
     this.getExerciseDetails(this.exercise);
     this.getExerciseHistory(this.exercise).then(() => {
-      console.log(true);
       this.statsReady = true;
     });
   },

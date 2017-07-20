@@ -25,12 +25,16 @@
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
       <h3 class="uk-heading-bullet uk-text-left"><span>Progress</span></h3>
       <Stats
-        v-if="progressData.length > 0"
         subtitle="Your workout volume progress"
         name="Progress"
         :dataSet="progressData"
+        v-if="statsReady"
         >
         </Stats>
+        <!-- <div v-else class="uk-text-center">
+          <i class="fa fa-bar-chart-o uk-text-primary fa-3x" aria-hidden="true"></i>
+          <h3>Not enough data</h3>
+        </div> -->
     </div>
   </div>
 
@@ -53,6 +57,7 @@ export default {
       today: '',
       todaysWorkouts: [],
       progressData: [],
+      statsReady: false,
     }
   },
 
@@ -68,7 +73,7 @@ export default {
 
     this.today = moment().format("ddd").toLowerCase();
     this.getTotalProgress().then((totalProgress) => {
-      console.log(totalProgress);
+      this.statsReady = true;
       for (var variable in totalProgress) {
         let sum = 0;
         for (var i = 0; i < totalProgress[variable].length; i++) {
