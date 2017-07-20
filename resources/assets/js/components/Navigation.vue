@@ -54,7 +54,7 @@
 
         <ul class="uk-nav uk-nav-default uk-margin-top">
           <li class="uk-nav-divider"></li>
-          <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Log out</a></li>
+          <li><a @click.prevent="logout"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Log out</a></li>
         </ul>
       </div>
     </div>

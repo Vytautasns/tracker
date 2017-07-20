@@ -137,7 +137,7 @@ class User extends Authenticatable
                         ->pluck('value')->first();
 
 
-      $weekLog = $this->programs()->find($selected)->logs()->get()
+      $weekLog = $this->programs()->find($selected)->logs()->select('weight', 'created_at')->get()
       ->groupBy(function($item){ return $item->created_at->format('d-M'); });
 
       return $weekLog;

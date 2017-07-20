@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="uk-background-cover uk-height-viewport" style="background-image: url(http://www.rd.com/wp-content/uploads/sites/2/2017/01/02-know-reasons-hit-workout-plateau-505776960-BartekSzewczyk.jpg);">
-  <div class="uk-width-5-6 uk-width-1-3@m uk-position-center uk-card uk-card-default uk-margin-remove">
+  <div class="uk-width-5-6 uk-width-1-3@s uk-position-center uk-card uk-card-default uk-margin-remove">
     <div class="uk-card-body">
 
         <div class="uk-text-center  uk-margin-small-bottom">
-          <i class="fa fa-user fa-3x uk-text-primary" aria-hidden="true"></i>
+          <i class="fa fa-bolt fa-3x uk-text-primary" aria-hidden="true"></i>
           <span class="uk-text-lead">fitW3</span>
           <span class="uk-text-meta uk-display-block">Register new account</span>
         </div>
@@ -83,12 +83,12 @@
                         @endif
                     </div>
 
-                  <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Register</button>
+                  <button type="submit" class="uk-button uk-button-large uk-button-primary uk-width-1-1 uk-margin-small-bottom">Register</button>
 
 
           </fieldset>
       </form>
-      <a href="/login" class="uk-button uk-button-secondary uk-width-1-1">Login</a>
+      <a href="/login" class="uk-button uk-button-small uk-button-secondary uk-width-1-1 uk-margin-top">Login</a>
 
      </div>
   </div>

@@ -26,6 +26,7 @@ class LogController extends Controller
         'user_id' => $request->user()->id,
         'day_id' => $request->day_id,
         'program_id' => $request->program_id,
+        'exercise_id' => $request->exercise_id,
       ]);
       return $log->id;
   }
@@ -85,6 +86,16 @@ class LogController extends Controller
     {
       $user = $request->user();
       return $user->logs()->where('step_id', $request->step_id)->first();
+    }
+
+
+    // Get all exercise Logs
+    public function getExerciseHistory(Request $request)
+    {
+      $user = Auth::user();
+
+      return $user->logs()->where('exercise_id', $request->id)->pluck('weight');
+
     }
 
 

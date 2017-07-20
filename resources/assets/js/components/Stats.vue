@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
-    <div v-show="points.data.length > 0" id="container" style="width:100%; height:400px;"></div>
-    <div v-show="points.data.length <= 0" class="uk-text-center">
+    <div id="container" v-show="dataSet.length > 0" style="width:100%; height:400px;"></div>
+    <div v-show="dataSet.length <= 0" class="uk-text-center">
       <i class="fa fa-bar-chart-o uk-text-primary fa-3x" aria-hidden="true"></i>
       <h3>Not enough data</h3>
     </div>
@@ -12,27 +12,35 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
+  props: ['dataSet', 'name', 'title', 'subtitle'],
+  
   data() {
     return {
-      points: {
-        name: 'Progress',
-        data: [],
-      },
+
     }
   },
   mounted() {
-    this.getStatistics();
-
-
 
     Highcharts.chart('container', {
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 500
+            },
+            chartOptions: {
+              legend: {
+                enabled: false
+              }
+            }
+          }]
+          },
 
           title: {
-              text: ''
+              text: this.title,
           },
 
           subtitle: {
-              text: 'Counted by total workouts volume by day'
+              text: this.subtitle,
           },
 
           yAxis: {
@@ -52,7 +60,12 @@ export default {
               }
           },
 
-          series: [0,5,3,6]
+          series: [
+            {
+              name: this.name,
+              data: this.dataSet,
+            },
+          ]
 
       });
 
@@ -60,7 +73,6 @@ export default {
 
   computed: {
     ...mapGetters([
-      'statistics',
     ]),
 
 
@@ -69,7 +81,6 @@ export default {
 
   methods: {
     ...mapActions([
-      'getStatistics',
     ]),
   },
 

@@ -5,6 +5,8 @@ import exercises from './modules/exercises';
 import logs from './modules/logs';
 import programs from './modules/programs';
 import application from './modules/application';
+import statistics from './modules/statistics';
+
 
 import * as types from './mutation-types';
 
@@ -23,5 +25,6 @@ export default new Vuex.Store({
     logs,
     main,
     programs,
+    statistics,
   },
 });

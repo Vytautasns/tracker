@@ -62,7 +62,8 @@ Route::post('/app/logs/remove', 'LogController@destroy');
 Route::post('/app/logs/day', 'LogController@getDayLog');
 Route::post('/app/logs/step', 'LogController@getStepLogs');
 
-Route::get('/app/logs/stats', 'LogController@getStats');
+Route::get('/app/statistics/total', 'LogController@getStats');
+Route::post('/app/statistics/exercise', 'LogController@getExerciseHistory');
 
 
 Route::get('/app/workout/today', 'DayController@getTodaysWorkout');

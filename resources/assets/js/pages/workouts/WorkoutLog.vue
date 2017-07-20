@@ -5,7 +5,7 @@
   <div class="uk-width-1-1">
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
       <h3 class="uk-heading-bullet uk-text-left uk-text-truncate">
-        
+
         <span>
           <strong>{{ parseInt(step)+1 }}</strong>/<small>{{ dayShown.steps.length }}</small> {{ dayShown.steps[step].name }}
         </span>
@@ -13,7 +13,12 @@
       <ul class="uk-subnav" uk-margin>
           <li>
             <a @click="$router.push(`/days/${dayShown.id}`)">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i> Exercises list
+              <i class="fa fa-arrow-left uk-text-primary" aria-hidden="true"></i> Exercises list
+            </a>
+          </li>
+          <li>
+            <a @click="$router.push(`/exercises/${dayShown.steps[step].exercise_id}`)">
+              <i class="fa fa-info-circle uk-text-primary" aria-hidden="true"></i> Exercise details
             </a>
           </li>
       </ul>
@@ -125,6 +130,13 @@
   <div class="uk-width-1-2@m uk-width-1-1 uk-margin-bottom">
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
       <h3 class="uk-heading-bullet uk-text-left"><span>Today's sets</span></h3>
+      <ul class="uk-subnav" uk-margin>
+          <li>
+            <a @click="$router.push(`/exercises/${dayShown.steps[step].exercise_id}`)">
+              <i class="fa fa-info-circle uk-text-primary" aria-hidden="true"></i> Exercise history
+            </a>
+          </li>
+      </ul>
       <div class="uk-overflow-auto" v-if="todaysLogs.length">
         <table class="uk-table uk-table-small uk-table-hover uk-table-divider">
           <thead>
@@ -230,6 +242,7 @@ export default {
         reps: this.selected.reps,
         set: this.todaysLogs.length+1,
         day_id: this.day,
+        exercise_id: this.dayShown.steps[this.step].exercise_id,
       }
 
       if ((this.todaysLogs.length + 1) <= this.maxSets) {

@@ -4,7 +4,7 @@
       <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
         <h3 class="uk-heading-bullet uk-text-left">
           <i @click="$router.go(-1)" class="ppp fa fa-chevron-left uk-text-primary uk-padding-small uk-position-top-right" aria-hidden="true"></i>
-          
+
           <span>{{ exerciseDetails.name }}</span>
         </h3>
 
@@ -48,6 +48,19 @@
         </div>
       </div>
     </div>
+
+    <div class="uk-margin-top uk-margin-bottom">
+      <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
+        <h3 class="uk-heading-bullet uk-text-left"><span>History</span></h3>
+        <Stats
+          subtitle="Weight history in all workouts"
+          name="Progress"
+          :dataSet="exerciseStats"
+          v-if="statsReady">
+          </Stats>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -56,11 +69,25 @@ import {
   mapGetters,
   mapActions
 } from 'vuex';
+import Stats from '../../components/Stats';
 export default {
+  data() {
+    return {
+      statsReady: false,
+    }
+  },
+  components: {
+    Stats,
+  },
+
   props: ['exercise'],
 
   created() {
     this.getExerciseDetails(this.exercise);
+    this.getExerciseHistory(this.exercise).then(() => {
+      console.log(true);
+      this.statsReady = true;
+    });
   },
 
   mounted() {
@@ -70,6 +97,7 @@ export default {
   computed: {
     ...mapGetters([
       'exerciseDetails',
+      'exerciseStats',
     ]),
 
   },
@@ -79,6 +107,7 @@ export default {
     ...mapActions([
       'getExerciseDetails',
       'removeExercise',
+      'getExerciseHistory',
     ]),
 
     deleteThis(id) {

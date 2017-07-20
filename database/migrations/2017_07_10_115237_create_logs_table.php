@@ -17,6 +17,7 @@ class CreateLogsTable extends Migration
             $table->increments('id');
             $table->integer('step_id');
             $table->integer('program_id');
+            $table->integer('exercise_id');
             $table->integer('day_id');
             $table->integer('user_id');
             $table->integer('weight');

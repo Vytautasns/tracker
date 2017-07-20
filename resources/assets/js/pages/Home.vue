@@ -24,7 +24,13 @@
   <div class="uk-margin-top uk-margin-bottom">
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
       <h3 class="uk-heading-bullet uk-text-left"><span>Progress</span></h3>
-      <Stats></Stats>
+      <Stats
+        v-if="progressData.length > 0"
+        subtitle="Your workout volume progress"
+        name="Progress"
+        :dataSet="progressData"
+        >
+        </Stats>
     </div>
   </div>
 
@@ -46,6 +52,7 @@ export default {
     return {
       today: '',
       todaysWorkouts: [],
+      progressData: [],
     }
   },
 
@@ -60,6 +67,20 @@ export default {
     });
 
     this.today = moment().format("ddd").toLowerCase();
+    this.getTotalProgress().then((totalProgress) => {
+      console.log(totalProgress);
+      for (var variable in totalProgress) {
+        let sum = 0;
+        for (var i = 0; i < totalProgress[variable].length; i++) {
+          // console.log(totalProgress[variable][i].weight);
+          sum += parseInt(totalProgress[variable][i].weight);
+
+        }
+        totalProgress[variable].total = sum;
+        this.progressData.push(sum);
+      }
+
+    });
   },
 
   computed: {
@@ -73,6 +94,7 @@ export default {
     ...mapActions([
       'getCurrentProgram',
       'makeNotification',
+      'getTotalProgress',
     ]),
   },
 

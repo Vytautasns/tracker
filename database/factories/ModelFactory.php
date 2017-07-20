@@ -64,9 +64,11 @@ $factory->define(App\Step::class, function (Faker\Generator $faker) {
 $factory->define(App\Log::class, function (Faker\Generator $faker) {
 
     $date = $faker->dateTimeBetween($startDate = '-1 years', $endDate = 'now');
-    
+
     return [
         'step_id' => 1,
+        'exercise_id' => 1,
+        'program_id' => 1,
         'weight' => rand(20,125),
         'reps' => rand(1,15),
         'set' => rand(1,5),
