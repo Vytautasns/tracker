@@ -4,7 +4,7 @@
       <ul class="uk-subnav" uk-margin>
           <li>
             <a @click="openAddDayModal">
-              <i class="fa fa-plus" aria-hidden="true"></i> Add new day
+              <i class="fa fa-plus uk-text-primary" aria-hidden="true"></i> Add new day
             </a>
           </li>
       </ul>

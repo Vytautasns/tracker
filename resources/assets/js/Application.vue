@@ -1,12 +1,10 @@
 <template lang="html">
-  <!-- <div class="uk-offcanvas-content background-image"> -->
   <div class="uk-offcanvas-content">
     <img src="assets/back.jpg" class="bg" alt="">
-    <Navigation></Navigation>
 
     <transition name="fade" mode="in-out">
       <div class="loading-container" v-if="appState.ajaxQueue">
-        <div class="loading-screen uk-overlay-primary uk-position-center uk-card uk-card-default">
+        <div class="loading-screen uk-overlay-primary uk-position-center uk-card uk-card-default" style="z-index: 101;">
           <div class="uk-card-body">
             <h3>
               <div uk-spinner></div>
@@ -19,31 +17,51 @@
           </div>
         </div>
       </div>
-    </transition>
 
 
-    <transition name="slide-fade" mode="out-in">
-      <router-view></router-view>
     </transition>
+
+      <div v-if="started === 1">
+        <Navigation></Navigation>
+
+        <transition name="slide-fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </div>
+      <div class="loading-container" v-else-if="started === 2">
+        <Setup></Setup>
+      </div>
+
+
+
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation';
-
+import Setup from './pages/app/Setup';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
 
-  components: { Navigation, },
+  components: { Navigation, Setup },
 
   data() {
     return {
+      started: 0,
     }
   },
 
   created() {
-    this.getUser();
+
+    this.getUser().then(() => {
+      if(this.settings.first_login == 1) {
+        this.started = 2;
+      } else {
+        this.started = 1;
+      }
+    });
+
     this.getCategories();
 
   },
@@ -54,12 +72,20 @@ export default {
 
   watch: {
     'appState.notification': 'notify',
+    // 'appState.ajaxQueue': function () {
+    //     if (this.appState.ajaxQueue > 0) {
+    //       this.started = false;
+    //     } else {
+    //       this.started = true;
+    //     }
+    // },
   },
 
   computed: {
     ...mapGetters([
       'appState',
       'user',
+      'settings',
     ]),
 
   },

@@ -2,7 +2,11 @@
   <div class="uk-container">
     <div class="uk-margin-top uk-margin-bottom">
       <div class="uk-card uk-card-default uk-padding-small">
-        <h3 class="uk-heading-bullet uk-text-left"><span>Workout programs</span></h3>
+        <h3 class="uk-heading-bullet uk-text-left">
+          <i @click="$router.go(-1)" class="ppp fa fa-chevron-left uk-text-primary uk-padding-small uk-position-top-right" aria-hidden="true"></i>
+
+          <span>Workout programs</span>
+        </h3>
         <ul class="uk-subnav" uk-margin>
             <li>
               <router-link to="/create/program" tag="a">
@@ -28,17 +32,17 @@
                   <canvas width="300" height="200"></canvas>
               </div>
               <div>
-                  <div class="uk-card-body">
-                    <span @click.prevent.stop="deleteProgram(program.id)" class="uk-float-right" uk-icon="icon: trash;"></span>
+                  <div class="uk-card-body uk-margin-large-bottom">
+                    <span v-if="program.id != settings.selected_program"  @click.prevent.stop="deleteProgram(program.id)" class="uk-float-right" uk-icon="icon: trash;"></span>
+                    <span @click="$router.push({ name: 'program-create', params: { program }})" class="uk-float-right uk-margin-small-right" uk-icon="icon: pencil;"></span>
+
                       <h3 class="uk-card-title">{{ program.name }}</h3>
                       <p>{{ program.description }}</p>
                   </div>
-                  <div class="uk-card-footer" v-if="program.id != settings.selected_program">
-                     <button @click="changeProgram(program)" class="uk-button uk-button-primary uk-width-1-1 uk-margin-bottom">
-                       <i class="fa fa-star" aria-hidden="true"></i>
-                       Select program
-                     </button>
-                  </div>
+                   <button  v-if="program.id != settings.selected_program" @click="changeProgram(program)" class="uk-button uk-button-primary uk-margin-small-right uk-margin-small-bottom uk-position-bottom-right">
+                     <i class="fa fa-star" aria-hidden="true"></i>
+                     Select program
+                   </button>
               </div>
             </div>
 

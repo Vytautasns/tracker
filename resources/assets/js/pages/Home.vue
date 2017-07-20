@@ -2,8 +2,7 @@
 <div class="uk-container">
 
 
-
-  <div class="uk-margin-top"  v-if="currentProgram.days.length > 0">
+  <div class="uk-margin-top"  v-if="todaysWorkouts.length > 0">
     <div class="uk-card uk-card-default uk-card-body uk-padding-small">
       <div class="uk-grid-collapse" uk-grid>
         <div class="uk-text-center uk-margin-top uk-align-center" v-if="day.week_days.includes(today) && day.steps.length > 0" v-for="day in currentProgram.days" :key="day.name">
@@ -46,11 +45,20 @@ export default {
   data() {
     return {
       today: '',
+      todaysWorkouts: [],
     }
   },
 
   created() {
-    this.getCurrentProgram();
+
+    this.getCurrentProgram().then((currentProgram) => {
+      for (var i = 0; i < currentProgram.days.length; i++) {
+        if (currentProgram.days[i].week_days.includes(this.today) && currentProgram.days[i].steps.length > 0) {
+          this.todaysWorkouts.push(currentProgram.days[i]);
+        }
+      }
+    });
+
     this.today = moment().format("ddd").toLowerCase();
   },
 
@@ -58,6 +66,7 @@ export default {
     ...mapGetters([
       'currentProgram',
     ]),
+
   },
 
   methods: {

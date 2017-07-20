@@ -41,4 +41,54 @@ class ExerciseController extends Controller
       return $search;
     }
 
+    // Store new exercise
+    public function store(Request $request)
+    {
+
+      $this->validate($request, [
+        'name' => 'required|min:3|max:255',
+        'category_id' => 'required|integer',
+      ]);
+
+      $user = $request->user();
+
+      if ($request->id) {
+        $exercise = Exercise::find($request->id);
+
+        if ($exercise->default != 1) {
+          $exercise->update([
+            'name' => $request->name,
+            'category_id' => $request->category_id,
+            'description' => $request->description,
+          ]);
+        }
+
+      } else {
+        $exercise = Exercise::create([
+          'name' => $request->name,
+          'category_id' => $request->category_id,
+          'description' => $request->description,
+          'image_url' => 'no_image',
+          'default' => 0,
+        ]);
+        $user->exercises()->attach($exercise->id);
+
+      }
+
+      return $exercise->id;
+
+    }
+
+    // Delete exercise
+    public function destroy(Request $request)
+    {
+      $this->validate($request, [
+        'id' => 'integer',
+      ]);
+
+      $user = $request->user();
+
+      $user->exercises()->detach($request->id);
+    }
+
 }

@@ -64,6 +64,40 @@ const actions = {
         commit(types.ERROR_TEXT, 'Problem getting exercise details. Try reloading.');
       });
   },
+
+   storeExercise({commit, dispatch}, exercise) {
+     return new Promise((resolve, reject) => {
+       commit(types.START_LOADING);
+       axios.post('/app/exercises/store', exercise)
+         .then((response) => {
+           resolve(response.data);
+           commit(types.STOP_LOADING);
+           dispatch('makeNotification', 'Saved!');
+         })
+         .catch(err => {
+           reject();
+           commit(types.STOP_LOADING);
+           commit(types.ERROR_TEXT, 'Couldn\'t save exercise');
+         });
+      });
+   },
+
+   removeExercise({commit, dispatch}, exerciseId) {
+     return new Promise((resolve, reject) => {
+       commit(types.START_LOADING);
+       axios.post('/app/exercises/destroy', { id: exerciseId })
+         .then((response) => {
+           resolve();
+           commit(types.STOP_LOADING);
+           dispatch('makeNotification', 'Deleted!');
+         })
+         .catch(err => {
+           reject();
+           commit(types.STOP_LOADING);
+           commit(types.ERROR_TEXT, 'Couldn\'t delete exercise');
+         });
+      });
+   },
 }
 
 // mutations

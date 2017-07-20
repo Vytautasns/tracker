@@ -2,9 +2,13 @@
 <div class="uk-container">
   <div class="uk-margin-top uk-margin-bottom">
     <div class="uk-card uk-card-default uk-padding-small">
-      <h3 class="uk-heading-bullet uk-text-left"><span>Browse exercises</span></h3>
+      <h3 class="uk-heading-bullet uk-text-left">
+        <i @click="$router.go(-1)" class="ppp fa fa-chevron-left uk-text-primary uk-padding-small uk-position-top-right" aria-hidden="true"></i>
+        
+        <span>Browse exercises</span>
+      </h3>
       <ul class="uk-subnav" uk-margin>
-          <li><a href="#">
+          <li><a @click="$router.push(`create/exercise`)">
             <i class="fa fa-plus uk-text-primary" aria-hidden="true"></i>
             Create exercise
           </a></li>
@@ -25,11 +29,6 @@
           </div>
         </div>
       </div>
-
-
-
-
-
     </div>
   </div>
 </div>

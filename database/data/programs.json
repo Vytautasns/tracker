@@ -93,5 +93,14 @@
           ]
         }
     ]
+  },
+
+  {
+    "name": "Custom workout program",
+    "description": "This is empty workout program. You can later add your exercises and edit info in progams section.",
+    "image_url": "https://i2.wp.com/notyourgoodfatty.com/wp-content/uploads/2014/12/wpid-timi_gustafson_empty_gym.jpg",
+    "days": [
+
+    ]
   }
 ]

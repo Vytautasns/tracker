@@ -22,17 +22,20 @@ const getters = {
 // actions
 const actions = {
   getCurrentProgram({ commit, rootState }) {
-    commit(types.START_LOADING);
+    return new Promise((resolve,reject) => {
+      commit(types.START_LOADING);
 
-    axios.post('/app/programs/selected')
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.SET_CURRENT_PROGRAM, response.data);
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'There was problem getting current program. Try reloading.');
-      });
+      axios.post('/app/programs/selected')
+        .then(response => {
+          resolve(response.data);
+          commit(types.STOP_LOADING);
+          commit(types.SET_CURRENT_PROGRAM, response.data);
+        })
+        .catch(err => {
+          commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, 'There was problem getting current program. Try reloading.');
+        });
+    });
   },
 
   getAvailablePrograms({ commit, rootState }) {
@@ -92,17 +95,20 @@ const actions = {
   },
 
   saveNewPrgoram({ commit, dispatch }, newProgram) {
-    commit(types.START_LOADING);
-    axios.post('/app/programs/save', newProgram)
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(type.ADD_NEW_PROGRAM, response.data);
-        dispatch('makeNotification', 'New program has been created');
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'There was a problem while saving program.');
-      });
+    return new Promise((resolve, reject) => {
+      commit(types.START_LOADING);
+      axios.post(`/app/programs/save`, newProgram)
+        .then((response) => {
+          resolve();
+          commit(types.STOP_LOADING);
+          dispatch('makeNotification', 'Saved!');
+        })
+        .catch(err => {
+          reject();
+          commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, 'Couldn\'t save program');
+        });
+     });
 
   },
 
@@ -160,9 +166,9 @@ const mutations = {
     }
   },
 
-  [types.ADD_NEW_PROGRAM] (state, newProgram) {
-    state.availableProgramsList.push(newProgram);
-  },
+  // [types.ADD_NEW_PROGRAM] (state, newProgram) {
+  //   state.availableProgramsList.push(newProgram);
+  // },
 
   [types.REMOVE_PROGRAM] (state, programId) {
     if (state.availableProgramsList) {

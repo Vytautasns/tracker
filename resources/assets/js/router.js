@@ -8,9 +8,12 @@ import ProgramCreate from './pages/programs/ProgramCreate';
 import Exercises from './pages/exercises/Exercises';
 import ExerciseBrowse from './pages/exercises/ExerciseBrowse';
 import ExerciseDetails from './pages/exercises/ExerciseDetails';
+import CreateExercise from './pages/exercises/CreateExercise';
 
 import WorkoutShow from './pages/workouts/WorkoutShow';
 import WorkoutLog from './pages/workouts/WorkoutLog';
+
+import Setup from './pages/app/Setup';
 
 Vue.use(Router);
 
@@ -36,6 +39,12 @@ export default new Router({
       component: Programs,
     },
 
+    {
+      path: 'settings/setup',
+      name: 'app-setup',
+      component: Setup,
+    },
+
     // Exercise routes
     // *************************************************************************
 
@@ -58,6 +67,14 @@ export default new Router({
       name: 'show-exercise',
       component: ExerciseDetails,
     },
+
+    {
+      path: '/create/exercise',
+      props: true,
+      name: 'create-exercise',
+      component: CreateExercise,
+    },
+
 
     // Workout routes
     // *************************************************************************
@@ -88,6 +105,7 @@ export default new Router({
 
     {
       path: '/create/program',
+      props: true,
       name: 'program-create',
       component: ProgramCreate,
     },

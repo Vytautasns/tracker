@@ -2,7 +2,9 @@
   <div class="uk-container">
     <div class="uk-margin-top uk-margin-bottom">
       <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
-        <h3 class="uk-heading-bullet uk-text-left"><span>Progress</span></h3>
+        <h3 class="uk-heading-bullet uk-text-left">
+          <span>Progress</span>
+        </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi tempora, rem ipsa dolores quaerat. Suscipit illum, tenetur sequi fuga veritatis sunt dolorem beatae itaque, exercitationem, sit earum saepe numquam commodi.</p>
       </div>
     </div>

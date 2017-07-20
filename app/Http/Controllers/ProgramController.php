@@ -46,15 +46,32 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
+
+      $this->validate($request, [
+        'name' => 'required|min:3|max:255',
+      ]);
+
       $user = $request->user();
 
-      $createdProgram = Program::create([
-        'name' => $request->name,
-        'user_id' => $user->id,
-        'description' => $request->description,
-        'image_url' => 'assets/user_program.jpg',
-      ]);
-      return $createdProgram;
+      if ($request->id) {
+
+        $program = Program::find($request->id);
+        $program->update([
+          'name' => $request->name,
+          'description' => $request->description,
+        ]);
+
+      } else {
+
+        $program = Program::create([
+          'name' => $request->name,
+          'user_id' => $user->id,
+          'description' => $request->description,
+          'image_url' => 'assets/user_program.jpg',
+        ]);
+
+      }
+
     }
 
     /**

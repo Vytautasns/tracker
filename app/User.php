@@ -43,7 +43,7 @@ class User extends Authenticatable
     // /database/data/exercises_seed.json
     public function attachDefaultExercises()
     {
-      $exercises = \App\Exercise::all();
+      $exercises = \App\Exercise::where('default', 1)->get();
       foreach ($exercises as $exercise) {
         $this->exercises()->attach($exercise->id);
       }

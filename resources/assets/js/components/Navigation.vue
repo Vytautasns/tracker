@@ -20,10 +20,24 @@
                        <span class="uk-margin-remove" :uk-icon="`icon: ${item.icon}`"></span>
                        <div class="uk-navbar-subtitle">{{ item.title }}</div>
                    </div>
-               </router-link>
+            </router-link>
           </li>
         </ul>
       </div>
+
+      <div class="uk-navbar-right uk-visible@s">
+        <ul class="uk-navbar-nav">
+          <li>
+            <a @click.prevent="logout">
+              <div class="uk-text-center menu-item">
+                <span class="uk-margin-remove" uk-icon="icon: trash"></span>
+                <div class="uk-navbar-subtitle">Log out</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </nav>
 
 
@@ -38,10 +52,10 @@
           <li @click="closeMenu" class="menu-item"><router-link :to="item.link" exact><span class="uk-margin-small-right" :uk-icon="`icon: ${item.icon}`"></span> {{ item.title }}</router-link></li>
         </ul>
 
-        <!-- <ul class="uk-nav uk-nav-default">
+        <ul class="uk-nav uk-nav-default uk-margin-top">
           <li class="uk-nav-divider"></li>
           <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Log out</a></li>
-        </ul> -->
+        </ul>
       </div>
     </div>
   </div>
@@ -87,11 +101,19 @@ export default {
     closeMenu () {
       UIkit.offcanvas('#mobile-menu').toggle();
     },
+
+    logout() {
+      axios.post('/logout')
+        .catch(() => {
+          location.reload();
+        });
+    },
   }
 }
 </script>
 
 <style lang="css" scoped>
+
   .floating-hamburger {
       background-color: #0e1e1e;
       opacity: 0.8;

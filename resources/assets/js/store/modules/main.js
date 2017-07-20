@@ -24,16 +24,19 @@ const actions = {
 
   // Get initial user data from database
   getUser({ commit }) {
-    commit(types.START_LOADING);
-    axios.post('/app/user')
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.RECEIVE_USER, response.data);
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
-      });
+    return new Promise ((resolve, reject) => {
+      commit(types.START_LOADING);
+      axios.post('/app/user')
+        .then(response => {
+          commit(types.STOP_LOADING);
+          resolve();
+          commit(types.RECEIVE_USER, response.data);
+        })
+        .catch(err => {
+          commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+        });
+    });
   },
 
   changeSetting({ commit }, settings) {
@@ -54,7 +57,7 @@ const actions = {
 
 // mutations
 const mutations = {
-  
+
   [types.RECEIVE_USER] (state, user) {
     let changedUserObject = {};
     changedUserObject.name = user.name;

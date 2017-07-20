@@ -5,6 +5,7 @@
   <div class="uk-width-1-1">
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
       <h3 class="uk-heading-bullet uk-text-left uk-text-truncate">
+        
         <span>
           <strong>{{ parseInt(step)+1 }}</strong>/<small>{{ dayShown.steps.length }}</small> {{ dayShown.steps[step].name }}
         </span>

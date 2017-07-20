@@ -6,7 +6,7 @@ import logs from './modules/logs';
 import programs from './modules/programs';
 import application from './modules/application';
 
-import * as types from './mutation-types'
+import * as types from './mutation-types';
 
 
 export default new Vuex.Store({

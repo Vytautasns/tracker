@@ -41,6 +41,8 @@ Route::get('/app/exercises/categories', 'AppController@getCategories');
 Route::post('/app/exercises/show', 'ExerciseController@index');
 Route::post('/app/exercises/details', 'ExerciseController@getExerciseDetails');
 Route::get('/app/exercises/search/{hint}', 'ExerciseController@searchExercise');
+Route::post('/app/exercises/store', 'ExerciseController@store');
+Route::post('/app/exercises/destroy', 'ExerciseController@destroy');
 
 // Workout days
 Route::post('/app/days/show', 'DayController@getDayById');
