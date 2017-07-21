@@ -5,7 +5,6 @@
   <div class="uk-width-5-6 uk-width-1-3@s uk-position-center uk-card uk-card-default uk-margin-remove">
     <div class="uk-card-body">
 
-      <button id="demo-button" type="button" class="uk-button uk-button-danger uk-align-center">Demo account</button>
 
       <div class="uk-text-center  uk-margin-small-bottom">
         <i class="fa fa-bolt fa-3x uk-text-primary" aria-hidden="true"></i>
@@ -13,6 +12,8 @@
         <span class="uk-text-meta uk-display-block">Welcome back!</span>
 
       </div>
+      <button id="demo-button" type="button" class="uk-button uk-button-danger uk-align-center">Demo account</button>
+      
 
       <form id="login-form" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
@@ -50,12 +51,12 @@
                       @endif
                   </div>
 
-                  <button type="submit" class="uk-button uk-button-primary uk-button-large uk-width-1-1 uk-margin-small-bottom">Login</button>
+                  <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Login</button>
 
 
           </fieldset>
       </form>
-      <a href="/register" class="uk-button uk-button-secondary uk-button-small uk-margin-top uk-width-1-1">Register new account</a>
+      <a href="/register" class="uk-link uk-margin-top">Register new account</a>
      </div>
   </div>
 </div>

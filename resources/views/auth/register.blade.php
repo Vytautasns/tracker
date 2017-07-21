@@ -83,12 +83,12 @@
                         @endif
                     </div>
 
-                  <button type="submit" class="uk-button uk-button-large uk-button-primary uk-width-1-1 uk-margin-small-bottom">Register</button>
+                  <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Register</button>
 
 
           </fieldset>
       </form>
-      <a href="/login" class="uk-button uk-button-small uk-button-secondary uk-width-1-1 uk-margin-top">Login</a>
+      <a href="/login" class="uk-link uk-margin-top">Login</a>
 
      </div>
   </div>
