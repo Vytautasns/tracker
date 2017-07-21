@@ -11,6 +11,9 @@
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
     <title>fitW3 - Workout tracker</title>
 
+    {{-- Manifest --}}
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0e1e1e" />
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">

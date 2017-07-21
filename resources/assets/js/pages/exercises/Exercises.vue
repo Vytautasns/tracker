@@ -4,7 +4,7 @@
     <div class="uk-card uk-card-default uk-padding-small">
       <h3 class="uk-heading-bullet uk-text-left">
         <i @click="$router.go(-1)" class="ppp fa fa-chevron-left uk-text-primary uk-padding-small uk-position-top-right" aria-hidden="true"></i>
-        
+
         <span>Browse exercises</span>
       </h3>
       <ul class="uk-subnav" uk-margin>
@@ -15,7 +15,7 @@
       </ul>
 
       <div class="uk-grid-small uk-child-width-1-2@s uk-grid-match" uk-grid>
-        <div @click="$router.push(`category/${category.id}`)" class="uk-box-shadow-hover-large ppp" v-for="category in categories" :key="category.id" v-if="!selectedCategory">
+        <div @click="$router.push({ path: `category/${category.id}`})" class="uk-box-shadow-hover-large ppp" v-for="category in categories" :key="category.id" v-if="!selectedCategory">
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding-small" uk-grid>
             <div class="uk-card-media-left uk-cover-container uk-text-center uk-padding-remove">
               <img :src="`${category.image_url}`" width="150" height="300" alt="">
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
 
   components: {
@@ -61,27 +61,6 @@ export default {
 
   },
 
-
-  methods: {
-    ...mapActions([
-    ]),
-
-    // getExercisesForCategory(category) {
-    //
-    //   this.selectedCategory = category;
-    //
-    //   this.getExercises(category.id);
-    //
-    // },
-
-    showExercises(category) {
-
-      this.$router.push({ path: `category/${category.id}`});
-      // UIkit.modal('#exercises-list').toggle();
-
-    },
-
-  },
 
 }
 </script>

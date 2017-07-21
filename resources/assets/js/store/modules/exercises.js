@@ -38,17 +38,20 @@ const actions = {
   },
 
   getExercises({ commit }, categoryId) {
-    commit(types.RECEIVE_EXERCISES, {});
-    commit(types.START_LOADING);
-    axios.post('/app/exercises/show', {category_id: categoryId})
-      .then((response) => {
-        commit(types.RECEIVE_EXERCISES, response.data);
-        commit(types.STOP_LOADING);
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Problem getting exercises. Try reloading.');
-      });
+    return new Promise((resolve, reject) => {
+      commit(types.RECEIVE_EXERCISES, {});
+      commit(types.START_LOADING);
+      axios.post('/app/exercises/show', {category_id: categoryId})
+        .then((response) => {
+          commit(types.RECEIVE_EXERCISES, response.data);
+          commit(types.STOP_LOADING);
+          resolve();
+        })
+        .catch(err => {
+          commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, 'Problem getting exercises. Try reloading.');
+        });
+    });
   },
 
   getExerciseDetails({ commit }, exerciseId) {
