@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="uk-background-cover uk-height-viewport" style="background-image: url(http://www.rd.com/wp-content/uploads/sites/2/2017/01/02-know-reasons-hit-workout-plateau-505776960-BartekSzewczyk.jpg);">
+<div class="uk-background-cover uk-height-viewport" style="background-image: url(assets/login_bg.jpg);">
   <div class="uk-width-5-6 uk-width-1-3@s uk-position-center uk-card uk-card-default uk-margin-remove">
     <div class="uk-card-body">
 

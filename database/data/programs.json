@@ -1,8 +1,8 @@
 [
   {
     "name": "Beginners program",
-    "description": "The following training routine is typical or basic and not designed for specialized training. Other specialized routines that can be used are listed in my Reverse Pyramid Training book. Selecting a routine should best fit your experience, level of fitness, goal(s) and allotted time (weekly schedule). https://www.bodybuilding.com/content/the-ultimate-beginner-3-day-full-body-routine.html",
-    "image_url": "http://www.rd.com/wp-content/uploads/sites/2/2017/05/01_liftingweights_Use-This-Science-Backed-Weight-Lifting-Trick-to-Get-Stronger-Faster-In-Zero-Extra-Time_245026915_hxdbzxy-1024x683.jpg",
+    "description": "The following training routine is typical or basic and not designed for specialized training. Other specialized routines that can be used are listed in my Reverse Pyramid Training book. Selecting a routine should best fit your experience, level of fitness, goal(s) and allotted time (weekly schedule).",
+    "image_url": "start",
     "days": [
         {
           "name": "Monday",
@@ -61,7 +61,7 @@
   {
     "name": "Jason Blaha's Ice Cream Fitness 5x5 Novice Program",
     "description": "A potent and proven novice muscle and strength building program from Jason Blaha & Ice Cream Fitness. Testimonials continue to pour in touting its effectiveness.",
-    "image_url": "http://fitby50.net/wp-content/uploads/2016/10/Ice-Cream-Fitness.jpg",
+    "image_url": "icf",
     "days": [
         {
           "name": "First day",
@@ -70,11 +70,11 @@
             { "exercise_id": 239, "reps": 5, "sets": 5 },
             { "exercise_id": 136, "reps": 5, "sets": 5 },
             { "exercise_id": 69, "reps": 5, "sets": 5 },
-            { "exercise_id": 226, "reps": 3, "sets": 8 },
-            { "exercise_id": 28, "reps": 3, "sets": 8 },
-            { "exercise_id": 18, "reps": 3, "sets": 8 },
-            { "exercise_id": 261, "reps": 2, "sets": 10 },
-            { "exercise_id": 25, "reps": 3, "sets": 10 }
+            { "exercise_id": 226, "reps": 8, "sets": 3 },
+            { "exercise_id": 28, "reps": 8, "sets": 3 },
+            { "exercise_id": 18, "reps": 8, "sets": 3 },
+            { "exercise_id": 261, "reps": 10, "sets": 2 },
+            { "exercise_id": 25, "reps": 10, "sets": 2 }
 
           ]
         },
@@ -86,9 +86,9 @@
             { "exercise_id": 55, "reps": 5, "sets": 1 },
             { "exercise_id": 143, "reps": 5, "sets": 5 },
             { "exercise_id": 69, "reps": 5, "sets": 5 },
-            { "exercise_id": 116, "reps": 3, "sets": 8 },
-            { "exercise_id": 18, "reps": 3, "sets": 8 },
-            { "exercise_id": 25, "reps": 3, "sets": 10 }
+            { "exercise_id": 116, "reps": 8, "sets": 3 },
+            { "exercise_id": 18, "reps": 8, "sets": 3 },
+            { "exercise_id": 25, "reps": 10, "sets": 3 }
 
           ]
         }
@@ -98,7 +98,7 @@
   {
     "name": "Custom workout program",
     "description": "This is empty workout program. You can later add your exercises and edit info in progams section.",
-    "image_url": "https://i2.wp.com/notyourgoodfatty.com/wp-content/uploads/2014/12/wpid-timi_gustafson_empty_gym.jpg",
+    "image_url": "custom",
     "days": [
 
     ]

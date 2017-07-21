@@ -9,7 +9,7 @@
       <div class="uk-card-default uk-padding-small uk-margin-bottom">
         <p class="uk-margin-remove">
           <span class="uk-h5 uk-margin-remove uk-padding-remove">Beta 0.1</span>
-          <p class="uk-text-meta uk-margin-remove uk-padding-remove">Thank you for resgistering. Please note that this web app is still in <strong>beta</strong> version.
+          <p class="uk-text-meta uk-margin-remove uk-padding-remove">Thank you for registering. Please note that this web app is still in <strong>beta</strong> version.
           There might be some bugs. Please use <strong class="uk-text-uppercase">bug report</strong> option from menu.</p>
         </p>
       </div>
@@ -27,7 +27,7 @@
 
           <div class="uk-card-default">
             <div class="uk-card-media-left uk-cover-container">
-                <img :src="program.image_url" alt="" uk-cover>
+                <img :src="`assets/programs/${program.image_url}.jpg`" alt="" uk-cover>
 
                 <canvas width="300" height="200"></canvas>
             </div>
