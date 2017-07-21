@@ -22,7 +22,7 @@
 
             <div class="uk-card" :class="program.id == settings.selected_program ? 'uk-card-primary' : 'uk-card-default'">
               <div class="uk-card-media-left uk-cover-container">
-                  <img :src="program.image_url" alt="" uk-cover>
+                  <img :src="`assets/programs/${program.image_url}`" alt="" uk-cover>
                   <div class="uk-position-bottom uk-overlay uk-overlay-primary" v-if="program.id == settings.selected_program ">
                       <p class="uk-h4 uk-margin-remove">
                         <i class="fa fa-star" aria-hidden="true"></i>
