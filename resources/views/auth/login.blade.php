@@ -5,6 +5,8 @@
   <div class="uk-width-5-6 uk-width-1-3@s uk-position-center uk-card uk-card-default uk-margin-remove">
     <div class="uk-card-body">
 
+      <button id="demo-button" type="button" class="uk-button uk-button-danger uk-align-center">Demo account</button>
+
       <div class="uk-text-center  uk-margin-small-bottom">
         <i class="fa fa-bolt fa-3x uk-text-primary" aria-hidden="true"></i>
         <span class="uk-text-lead">fitW3</span>
@@ -12,7 +14,7 @@
 
       </div>
 
-      <form method="POST" action="{{ route('login') }}">
+      <form id="login-form" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
 
           <fieldset class="uk-fieldset">
@@ -20,7 +22,6 @@
 
               <div class="uk-margin">
                     <div class="uk-inline uk-width-1-1">
-                        {{-- <span class="uk-form-icon" uk-icon="icon: user"></span> --}}
                         <span class="uk-form-icon">
                           <i class="fa fa-user" aria-hidden="true"></i>
                         </span>
@@ -36,7 +37,6 @@
 
                 <div class="uk-margin">
                       <div class="uk-inline uk-width-1-1">
-                          {{-- <span class="uk-form-icon" uk-icon="icon: user"></span> --}}
                           <span class="uk-form-icon">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                           </span>
@@ -59,4 +59,13 @@
      </div>
   </div>
 </div>
+<script type="text/javascript">
+  var demo = document.getElementById('demo-button');
+  var form = document.getElementById('login-form');
+  demo.addEventListener('click', () => {
+    document.getElementById('email').value = "demo@example.com";
+    document.getElementById('password').value = "demopassword";
+    form.submit();
+  });
+</script>
 @endsection
