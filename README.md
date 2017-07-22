@@ -1,9 +1,8 @@
 # tracker
-
-> fitW3
+## fitW3
 >
 > Fitness logger app
-> It is my vuejs and php learning project
+> It is my vuejs and laravel learning project
 > Still in development and has bugs
 
 ## Install instructions
