@@ -33,7 +33,7 @@ const actions = {
         commit(types.RECEIVE_EXERCISE_STATS, response.data);
       })
       .catch((err) => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'Error getting exercise statistics.');
       });
     });
@@ -50,7 +50,7 @@ const actions = {
         // commit(types.RECEIVE_TOTAL_PROGRESS, response.data);
       })
       .catch((err) => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'Error getting exercise statistics.');
       });
     });

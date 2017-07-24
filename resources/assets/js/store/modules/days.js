@@ -28,7 +28,7 @@ const actions = {
         commit(types.SET_CURRENT_DAY, response.data);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'There was a problem getting day. Try reloading.');
       });
   },
@@ -43,7 +43,7 @@ const actions = {
 
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'There was a problem saving step. Try reloading.');
       });
   },
@@ -56,7 +56,7 @@ const actions = {
         commit(types.REMOVE_STEP, stepId);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'There was a problem saving step. Try reloading.');
       });
   },

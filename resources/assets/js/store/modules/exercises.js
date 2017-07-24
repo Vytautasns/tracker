@@ -25,16 +25,20 @@ const getters = {
 // actions
 const actions = {
   getCategories({ commit }) {
-    commit(types.START_LOADING);
-    axios.get('/app/exercises/categories')
-      .then((response) => {
-        commit(types.RECEIVE_CATEGORIES, response.data);
-        commit(types.STOP_LOADING);
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
-      });
+    return new Promise(function(resolve, reject) {
+      commit(types.START_LOADING);
+      axios.get('/app/exercises/categories')
+        .then((response) => {
+          resolve(response.data);
+          commit(types.RECEIVE_CATEGORIES, response.data);
+          commit(types.STOP_LOADING);
+        })
+        .catch(err => {
+          // commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+        });
+    });
+
   },
 
   getExercises({ commit }, categoryId) {
@@ -48,7 +52,7 @@ const actions = {
           resolve();
         })
         .catch(err => {
-          commit(types.STOP_LOADING);
+          // commit(types.STOP_LOADING);
           commit(types.ERROR_TEXT, 'Problem getting exercises. Try reloading.');
         });
     });
@@ -63,7 +67,7 @@ const actions = {
         commit(types.STOP_LOADING);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'Problem getting exercise details. Try reloading.');
       });
   },
@@ -79,7 +83,7 @@ const actions = {
          })
          .catch(err => {
            reject();
-           commit(types.STOP_LOADING);
+          //  commit(types.STOP_LOADING);
            commit(types.ERROR_TEXT, 'Couldn\'t save exercise');
          });
       });
@@ -96,7 +100,7 @@ const actions = {
          })
          .catch(err => {
            reject();
-           commit(types.STOP_LOADING);
+          //  commit(types.STOP_LOADING);
            commit(types.ERROR_TEXT, 'Couldn\'t delete exercise');
          });
       });

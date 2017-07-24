@@ -64,6 +64,12 @@ class User extends Authenticatable
         'name' => 'weight_units',
         'value' => 'kg',
       ]);
+
+      Setting::create([
+        'user_id' => $this->id,
+        'name' => 'selected_program',
+        'value' => 0,
+      ]);
     }
 
     // Create default starting programs
@@ -102,30 +108,43 @@ class User extends Authenticatable
            }
        }
 
-       // TODO let user choose program upon first start
-       // Temp take first created program
-       Setting::create([
-         'user_id' => $this->id,
-         'name' => 'selected_program',
-         'value' => $this->programs()->first()->id,
-       ]);
+    }
 
+    // Select program
+    public function selectProgram($id)
+    {
+      $selected = $this->settings()
+                       ->updateOrCreate(
+                         ['name' => 'selected_program'],
+                         ['value' => $id]
+                       );
+      return true;
     }
 
 
 
     // Return selected program
-    public function getSelectedProgram()
+    public function selectedProgram()
     {
-      $selected = $this->settings()
-                        ->where('name', 'selected_program')
-                        ->pluck('value')->first();
+      try {
+        $selected = $this->settings()
+                          ->where('name', 'selected_program')
+                          ->firstOrFail()->id;
+        return $selected;
+      } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+        $this->selectProgram(0);
+        return $this->selectedProgram();
+      }
+    }
 
-      return $this->programs()->find($selected)->load([
-        'days' => function ($query) {
-          $query->with('steps');
-        }
-      ]);
+    // Return all programs
+    // If there is none, create default ones
+    public function availablePrograms()
+    {
+      if ($this->programs()->count() <= 0) {
+        $this->createDefaultPrograms();
+      }
+      return $this->programs;
     }
 
 

@@ -4,7 +4,7 @@
       <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
         <h3 class="uk-heading-bullet uk-text-left">
           <i @click="$router.go(-1)" class="ppp fa fa-chevron-left uk-text-primary uk-padding-small uk-position-top-right" aria-hidden="true"></i>
-          
+
           <span v-if="!program">Create new program</span>
           <span v-else="!program">Edit program</span>
         </h3>
@@ -21,9 +21,21 @@
               </div>
 
               <div class="uk-margin">
-                <button @click.prevent="saveProgram" type="submit" class="uk-button uk-button-primary" :disabled="newProgram.name.length < 3">
+                <button class="uk-button uk-button-primary"
+                  v-if="!program"
+                  @click.prevent="saveProgram"
+                  type="submit"
+                  :disabled="buttonEnabled">
                   <i class="fa fa-save" aria-hidden="true"></i>
                   Save
+                </button>
+                <button class="uk-button uk-button-primary"
+                  v-else
+                  @click.prevent="saveEdited"
+                  type="submit"
+                  :disabled="buttonEnabled">
+                  <i class="fa fa-save" aria-hidden="true"></i>
+                  Update
                 </button>
               </div>
           </fieldset>
@@ -34,7 +46,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
 
@@ -55,13 +67,31 @@ export default {
     }
   },
 
+  computed: {
+    ...mapGetters([
+      'appState',
+    ]),
+
+    buttonEnabled: function () {
+      return this.newProgram.name.length < 3 || this.newProgram.description.length < 3 || this.appState.ajaxQueue.length > 0;
+    },
+  },
+
   methods: {
     ...mapActions([
       'saveNewPrgoram',
+      'updateProgram',
     ]),
 
     saveProgram() {
       this.saveNewPrgoram(this.newProgram)
+        .then(() => {
+          this.$router.push('/programs');
+        });
+    },
+
+    saveEdited() {
+      this.updateProgram(this.newProgram)
         .then(() => {
           this.$router.push('/programs');
         });

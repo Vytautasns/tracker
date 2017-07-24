@@ -63,29 +63,29 @@ export default {
 
   created() {
 
-    this.getCurrentProgram().then((currentProgram) => {
-      for (var i = 0; i < currentProgram.days.length; i++) {
-        if (currentProgram.days[i].week_days.includes(this.today) && currentProgram.days[i].steps.length > 0) {
-          this.todaysWorkouts.push(currentProgram.days[i]);
-        }
-      }
-    });
-
-    this.today = moment().format("ddd").toLowerCase();
-    this.getTotalProgress().then((totalProgress) => {
-      this.statsReady = true;
-      for (var variable in totalProgress) {
-        let sum = 0;
-        for (var i = 0; i < totalProgress[variable].length; i++) {
-          // console.log(totalProgress[variable][i].weight);
-          sum += parseInt(totalProgress[variable][i].weight);
-
-        }
-        totalProgress[variable].total = sum;
-        this.progressData.push(sum);
-      }
-
-    });
+    // this.getCurrentProgram().then((currentProgram) => {
+    //   for (var i = 0; i < currentProgram.days.length; i++) {
+    //     if (currentProgram.days[i].week_days.includes(this.today) && currentProgram.days[i].steps.length > 0) {
+    //       this.todaysWorkouts.push(currentProgram.days[i]);
+    //     }
+    //   }
+    // });
+    //
+    // this.today = moment().format("ddd").toLowerCase();
+    // this.getTotalProgress().then((totalProgress) => {
+    //   this.statsReady = true;
+    //   for (var variable in totalProgress) {
+    //     let sum = 0;
+    //     for (var i = 0; i < totalProgress[variable].length; i++) {
+    //       // console.log(totalProgress[variable][i].weight);
+    //       sum += parseInt(totalProgress[variable][i].weight);
+    //
+    //     }
+    //     totalProgress[variable].total = sum;
+    //     this.progressData.push(sum);
+    //   }
+    //
+    // });
   },
 
   computed: {

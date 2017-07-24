@@ -14,6 +14,7 @@ export const STOP_LOADING = 'STOP_LOADING';
 export const ERROR_TEXT = 'ERROR_TEXT';
 export const CHANGE_SETTING = 'CHANGE_SETTING';
 export const MAKE_NOTIFICATION = 'MAKE_NOTIFICATION';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 // Workout Programs
 

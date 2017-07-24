@@ -35,7 +35,7 @@ const actions = {
         commit(types.RECEIVE_TODAYS_LOGS, response.data);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'There was a problem todays log entries. Try reloading.');
       });
   },
@@ -50,7 +50,7 @@ const actions = {
         commit(types.ADD_NEW_LOG, log);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'There was a problem todays log entries. Try reloading.');
       });
   },
@@ -63,7 +63,7 @@ const actions = {
         commit(types.REMOVE_LOG, logId);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'Cannot delete log. Try reloading.');
       });
   },
@@ -77,7 +77,7 @@ const actions = {
         commit(types.RECEIVE_DAY_LOG, response.data);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'Cannot get todays log. Try reloading.');
       });
   },
@@ -91,7 +91,7 @@ const actions = {
         commit(types.RECEIVE_STEP_LOGS, response.data);
       })
       .catch(err => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.ERROR_TEXT, 'Cannot get this step logs. Try reloading.');
       });
   },
