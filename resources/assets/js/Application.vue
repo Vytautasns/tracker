@@ -18,7 +18,7 @@
                     {{ message }}
                   </p>
                 </div>
-                <a @click="reload" class="uk-button uk-button-danger uk-margin-small uk-width-1-1">Try again</a>
+                <a @click="reload" class="uk-button uk-button-danger uk-margin-small uk-width-1-1">Main page</a>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default {
     ]),
 
     reload() {
-      location.reload();
+      window.location = '/';
     },
 
     notify() {

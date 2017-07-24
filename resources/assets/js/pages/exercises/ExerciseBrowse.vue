@@ -7,12 +7,14 @@
           <span>{{ categories[category-1].name }}</span>
         </h3>
         <img :src="categories[category-1].image_url" width="120" height="280" alt="" class="uk-align-center uk-display-block">
-        <div class="uk-card-default uk-padding-small uk-align-center uk-text-center" uk-sticky="top: 100; animation: uk-animation-slide-top; cls-active:sticky-back;">
-          <button @click="$router.go(-1)" type="button" class="uk-button uk-button-secondary uk-margin-remove">
+
+        <div class="uk-padding-remove uk-align-center uk-text-center" uk-sticky="top: 30; animation: uk-animation-slide-top; cls-active:sticky-back;">
+          <button @click="$router.go(-1)" type="button" class="uk-button uk-button-primary uk-margin-remove" >
             <i class="fa fa-step-backward" aria-hidden="true"></i>
             Categories
           </button>
         </div>
+        <w-loading v-if="!loaded || exercises.length <= 0">Getting exercises...</w-loading>
         <div class="uk-grid-small uk-child-width-2-3@m uk-padding-small uk-grid-match uk-padding-remove-top uk-margin-top" uk-grid>
           <div @click="$router.push(`/exercises/${exercise.id}`)" class="uk-box-shadow-hover-large ppp" v-if="exercises" v-for="exercise in exercises" :key="exercise.id">
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding-small" uk-grid>
@@ -39,10 +41,19 @@ export default {
 
   props: ['category'],
 
+  data() {
+    return {
+      loaded: false,
+    }
+  },
+
   created() {},
 
-  mounted() {
-    this.getExercises(this.category);
+  created() {
+    this.getExercises(this.category)
+      .then(() => {
+        this.loaded = true;
+      });
   },
 
   computed: {
@@ -71,5 +82,10 @@ export default {
 
 .sticky-back {
   z-index: 1;
+  padding: 20px !important;
+  background-color: rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
 }
 </style>

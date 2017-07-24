@@ -54571,7 +54571,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -54621,63 +54621,15 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 var _vuex = __webpack_require__(4);
 
 exports.default = {
-
-  components: {},
-
   data: function data() {
     return {
       selectedCategory: ''
     };
   },
-  created: function created() {},
-  mounted: function mounted() {},
 
 
   computed: _extends({}, (0, _vuex.mapGetters)(['categories']))
@@ -54690,7 +54642,7 @@ exports.default = {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "uk-container"
+    staticClass: "uk-container uk-margin-bottom"
   }, [_c('div', {
     staticClass: "uk-margin-top"
   }, [_c('div', {
@@ -54725,7 +54677,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\n                Create exercise\n              ")])])])]), _vm._v(" "), _c('div', {
+  }), _vm._v("\n              Create exercise\n            ")])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-child-width-1-3@m uk-padding-small uk-grid-match uk-padding-remove-top",
     attrs: {
       "uk-grid": ""
@@ -54844,7 +54796,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n.image[data-v-6fb4f57e] {\n  height: 80px;\n  width: 80px;\n}\n.sticky-back[data-v-6fb4f57e] {\n  z-index: 1;\n}\n", ""]);
+exports.push([module.i, "\n.image[data-v-6fb4f57e] {\n  height: 80px;\n  width: 80px;\n}\n.sticky-back[data-v-6fb4f57e] {\n  z-index: 1;\n  padding: 20px !important;\n  background-color: rgba(0,0,0,0.75);\n  -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);\n  -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);\n  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);\n}\n", ""]);
 
 // exports
 
@@ -54860,7 +54812,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _props$data$created$c;
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
 //
 //
 //
@@ -54895,20 +54851,25 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _vuex = __webpack_require__(4);
 
-exports.default = {
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+exports.default = (_props$data$created$c = {
 
   props: ['category'],
 
-  created: function created() {},
-  mounted: function mounted() {
-    this.getExercises(this.category);
+  data: function data() {
+    return {
+      loaded: false
+    };
   },
+  created: function created() {}
+}, _defineProperty(_props$data$created$c, 'created', function created() {
+  var _this = this;
 
-
-  computed: _extends({}, (0, _vuex.mapGetters)(['exercises', 'categories'])),
-
-  methods: _extends({}, (0, _vuex.mapActions)(['getExercises']))
-};
+  this.getExercises(this.category).then(function () {
+    _this.loaded = true;
+  });
+}), _defineProperty(_props$data$created$c, 'computed', _extends({}, (0, _vuex.mapGetters)(['exercises', 'categories']))), _defineProperty(_props$data$created$c, 'methods', _extends({}, (0, _vuex.mapActions)(['getExercises']))), _props$data$created$c);
 
 /***/ }),
 /* 203 */
@@ -54942,12 +54903,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "alt": ""
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "uk-card-default uk-padding-small uk-align-center uk-text-center",
+    staticClass: "uk-padding-remove uk-align-center uk-text-center",
     attrs: {
-      "uk-sticky": "top: 100; animation: uk-animation-slide-top; cls-active:sticky-back;"
+      "uk-sticky": "top: 30; animation: uk-animation-slide-top; cls-active:sticky-back;"
     }
   }, [_c('button', {
-    staticClass: "uk-button uk-button-secondary uk-margin-remove",
+    staticClass: "uk-button uk-button-primary uk-margin-remove",
     attrs: {
       "type": "button"
     },
@@ -54961,7 +54922,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\n          Categories\n        ")])]), _vm._v(" "), _c('div', {
+  }), _vm._v("\n          Categories\n        ")])]), _vm._v(" "), (!_vm.loaded || _vm.exercises.length <= 0) ? _c('w-loading', [_vm._v("Getting exercises...")]) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-child-width-2-3@m uk-padding-small uk-grid-match uk-padding-remove-top uk-margin-top",
     attrs: {
       "uk-grid": ""
@@ -54993,7 +54954,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('span', {
       staticClass: "uk-h4"
     }, [_vm._v(_vm._s(exercise.name))])])])]) : _vm._e()
-  }))])])])
+  }))], 1)])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -55082,7 +55043,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -55163,6 +55124,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
 
 var _vuex = __webpack_require__(4);
 
@@ -55175,7 +55137,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
   data: function data() {
     return {
-      statsReady: false
+      statsReady: false,
+      loaded: false
     };
   },
 
@@ -55188,10 +55151,12 @@ exports.default = {
   created: function created() {
     var _this = this;
 
-    this.getExerciseDetails(this.exercise);
-    this.getExerciseHistory(this.exercise).then(function () {
-      _this.statsReady = true;
+    this.getExerciseDetails(this.exercise).then(function () {
+      _this.loaded = true;
     });
+    // this.getExerciseHistory(this.exercise).then(() => {
+    //   this.statsReady = true;
+    // });
   },
   mounted: function mounted() {},
 
@@ -55206,7 +55171,7 @@ exports.default = {
 
       UIkit.modal.confirm(template).then(function () {
         _this2.removeExercise(id).then(function () {
-          _this2.$router.go(-1);
+          _this2.$router.push('/exercises');
         });
       });
     }
@@ -55268,7 +55233,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\n            Delete\n          ")])])]) : _vm._e(), _vm._v(" "), _c('div', {
+  }), _vm._v("\n            Delete\n          ")])])]) : _vm._e(), _vm._v(" "), (!_vm.loaded || !_vm.exerciseDetails) ? _c('w-loading') : _vm._e(), _vm._v(" "), (_vm.loaded) ? _c('div', {
     staticClass: "uk-grid-collapse uk-child-width-1-2@s uk-margin",
     attrs: {
       "uk-grid": ""
@@ -55299,7 +55264,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "uk-card-title"
   }, [_vm._v("Details")]), _vm._v(" "), _c('dl', {
     staticClass: "uk-description-list"
-  }, [_c('dt', [_vm._v("Description")]), _vm._v(" "), _c('dd', [_vm._v("\n                " + _vm._s(_vm.exerciseDetails.description) + "\n              ")])])])])])])]), _vm._v(" "), _c('div', {
+  }, [_c('dt', [_vm._v("Description")]), _vm._v(" "), _c('dd', [_vm._v("\n                " + _vm._s(_vm.exerciseDetails.description) + "\n              ")])])])])]) : _vm._e()], 1)]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-top uk-margin-bottom"
   }, [_c('div', {
     staticClass: "uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small"
@@ -55415,7 +55380,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -55432,6 +55397,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -55497,14 +55475,27 @@ exports.default = {
   },
 
 
-  computed: _extends({}, (0, _vuex.mapGetters)(['categories'])),
+  computed: _extends({}, (0, _vuex.mapGetters)(['categories', 'appState']), {
 
-  methods: _extends({}, (0, _vuex.mapActions)(['storeExercise']), {
+    buttonEnabled: function buttonEnabled() {
+      return this.newExercise.name.length < 3 || this.newExercise.category_id == 99 || this.appState.ajaxQueue.length > 0;
+    }
+
+  }),
+
+  methods: _extends({}, (0, _vuex.mapActions)(['storeExercise', 'updateExercise']), {
     saveExercise: function saveExercise() {
       var _this = this;
 
       this.storeExercise(this.newExercise).then(function (id) {
         _this.$router.push('/exercises/' + id);
+      });
+    },
+    update: function update() {
+      var _this2 = this;
+
+      this.updateExercise(this.newExercise).then(function (id) {
+        _this2.$router.push('/exercises/' + id);
       });
     }
   })
@@ -55627,11 +55618,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
-  }, [_c('button', {
+  }, [(!_vm.exercise) ? _c('button', {
     staticClass: "uk-button uk-button-primary",
     attrs: {
       "type": "submit",
-      "disabled": _vm.newExercise.name.length < 3 || _vm.newExercise.category_id == 99
+      "disabled": _vm.buttonEnabled
     },
     on: {
       "click": function($event) {
@@ -55644,7 +55635,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\n                Save\n              ")])])])])])])])
+  }), _vm._v("\n                Save\n              ")]) : _c('button', {
+    staticClass: "uk-button uk-button-primary",
+    attrs: {
+      "type": "submit",
+      "disabled": _vm.buttonEnabled
+    },
+    on: {
+      "click": function($event) {
+        $event.preventDefault();
+        _vm.update($event)
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-save",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v("\n                Update\n              ")])])])])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('label', {
     attrs: {
@@ -58139,8 +58147,7 @@ var actions = {
         commit(types.RECEIVE_CATEGORIES, response.data);
         commit(types.STOP_LOADING);
       }).catch(function (err) {
-        // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
     });
   },
@@ -58149,28 +58156,25 @@ var actions = {
 
     return new Promise(function (resolve, reject) {
       commit(types.RECEIVE_EXERCISES, {});
-      commit(types.START_LOADING);
-      axios.post('/app/exercises/show', { category_id: categoryId }).then(function (response) {
+      axios.get('/app/exercises/category/' + categoryId).then(function (response) {
         commit(types.RECEIVE_EXERCISES, response.data);
-        commit(types.STOP_LOADING);
         resolve();
       }).catch(function (err) {
-        // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Problem getting exercises. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
     });
   },
   getExerciseDetails: function getExerciseDetails(_ref3, exerciseId) {
     var commit = _ref3.commit;
 
-    commit(types.RECEIVE_EXERCISE_DETAILS, {});
-    commit(types.START_LOADING);
-    axios.post('/app/exercises/details', { exercise_id: exerciseId }).then(function (response) {
-      commit(types.RECEIVE_EXERCISE_DETAILS, response.data);
-      commit(types.STOP_LOADING);
-    }).catch(function (err) {
-      // commit(types.STOP_LOADING);
-      commit(types.ERROR_TEXT, 'Problem getting exercise details. Try reloading.');
+    return new Promise(function (resolve, reject) {
+      commit(types.RECEIVE_EXERCISE_DETAILS, {});
+      axios.get('/app/exercises/' + exerciseId).then(function (response) {
+        resolve();
+        commit(types.RECEIVE_EXERCISE_DETAILS, response.data);
+      }).catch(function (err) {
+        commit(types.ERROR_TEXT, err.response);
+      });
     });
   },
   storeExercise: function storeExercise(_ref4, exercise) {
@@ -58179,31 +58183,45 @@ var actions = {
 
     return new Promise(function (resolve, reject) {
       commit(types.START_LOADING);
-      axios.post('/app/exercises/store', exercise).then(function (response) {
+      axios.post('/app/exercises', exercise).then(function (response) {
         resolve(response.data);
         commit(types.STOP_LOADING);
         dispatch('makeNotification', 'Saved!');
       }).catch(function (err) {
         reject();
-        //  commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Couldn\'t save exercise');
+        commit(types.ERROR_TEXT, err.response);
       });
     });
   },
-  removeExercise: function removeExercise(_ref5, exerciseId) {
+  updateExercise: function updateExercise(_ref5, exercise) {
     var commit = _ref5.commit,
         dispatch = _ref5.dispatch;
 
     return new Promise(function (resolve, reject) {
       commit(types.START_LOADING);
-      axios.post('/app/exercises/destroy', { id: exerciseId }).then(function (response) {
+      axios.put('/app/exercises/' + exercise.id, exercise).then(function (response) {
+        resolve(response.data);
+        commit(types.STOP_LOADING);
+        dispatch('makeNotification', 'Updated!');
+      }).catch(function (err) {
+        reject();
+        commit(types.ERROR_TEXT, err.response);
+      });
+    });
+  },
+  removeExercise: function removeExercise(_ref6, exerciseId) {
+    var commit = _ref6.commit,
+        dispatch = _ref6.dispatch;
+
+    return new Promise(function (resolve, reject) {
+      commit(types.START_LOADING);
+      axios.delete('/app/exercises/' + exerciseId).then(function (response) {
         resolve();
         commit(types.STOP_LOADING);
         dispatch('makeNotification', 'Deleted!');
       }).catch(function (err) {
         reject();
-        //  commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Couldn\'t delete exercise');
+        commit(types.ERROR_TEXT, err.response);
       });
     });
   }
@@ -59013,7 +59031,7 @@ exports.default = {
 
   methods: _extends({}, (0, _vuex.mapActions)(['getUser', 'makeNotification', 'getCategories', 'clearErrors']), {
     reload: function reload() {
-      location.reload();
+      window.location = '/';
     },
     notify: function notify() {
       if (this.appState.notification) {
@@ -59414,7 +59432,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.reload
     }
-  }, [_vm._v("Try again")])])])])]) : _vm._e()]), _vm._v(" "), (_vm.started === 1) ? _c('div', [_c('Navigation'), _vm._v(" "), _c('transition', {
+  }, [_vm._v("Main page")])])])])]) : _vm._e()]), _vm._v(" "), (_vm.started === 1) ? _c('div', [_c('Navigation'), _vm._v(" "), _c('transition', {
     attrs: {
       "name": "slide-fade",
       "mode": "out-in"

@@ -22,7 +22,8 @@
             </a>
           </li>
         </ul>
-        <div class="uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <w-loading v-if="!loaded || !exerciseDetails"></w-loading>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid v-if="loaded">
           <div class="uk-card-media-left uk-cover-container">
             <div class="uk-text-center" uk-toggle="target: .toggle; mode: click;">
               <img class="toggle" :src="`assets/exercise_image/${exerciseDetails.image_url}_1.png`" alt="">
@@ -73,6 +74,7 @@ export default {
   data() {
     return {
       statsReady: false,
+      loaded: false,
     }
   },
   components: {
@@ -82,10 +84,12 @@ export default {
   props: ['exercise'],
 
   created() {
-    this.getExerciseDetails(this.exercise);
-    this.getExerciseHistory(this.exercise).then(() => {
-      this.statsReady = true;
+    this.getExerciseDetails(this.exercise).then(() => {
+      this.loaded = true;
     });
+    // this.getExerciseHistory(this.exercise).then(() => {
+    //   this.statsReady = true;
+    // });
   },
 
   mounted() {
@@ -124,7 +128,7 @@ export default {
       .then(() => {
         this.removeExercise(id)
         .then(() => {
-          this.$router.go(-1);
+          this.$router.push('/exercises');
         });
       });
     },

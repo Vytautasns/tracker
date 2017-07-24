@@ -34,8 +34,7 @@ const actions = {
           commit(types.STOP_LOADING);
         })
         .catch(err => {
-          // commit(types.STOP_LOADING);
-          commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+          commit(types.ERROR_TEXT, err.response);
         });
     });
 
@@ -44,38 +43,35 @@ const actions = {
   getExercises({ commit }, categoryId) {
     return new Promise((resolve, reject) => {
       commit(types.RECEIVE_EXERCISES, {});
-      commit(types.START_LOADING);
-      axios.post('/app/exercises/show', {category_id: categoryId})
+      axios.get(`/app/exercises/category/${categoryId}`)
         .then((response) => {
           commit(types.RECEIVE_EXERCISES, response.data);
-          commit(types.STOP_LOADING);
           resolve();
         })
         .catch(err => {
-          // commit(types.STOP_LOADING);
-          commit(types.ERROR_TEXT, 'Problem getting exercises. Try reloading.');
+          commit(types.ERROR_TEXT, err.response);
         });
     });
   },
 
   getExerciseDetails({ commit }, exerciseId) {
-    commit(types.RECEIVE_EXERCISE_DETAILS, {});
-    commit(types.START_LOADING);
-    axios.post('/app/exercises/details', {exercise_id: exerciseId})
-      .then((response) => {
-        commit(types.RECEIVE_EXERCISE_DETAILS, response.data);
-        commit(types.STOP_LOADING);
-      })
-      .catch(err => {
-        // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Problem getting exercise details. Try reloading.');
-      });
+    return new Promise(function(resolve, reject) {
+      commit(types.RECEIVE_EXERCISE_DETAILS, {});
+      axios.get(`/app/exercises/${exerciseId}`)
+        .then((response) => {
+          resolve();
+          commit(types.RECEIVE_EXERCISE_DETAILS, response.data);
+        })
+        .catch(err => {
+          commit(types.ERROR_TEXT, err.response);
+        });
+    });
   },
 
    storeExercise({commit, dispatch}, exercise) {
      return new Promise((resolve, reject) => {
        commit(types.START_LOADING);
-       axios.post('/app/exercises/store', exercise)
+       axios.post('/app/exercises', exercise)
          .then((response) => {
            resolve(response.data);
            commit(types.STOP_LOADING);
@@ -83,8 +79,23 @@ const actions = {
          })
          .catch(err => {
            reject();
-          //  commit(types.STOP_LOADING);
-           commit(types.ERROR_TEXT, 'Couldn\'t save exercise');
+           commit(types.ERROR_TEXT, err.response);
+         });
+      });
+   },
+
+   updateExercise({commit, dispatch}, exercise) {
+     return new Promise((resolve, reject) => {
+       commit(types.START_LOADING);
+       axios.put(`/app/exercises/${exercise.id}`, exercise)
+         .then((response) => {
+           resolve(response.data);
+           commit(types.STOP_LOADING);
+           dispatch('makeNotification', 'Updated!');
+         })
+         .catch(err => {
+           reject();
+           commit(types.ERROR_TEXT, err.response);
          });
       });
    },
@@ -92,7 +103,7 @@ const actions = {
    removeExercise({commit, dispatch}, exerciseId) {
      return new Promise((resolve, reject) => {
        commit(types.START_LOADING);
-       axios.post('/app/exercises/destroy', { id: exerciseId })
+       axios.delete(`/app/exercises/${exerciseId}`)
          .then((response) => {
            resolve();
            commit(types.STOP_LOADING);
@@ -100,8 +111,7 @@ const actions = {
          })
          .catch(err => {
            reject();
-          //  commit(types.STOP_LOADING);
-           commit(types.ERROR_TEXT, 'Couldn\'t delete exercise');
+           commit(types.ERROR_TEXT, err.response);
          });
       });
    },
