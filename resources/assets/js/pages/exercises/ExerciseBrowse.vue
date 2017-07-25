@@ -16,8 +16,8 @@
         </div>
         <w-loading v-if="!loaded || exercises.length <= 0">Getting exercises...</w-loading>
         <div class="uk-grid-small uk-child-width-2-3@m uk-padding-small uk-grid-match uk-padding-remove-top uk-margin-top" uk-grid>
-          <div @click="$router.push(`/exercises/${exercise.id}`)" class="uk-box-shadow-hover-large ppp" v-if="exercises" v-for="exercise in exercises" :key="exercise.id">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding-small" uk-grid>
+          <div @click="$router.push(`/exercises/${exercise.id}`)" class="ppp" v-if="exercises" v-for="exercise in exercises" :key="exercise.id">
+            <div class="uk-box-shadow-hover-large uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding-small" uk-grid>
               <div class="uk-width-auto uk-background-contain uk-margin-right" :style="`background-image: url(assets/exercise_thumbnail/${exercise.image_url}_1.png);`">
                 <canvas width="60" height="60"></canvas>
               </div>

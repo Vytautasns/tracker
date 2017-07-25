@@ -27,16 +27,16 @@ const actions = {
 
   getTodaysLogs({ commit }, stepId) {
     commit(types.RECEIVE_TODAYS_LOGS, {});
-    commit(types.START_LOADING);
+    // commit(types.START_LOADING);
 
     axios.post('/app/logs/today', { id: stepId })
       .then(response => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.RECEIVE_TODAYS_LOGS, response.data);
       })
       .catch(err => {
         // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'There was a problem todays log entries. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
   },
 
@@ -51,7 +51,7 @@ const actions = {
       })
       .catch(err => {
         // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'There was a problem todays log entries. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
   },
 
@@ -64,35 +64,35 @@ const actions = {
       })
       .catch(err => {
         // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Cannot delete log. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
   },
 
   getDayLogs({ commit }, dayId) {
     commit(types.RECEIVE_DAY_LOG, {});
-    commit(types.START_LOADING);
+    // commit(types.START_LOADING);
     axios.post('/app/logs/day', { day_id: dayId })
       .then(response => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.RECEIVE_DAY_LOG, response.data);
       })
       .catch(err => {
         // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Cannot get todays log. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
   },
 
   getStepLogs({ commit, dispatch }, stepId) {
     commit(types.RECEIVE_STEP_LOGS, {});
-    commit(types.START_LOADING);
+    // commit(types.START_LOADING);
     axios.post('/app/logs/step', { step_id: stepId })
       .then(response => {
-        commit(types.STOP_LOADING);
+        // commit(types.STOP_LOADING);
         commit(types.RECEIVE_STEP_LOGS, response.data);
       })
       .catch(err => {
         // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Cannot get this step logs. Try reloading.');
+        commit(types.ERROR_TEXT, err.response);
       });
   },
 

@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-
+<!-- 
     <div class="uk-margin-top uk-margin-bottom">
       <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
         <h3 class="uk-heading-bullet uk-text-left"><span>History</span></h3>
@@ -59,7 +59,7 @@
           v-if="statsReady">
           </Stats>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>

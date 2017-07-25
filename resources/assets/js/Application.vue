@@ -12,7 +12,7 @@
             </h3>
             <div class="uk-alert-danger uk-padding" uk-alert v-else>
                 <i class="fa fa-warning fa-3x" aria-hidden="true"></i>
-                <h3 class="uk-text-danger uk-margin-remove-top">Something went wrong</h3>
+                <!-- <h3 class="uk-text-danger uk-margin-remove-top">Something went wrong</h3> -->
                 <div class="uk-tile uk-tile-muted uk-padding-small">
                   <p v-for="(message, index) in appState.errorMessages">
                     {{ message }}
@@ -63,6 +63,7 @@ export default {
     });
 
     this.getCategories();
+    this.getCurrentProgram();
 
   },
 
@@ -96,6 +97,7 @@ export default {
       'makeNotification',
       'getCategories',
       'clearErrors',
+      'getCurrentProgram',
     ]),
 
     reload() {
@@ -149,15 +151,20 @@ export default {
 
 
   .slide-fade-enter-active {
-    transition: all 0.1s linear;
+    transition: all 0.2s linear;
   }
   .slide-fade-leave-active {
-    transition: all 0.1s linear;
-    // opacity: 0;
+    transition: all 0.2s linear;
+    opacity: 0;
   }
-  .slide-fade-enter, .slide-fade-leave-to
+
+  .slide-fade-enter
   /* .slide-fade-leave-active for <2.1.8 */ {
-    transform: translateY(-50px);
+    /*transform: translateX(-1000px);*/
+    opacity: 0;
+  }
+  .slide-fade-leave-to {
+    /*transform: translateX(1000px);*/
     opacity: 0;
   }
 </style>

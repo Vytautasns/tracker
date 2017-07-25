@@ -8,16 +8,30 @@ use Illuminate\Support\Facades\Auth;
 
 class DayController extends Controller
 {
-  // Get program day by its id
-  public function getDayById(Request $request)
+  /**
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index()
   {
-    $user = $request->user();
-    return $user->getSelectedProgram()->days()->find($request->day_id)->getSteps();
+      $user = Auth::user();
+      return $user->currentProgram()->days;
   }
 
-  // Save new day to program
-  public function addNewDay(Request $request)
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function store(Request $request)
   {
+    $this->validate($request, [
+        'name' => 'required|min:3',
+    ]);
+
+
     $newDay = Day::create([
       'program_id' => $request->program_id,
       'name' => $request->name,
@@ -27,30 +41,70 @@ class DayController extends Controller
     return $newDay;
   }
 
-  // delete day
-  public function removeDay(Request $request)
+  /**
+   * Display the specified resource.
+   *
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
+  public function show($id)
   {
-    $day = Day::find($request->id);
+      $user = Auth::user();
+      $day = $user->currentProgram()->days()->find($id);
+      if (!$day) {
+        return response('Step not found', 404);
+      }
+      return $day->getSteps();
+  }
+
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
+  public function update(Request $request, Day $day)
+  {
+    $this->validate($request, [
+        'name' => 'required|min:3',
+    ]);
+
+    $day->update([
+      'name' => $request->name,
+      'week_days' => implode(',', $request->week_days),
+    ]);
+
+    return $day;
+  }
+
+  /**
+   * Remove the specified resource from storage.
+   *
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
+  public function destroy(Day $day)
+  {
     foreach ($day->steps as $step) {
       $step->logs()->delete();
     }
     $day->steps()->delete();
     $day->delete();
+
   }
 
-  // Update day
-  public function update(Request $request)
-  {
-    $day = Day::find($request->id);
-    $day->name = $request->name;
-    $day->week_days = $request->week_days;
-    $day->save();
-  }
-
-  // Get todays workout
+  /**
+   * Get todays workouts
+   *
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
   public function getTodaysWorkout()
   {
     $user = Auth::user();
-    return $user->getTodaysWorkout();
+    return $user->currentProgram()->todaysWorkout();
   }
+
+
 }

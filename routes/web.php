@@ -31,10 +31,10 @@ Route::group(['middleware' => ['auth']], function () {
 
   // Program routes
   Route::get('/app/programs/selected', 'ProgramController@getSelectedProgram');
+  Route::get('/app/programs/current', 'ProgramController@getCurrentProgram');
   Route::resource('/app/programs', 'ProgramController', ['except' => [
     'edit', 'show', 'create'
   ]]);
-
 
   // Exercises routes
   Route::get('/app/exercises/categories', 'AppController@getCategories');
@@ -44,17 +44,14 @@ Route::group(['middleware' => ['auth']], function () {
     'edit', 'create'
   ]]);
 
-
   // Workout days
-  Route::post('/app/days/show', 'DayController@getDayById');
-  Route::post('/app/days/add', 'DayController@addNewDay');
-  Route::post('/app/days/remove', 'DayController@removeDay');
-  Route::post('/app/days/update', 'DayController@update');
-
+  Route::get('/app/days/today', 'DayController@getTodaysWorkout');
+  Route::resource('/app/days', 'DayController', ['except' => [
+    'edit', 'create'
+  ]]);
 
   // Steps
-  Route::post('/app/steps/save', 'StepController@store');
-  Route::post('/app/steps/remove', 'StepController@destroy');
+  Route::resource('/app/steps', 'StepController');
 
   // Logs
   Route::post('/app/logs/today', 'StepController@getTodaysLogs');
@@ -66,7 +63,5 @@ Route::group(['middleware' => ['auth']], function () {
   Route::get('/app/statistics/total', 'LogController@getStats');
   Route::post('/app/statistics/exercise', 'LogController@getExerciseHistory');
 
-
-  Route::get('/app/workout/today', 'DayController@getTodaysWorkout');
 
 });

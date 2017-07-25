@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="uk-container">
-<div class="uk-grid-small uk-margin-top" uk-grid>
+<div class="uk-grid-small uk-margin-top" uk-grid v-if="loaded">
 
   <div class="uk-width-1-1">
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-small">
@@ -185,6 +185,7 @@ export default {
 
   data() {
     return {
+      loaded: false,
       selected: {
         weight: 0,
         reps: 0,
@@ -195,7 +196,9 @@ export default {
   },
 
   created() {
-    this.getDayById(this.day);
+    this.getDayById(this.day).then(() => {
+      this.loaded = true;
+    });
     this.getTodaysLogs(this.stepId);
     this.updateLastWeight();
   },

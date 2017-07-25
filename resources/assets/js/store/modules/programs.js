@@ -21,10 +21,11 @@ const getters = {
 
 // actions
 const actions = {
+
   getCurrentProgram({ commit, rootState }) {
     return new Promise((resolve,reject) => {
       commit(types.START_LOADING);
-      axios.get('/app/programs/selected')
+      axios.get('/app/programs/current')
         .then(response => {
           resolve(response.data);
           commit(types.STOP_LOADING);
@@ -52,48 +53,6 @@ const actions = {
           commit(types.ERROR_TEXT, err.response);
         });
     });
-  },
-
-  addDay({ commit, dispatch }, day) {
-    commit(types.START_LOADING);
-    axios.post('/app/days/add', day)
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.ADD_NEW_DAY, response.data);
-        dispatch('makeNotification', 'New day added');
-      })
-      .catch(err => {
-        // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, err.response.data);
-      });
-  },
-
-  updateDay({ commit, dispatch }, day) {
-    commit(types.UPDATE_DAY, day);
-    commit(types.START_LOADING);
-    axios.post('/app/days/update', day)
-      .then(response => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'Information updated.');
-      })
-      .catch(err => {
-        // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, err.response);
-      });
-  },
-
-  removeDay({ commit, dispatch }, dayId) {
-    commit(types.START_LOADING);
-    axios.post('/app/days/remove', { id: dayId })
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.REMOVE_DAY, dayId);
-        dispatch('makeNotification', 'Day removed.');
-      })
-      .catch(err => {
-        // commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, err.response);
-      });
   },
 
   saveNewPrgoram({ commit, dispatch }, newProgram) {
@@ -156,36 +115,6 @@ const mutations = {
   [types.SET_CURRENT_PROGRAM] (state, program) {
     state.currentProgram = program;
   },
-
-  [types.ADD_NEW_DAY] (state, newDay) {
-    if (state.currentProgram) {
-      state.currentProgram.days.push(newDay);
-    }
-  },
-
-  [types.REMOVE_DAY] (state, dayId) {
-    if (state.currentProgram) {
-      for (var i = 0; i < state.currentProgram.days.length; i++) {
-        if (state.currentProgram.days[i].id == dayId) {
-          state.currentProgram.days.splice(i, 1);
-        }
-      }
-    }
-  },
-
-  [types.UPDATE_DAY] (state, day) {
-    if (state.currentProgram) {
-      for (var i = 0; i < state.currentProgram.days.length; i++) {
-        if (state.currentProgram.days[i].id == day.id) {
-          state.currentProgram.days[i] = day;
-        }
-      }
-    }
-  },
-
-  // [types.ADD_NEW_PROGRAM] (state, newProgram) {
-  //   state.availableProgramsList.push(newProgram);
-  // },
 
   [types.REMOVE_PROGRAM] (state, programId) {
     if (state.availableProgramsList) {

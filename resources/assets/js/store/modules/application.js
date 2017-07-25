@@ -54,6 +54,7 @@ const mutations = {
   },
 
   [types.ERROR_TEXT] (state, error) {
+    console.log(error);
     if (error.data instanceof Object) {
 
       for (var variable in error.data) {

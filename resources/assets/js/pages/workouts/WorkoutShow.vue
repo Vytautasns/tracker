@@ -1,6 +1,6 @@
 <template lang="html">
-<div class="uk-container">
-  <div class="uk-margin-top">
+<div class="uk-container" v-if="loaded">
+  <div class="uk-margin-top uk-margin-bottom">
     <div class="uk-card uk-card-default uk-card-body uk-width-auto uk-padding-remove">
       <div class="uk-padding-small">
         <h3 class="uk-heading-bullet uk-text-left">
@@ -21,8 +21,8 @@
         </ul>
       </div>
       <div class="uk-grid-small uk-child-width-1-2@m uk-padding-small uk-grid-match uk-padding-remove-top" uk-grid v-if="dayShown.steps.length > 0">
-        <div class="uk-box-shadow-hover-large ppp" @click="$router.push(`/days/${day}/step/${index}/${step.id}`)" v-for="(step, index) in dayShown.steps" :key="step.id">
-          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding-small" uk-grid>
+        <div class="ppp" @click="$router.push(`/days/${day}/step/${index}/${step.id}`)" v-for="(step, index) in dayShown.steps" :key="step.id">
+          <div class="uk-box-shadow-hover-large uk-card uk-card-default uk-grid-collapse uk-child-width-1-2 uk-margin uk-padding-small" uk-grid>
                 <div class="uk-width-auto uk-background-contain uk-margin-right" :style="`background-image: url(assets/exercise_thumbnail/${step.image_url}_1.png);`">
                   <canvas width="60" height="60"></canvas>
                 </div>
@@ -59,15 +59,21 @@ export default {
 
   props: ['day'],
 
+  data() {
+    return {
+      loaded: false,
+    }
+  },
+
   created() {
-      this.getDayById(this.day);
-      this.getDayLogs(this.day);
+      this.getDayById(this.day).then(() => {
+        this.loaded = true;
+      });
   },
 
   computed: {
     ...mapGetters([
       'dayShown',
-      'dayLog',
     ]),
 
   },
@@ -77,7 +83,6 @@ export default {
       'getDayById',
       'removeDay',
       'removeStep',
-      'getDayLogs',
     ]),
 
     confirmDelete(dayId) {
@@ -87,11 +92,9 @@ export default {
         <p>All related history and exercises will also be removed.</p>
         `).then(function() {
 
-        self.removeDay(dayId);
-        self.$router.push('/');
-
-      }, function () {
-
+        self.removeDay(dayId).then(() => {
+          self.$router.push('/');
+        });
 
       });
     },
@@ -103,7 +106,6 @@ export default {
       `)
       .then(function() {
         self.removeStep(stepId);
-        self.getDayLogs(self.day);
       });
     },
   },

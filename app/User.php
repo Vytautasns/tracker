@@ -121,16 +121,22 @@ class User extends Authenticatable
       return true;
     }
 
+    // Get selected program model
+    public function currentProgram()
+    {
+      return $this->programs()->find($this->selectedProgram());
+    }
 
 
-    // Return selected program
+    // Return selected program id
     public function selectedProgram()
     {
       try {
         $selected = $this->settings()
                           ->where('name', 'selected_program')
-                          ->firstOrFail()->id;
-        return $selected;
+                          ->firstOrFail()->value;
+        return (Integer) $selected;
+        return $this->settings;
       } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
         $this->selectProgram(0);
         return $this->selectedProgram();

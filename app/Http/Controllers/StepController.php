@@ -36,16 +36,6 @@ class StepController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -74,17 +64,6 @@ class StepController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Step  $step
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Step $step)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -102,9 +81,8 @@ class StepController extends Controller
      * @param  \App\Step  $step
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy(Step $step)
     {
-      $step = Step::find($request->id);
       $step->logs()->delete();
       $step->delete();
     }

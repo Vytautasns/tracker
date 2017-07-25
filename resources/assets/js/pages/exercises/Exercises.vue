@@ -15,8 +15,8 @@
           </ul>
         </div>
         <div class="uk-grid-small uk-child-width-1-3@m uk-padding-small uk-grid-match uk-padding-remove-top" uk-grid>
-          <div class="uk-box-shadow-hover-large ppp" @click="$router.push({ path: `category/${category.id}`})" v-for="category in categories" :key="category.id" v-if="!selectedCategory">
-            <div class="uk-card uk-card-default uk-margin uk-padding-small">
+          <div class="ppp" @click="$router.push({ path: `category/${category.id}`})" v-for="category in categories" :key="category.id" v-if="!selectedCategory">
+            <div class="uk-box-shadow-hover-large  uk-card uk-card-default uk-margin uk-padding-small">
                   <div class="uk-width-small uk-align-center">
                     <img :src="`${category.image_url}`" alt="category image">
 

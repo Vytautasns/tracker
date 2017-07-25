@@ -105,4 +105,11 @@ class ProgramController extends Controller
       return $user->selectedProgram();
     }
 
+    // Get current program
+    public function getCurrentProgram()
+    {
+      $user = Auth::user();
+      return $user->currentProgram();
+    }
+
 }

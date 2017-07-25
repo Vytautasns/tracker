@@ -19,7 +19,7 @@
         <div class="uk-grid-small uk-grid-match uk-child-width-1-2@m" uk-grid>
           <div v-for="program in availableProgramsList" :key="program.name">
 
-            <div class="uk-card" :class="program.id == settings.selected_program ? 'uk-card-primary' : 'uk-card-default'">
+            <div class="uk-box-shadow-hover-large uk-card" :class="program.id == settings.selected_program ? 'uk-card-primary' : 'uk-card-default'">
               <div class="uk-card-media-left uk-cover-container">
                   <img :src="`assets/programs/${program.image_url}.jpg`" alt="" uk-cover>
                   <div class="uk-position-bottom uk-overlay uk-overlay-primary" v-if="program.id == settings.selected_program ">
