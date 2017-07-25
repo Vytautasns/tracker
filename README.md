@@ -1,10 +1,16 @@
 # fitW3
-## Fitness logs app
 
-> Simple VueJS + Laravel SPA to log your fitness progress
-> Still in development
+Single Page App to log your workout progress.
+* [Live demo](https://fit.vytautasns.me)
 
-## Install instructions
+### Caution
+
+This web app is still in development.
+
+
+### Installing
+
+Run theese command to install the project
 
 ``` bash
 # clone repository
@@ -36,5 +42,13 @@ npm run dev
 
 # serve to local host now you can visit app at http://127.0.0.1:8000
 php artisan serve
-
 ```
+
+
+## Built With
+
+* [Laravel](https://laravel.com/) - PHP framework
+* [VueJS](https://vuejs.org/) - JavaScript Framework
+* [UIkit](https://getuikit.com/docs/introduction) - Nice and clean CSS framework
+
+
