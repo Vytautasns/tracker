@@ -15,12 +15,11 @@
               </router-link>
             </li>
         </ul>
-
+        <w-loading v-if="!loaded && !availableProgramsList.length"></w-loading>
         <div class="uk-grid-small uk-grid-match uk-child-width-1-2@m" uk-grid>
-
           <div v-for="program in availableProgramsList" :key="program.name">
 
-            <div class="uk-card" :class="program.id == settings.selected_program ? 'uk-card-primary' : 'uk-card-default'">
+            <div class="uk-box-shadow-hover-large uk-card" :class="program.id == settings.selected_program ? 'uk-card-primary' : 'uk-card-default'">
               <div class="uk-card-media-left uk-cover-container">
                   <img :src="`assets/programs/${program.image_url}.jpg`" alt="" uk-cover>
                   <div class="uk-position-bottom uk-overlay uk-overlay-primary" v-if="program.id == settings.selected_program ">
@@ -39,7 +38,11 @@
                       <h3 class="uk-card-title">{{ program.name }}</h3>
                       <p>{{ program.description }}</p>
                   </div>
-                   <button  v-if="program.id != settings.selected_program" @click="changeProgram(program)" class="uk-button uk-button-primary uk-margin-small-right uk-margin-small-bottom uk-position-bottom-right">
+                   <button
+                    class="uk-button uk-button-primary uk-margin-small-right uk-margin-small-bottom uk-position-bottom-right"
+                    v-if="program.id != settings.selected_program"
+                    @click="changeProgram(program)"
+                    :disabled="appState.ajaxQueue > 0">
                      <i class="fa fa-star" aria-hidden="true"></i>
                      Select program
                    </button>
@@ -50,10 +53,6 @@
         </div>
       </div>
     </div>
-
-
-
-
   </div>
 </template>
 
@@ -64,16 +63,20 @@ export default {
 
   data() {
     return {
+      loaded: false,
     }
   },
 
   mounted() {
-    this.getAvailablePrograms();
+    this.getAvailablePrograms().then(() => {
+      this.loaded = true;
+    });
   },
 
 
   computed: {
     ...mapGetters([
+      'appState',
       'settings',
       'availableProgramsList',
     ]),
@@ -92,26 +95,23 @@ export default {
       this.changeSetting({
         name: 'selected_program',
         value: program.id,
+      }).then(() => {
+        this.makeNotification('Workout program changed!');
+        this.$router.push('/');
       });
-      this.makeNotification('Workout program changed!');
-      this.$router.push('/');
-
     },
 
     deleteProgram(programId) {
       let self = this;
+
       UIkit.modal.confirm(`
         <h3>Do you really want to delete this program?</h3>
         <p class="uk-text-center"><i class="fa fa-warning fa-3x" aria-hidden="true"></i></p>
         <p>All related history, days and exercises will also be removed.</p>
         `).then(function() {
-
-        self.removeProgram(programId);
-        self.$router.push('/programs');
-
-      }, function () {
-
-
+          self.removeProgram(programId).then(() => {
+            self.$router.push('/programs');
+          });
       });
     },
 

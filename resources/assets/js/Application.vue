@@ -4,26 +4,29 @@
 
     <transition name="fade" mode="in-out">
       <div class="loading-container" v-if="appState.ajaxQueue">
-        <div class="loading-screen uk-overlay-primary uk-position-center uk-card uk-card-default" style="z-index: 101;">
-          <div class="uk-card-body">
-            <h3>
+        <div class="loading-screen uk-position-center uk-box-shadow-medium uk-card-default" style="z-index: 101;">
+          <div class="uk-card-body uk-text-center uk-padding-remove">
+            <h3 class="uk-margin uk-padding" v-if="!appState.errorMessages.length">
               <div uk-spinner></div>
               Loading...
             </h3>
-            <div class="uk-alert-danger" uk-alert v-if="appState.errorMessage">
-                <a class="uk-alert-close" uk-close></a>
-                <p>{{ appState.errorMessage }}</p>
+            <div class="uk-alert-danger uk-padding" uk-alert v-else>
+                <i class="fa fa-warning fa-3x" aria-hidden="true"></i>
+                <!-- <h3 class="uk-text-danger uk-margin-remove-top">Something went wrong</h3> -->
+                <div class="uk-tile uk-tile-muted uk-padding-small">
+                  <p v-for="(message, index) in appState.errorMessages">
+                    {{ message }}
+                  </p>
+                </div>
+                <a @click="reload" class="uk-button uk-button-danger uk-margin-small uk-width-1-1">Main page</a>
             </div>
           </div>
         </div>
       </div>
-
-
     </transition>
 
       <div v-if="started === 1">
         <Navigation></Navigation>
-
         <transition name="slide-fade" mode="out-in">
           <router-view></router-view>
         </transition>
@@ -31,9 +34,6 @@
       <div class="loading-container" v-else-if="started === 2">
         <Setup></Setup>
       </div>
-
-
-
   </div>
 </template>
 
@@ -55,7 +55,7 @@ export default {
   created() {
 
     this.getUser().then(() => {
-      if(this.settings.first_login == 1) {
+      if(this.settings.selected_program == 0) {
         this.started = 2;
       } else {
         this.started = 1;
@@ -63,11 +63,12 @@ export default {
     });
 
     this.getCategories();
+    this.getCurrentProgram();
 
   },
 
   mounted() {
-
+    this.clearErrors();
   },
 
   watch: {
@@ -95,7 +96,13 @@ export default {
       'getUser',
       'makeNotification',
       'getCategories',
+      'clearErrors',
+      'getCurrentProgram',
     ]),
+
+    reload() {
+      window.location = '/';
+    },
 
     notify() {
       if (this.appState.notification) {
@@ -116,23 +123,22 @@ export default {
 
 <style lang="css">
 
-  /*.loading-screen {
+  .loading-screen {
     position: fixed;
-    top: 5%; left: 5%;
-    width: 80%;
-    height: 80%;
+
     background-color: #fff;
     z-index: 9999;
-    -webkit-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.55);
-    -moz-box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.55);
-    box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.55);
-  }*/
+    opacity: 1 !important;
+
+  }
+
 
   .loading-container {
     position: fixed;
-    z-index: 99999999;
+    z-index: 999;
     width: 100vw;
     height: 100vh;
+    background-color: rgba(0,0,0,0.8);
   }
 
 
@@ -145,15 +151,20 @@ export default {
 
 
   .slide-fade-enter-active {
-    transition: all 0.1s linear;
+    transition: all 0.2s linear;
   }
   .slide-fade-leave-active {
-    transition: all 0.1s linear;
-    // opacity: 0;
+    transition: all 0.2s linear;
+    opacity: 0;
   }
-  .slide-fade-enter, .slide-fade-leave-to
+
+  .slide-fade-enter
   /* .slide-fade-leave-active for <2.1.8 */ {
-    transform: translateY(-50px);
+    /*transform: translateX(-1000px);*/
+    opacity: 0;
+  }
+  .slide-fade-leave-to {
+    /*transform: translateX(1000px);*/
     opacity: 0;
   }
 </style>

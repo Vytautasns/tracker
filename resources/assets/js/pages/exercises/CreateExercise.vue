@@ -30,9 +30,22 @@
             </div>
 
             <div class="uk-margin">
-              <button @click.prevent="saveExercise" type="submit" class="uk-button uk-button-primary" :disabled="newExercise.name.length < 3 || newExercise.category_id == 99">
+
+              <button class="uk-button uk-button-primary"
+                v-if="!exercise"
+                @click.prevent="saveExercise"
+                type="submit"
+                :disabled="buttonEnabled">
                 <i class="fa fa-save" aria-hidden="true"></i>
                 Save
+              </button>
+              <button class="uk-button uk-button-primary"
+                v-else
+                @click.prevent="update"
+                type="submit"
+                :disabled="buttonEnabled">
+                <i class="fa fa-save" aria-hidden="true"></i>
+                Update
               </button>
             </div>
         </fieldset>
@@ -66,7 +79,14 @@ export default {
   computed: {
     ...mapGetters([
       'categories',
+      'appState',
     ]),
+
+    buttonEnabled: function () {
+      return this.newExercise.name.length < 3
+          || this.newExercise.category_id == 99
+          || this.appState.ajaxQueue.length > 0;
+    },
 
   },
 
@@ -74,10 +94,17 @@ export default {
   methods: {
     ...mapActions([
       'storeExercise',
+      'updateExercise',
     ]),
 
     saveExercise() {
       this.storeExercise(this.newExercise).then((id) => {
+        this.$router.push(`/exercises/${id}`);
+      });
+    },
+
+    update() {
+      this.updateExercise(this.newExercise).then((id) => {
         this.$router.push(`/exercises/${id}`);
       });
     },

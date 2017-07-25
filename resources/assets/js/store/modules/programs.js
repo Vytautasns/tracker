@@ -21,83 +21,44 @@ const getters = {
 
 // actions
 const actions = {
+
   getCurrentProgram({ commit, rootState }) {
     return new Promise((resolve,reject) => {
       commit(types.START_LOADING);
-
-      axios.post('/app/programs/selected')
+      axios.get('/app/programs/current')
         .then(response => {
           resolve(response.data);
           commit(types.STOP_LOADING);
           commit(types.SET_CURRENT_PROGRAM, response.data);
         })
-        .catch(err => {
-          commit(types.STOP_LOADING);
-          commit(types.ERROR_TEXT, 'There was problem getting current program. Try reloading.');
+        .catch((err) => {
+          // commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, err.response);
+
         });
     });
   },
 
   getAvailablePrograms({ commit, rootState }) {
-    commit(types.START_LOADING);
-
-    axios.post('/app/programs')
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.RECEIVE_PROGRAMS, response.data);
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'There was problem getting programs. Try reloading.');
-      });
-  },
-
-  addDay({ commit, dispatch }, day) {
-    commit(types.START_LOADING);
-    axios.post('/app/days/add', day)
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.ADD_NEW_DAY, response.data);
-        dispatch('makeNotification', 'New day added');
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'There was a problem while adding a new day.');
-      });
-  },
-
-  updateDay({ commit, dispatch }, day) {
-    commit(types.UPDATE_DAY, day);
-    commit(types.START_LOADING);
-    axios.post('/app/days/update', day)
-      .then(response => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'Information updated.');
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'There was a problem updating day.');
-      });
-  },
-
-  removeDay({ commit, dispatch }, dayId) {
-    commit(types.START_LOADING);
-    axios.post('/app/days/remove', { id: dayId })
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.REMOVE_DAY, dayId);
-        dispatch('makeNotification', 'Day removed.');
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'There was a problem while deleting day.');
-      });
+    return new Promise ((resolve, reject) => {
+      // commit(types.START_LOADING);
+      axios.get('/app/programs')
+        .then(response => {
+          // commit(types.STOP_LOADING);
+          resolve(response.data);
+          commit(types.RECEIVE_PROGRAMS, response.data);
+        })
+        .catch(err => {
+          // commit(types.STOP_LOADING);
+          commit(types.ERROR_TEXT, err.response);
+        });
+    });
   },
 
   saveNewPrgoram({ commit, dispatch }, newProgram) {
     return new Promise((resolve, reject) => {
       commit(types.START_LOADING);
-      axios.post(`/app/programs/save`, newProgram)
+      axios.post(`/app/programs`, newProgram)
         .then((response) => {
           resolve();
           commit(types.STOP_LOADING);
@@ -105,26 +66,41 @@ const actions = {
         })
         .catch(err => {
           reject();
-          commit(types.STOP_LOADING);
-          commit(types.ERROR_TEXT, 'Couldn\'t save program');
+          commit(types.ERROR_TEXT, err.response);
+
         });
      });
+  },
 
+  updateProgram({ commit, dispatch }, updatedProgram) {
+    return new Promise((resolve, reject) => {
+      commit(types.START_LOADING);
+      axios.put(`/app/programs/${updatedProgram.id}`, updatedProgram)
+        .then((response) => {
+          resolve();
+          commit(types.STOP_LOADING);
+          dispatch('makeNotification', 'Updated!');
+        })
+        .catch(err => {
+          reject();
+          commit(types.ERROR_TEXT, err.response);
+        });
+     });
   },
 
   removeProgram({ commit, dispatch }, programId) {
-    commit(types.START_LOADING);
-    axios.post('/app/programs/remove', { id: programId })
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.REMOVE_PROGRAM, programId);
-        dispatch('makeNotification', 'Program deleted!');
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        dispatch('makeNotification', 'There was a problem while deleting program.');
-      });
-
+    return new Promise(function(resolve, reject) {
+      commit(types.START_LOADING);
+      axios.delete(`/app/programs/${programId}`)
+        .then(response => {
+          commit(types.STOP_LOADING);
+          commit(types.REMOVE_PROGRAM, programId);
+          dispatch('makeNotification', 'Program deleted!');
+        })
+        .catch(err => {
+          commit(types.ERROR_TEXT, err.response );
+        });
+    });
   },
 
 }
@@ -139,36 +115,6 @@ const mutations = {
   [types.SET_CURRENT_PROGRAM] (state, program) {
     state.currentProgram = program;
   },
-
-  [types.ADD_NEW_DAY] (state, newDay) {
-    if (state.currentProgram) {
-      state.currentProgram.days.push(newDay);
-    }
-  },
-
-  [types.REMOVE_DAY] (state, dayId) {
-    if (state.currentProgram) {
-      for (var i = 0; i < state.currentProgram.days.length; i++) {
-        if (state.currentProgram.days[i].id == dayId) {
-          state.currentProgram.days.splice(i, 1);
-        }
-      }
-    }
-  },
-
-  [types.UPDATE_DAY] (state, day) {
-    if (state.currentProgram) {
-      for (var i = 0; i < state.currentProgram.days.length; i++) {
-        if (state.currentProgram.days[i].id == day.id) {
-          state.currentProgram.days[i] = day;
-        }
-      }
-    }
-  },
-
-  // [types.ADD_NEW_PROGRAM] (state, newProgram) {
-  //   state.availableProgramsList.push(newProgram);
-  // },
 
   [types.REMOVE_PROGRAM] (state, programId) {
     if (state.availableProgramsList) {

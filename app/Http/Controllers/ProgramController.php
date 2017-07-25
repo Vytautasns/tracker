@@ -16,26 +16,10 @@ class ProgramController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-      return $request->user()->programs;
-    }
-
-
-    // Get all programs for the user
-    public function getSelectedProgram(Request $request)
-    {
-      return $request->user()->getSelectedProgram();
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+      $user = Auth::user();
+      return $user->availablePrograms();
     }
 
     /**
@@ -46,60 +30,21 @@ class ProgramController extends Controller
      */
     public function store(Request $request)
     {
-
       $this->validate($request, [
         'name' => 'required|min:3|max:255',
+        'description' => 'required|min:3',
       ]);
 
       $user = $request->user();
 
-      if ($request->id) {
-
-        $program = Program::find($request->id);
-        $program->update([
-          'name' => $request->name,
-          'description' => $request->description,
-        ]);
-
-      } else {
-
-        $program = Program::create([
-          'name' => $request->name,
-          'user_id' => $user->id,
-          'description' => $request->description,
-          'image_url' => 'assets/user_program.jpg',
-        ]);
-
-      }
-
+      $program = Program::create([
+        'name' => $request->name,
+        'user_id' => $user->id,
+        'description' => $request->description,
+        'image_url' => 'custom',
+      ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Program  $program
-     * @return \App\Program
-     */
-    public function show(Program $program)
-    {
-//      $user = Auth::user();
-//      return $user->programs()->load([
-//        'days' => function ($query) {
-//          $query->with('steps');
-//        }
-//      ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Program  $program
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Program $program)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -110,7 +55,21 @@ class ProgramController extends Controller
      */
     public function update(Request $request, Program $program)
     {
-        //
+      $this->validate($request, [
+        'name' => 'required|min:3|max:255',
+        'description' => 'required',
+      ]);
+
+      $user = $request->user();
+
+      if ($program->user_id != $user->id) {
+        return response('Unauthorized', 401);
+      }
+
+      $program->update([
+        'name' => $request->name,
+        'description' => $request->description,
+      ]);
     }
 
     /**
@@ -119,13 +78,38 @@ class ProgramController extends Controller
      * @param  \App\Program  $program
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy(Program $program)
     {
-      $program = Program::find($request->id);
+      // $a = 0;
+      // while ($a <= 600000000) {
+      //   $a++;
+      // }
+      $user = Auth::user();
+
+      if ($program->user_id != $user->id) {
+        return response('Unauthorized', 401);
+      }
+
       foreach ($program->days as $day) {
         $day->steps()->delete();
       }
       $program->days()->delete();
       $program->delete();
     }
+
+
+    // Get all programs for the user
+    public function getSelectedProgram()
+    {
+      $user = Auth::user();
+      return $user->selectedProgram();
+    }
+
+    // Get current program
+    public function getCurrentProgram()
+    {
+      $user = Auth::user();
+      return $user->currentProgram();
+    }
+
 }

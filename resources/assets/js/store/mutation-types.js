@@ -14,6 +14,7 @@ export const STOP_LOADING = 'STOP_LOADING';
 export const ERROR_TEXT = 'ERROR_TEXT';
 export const CHANGE_SETTING = 'CHANGE_SETTING';
 export const MAKE_NOTIFICATION = 'MAKE_NOTIFICATION';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 // Workout Programs
 
@@ -24,6 +25,8 @@ export const REMOVE_DAY = 'REMOVE_DAY';
 export const UPDATE_DAY = "UPDATE_DAY"
 export const ADD_NEW_PROGRAM = "ADD_NEW_PROGRAM";
 export const REMOVE_PROGRAM = "REMOVE_PROGRAM";
+export const RECEIVE_TODAYS_WORKOUT = 'RECEIVE_TODAYS_WORKOUT';
+export const RECEIVE_PROGRAM_DAYS = 'RECEIVE_PROGRAM_DAYS';
 
 
 // Days

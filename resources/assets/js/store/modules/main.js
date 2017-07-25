@@ -22,11 +22,13 @@ const getters = {
 // actions
 const actions = {
 
+
+
   // Get initial user data from database
   getUser({ commit }) {
     return new Promise ((resolve, reject) => {
-      commit(types.START_LOADING);
-      axios.post('/app/user')
+      // commit(types.START_LOADING);
+      axios.get('/app/user')
         .then(response => {
           commit(types.STOP_LOADING);
           resolve();
@@ -34,23 +36,25 @@ const actions = {
         })
         .catch(err => {
           commit(types.STOP_LOADING);
-          commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
+          commit(types.ERROR_TEXT, err.response);
         });
     });
   },
 
   changeSetting({ commit }, settings) {
-    commit(types.START_LOADING);
+    return new Promise(function(resolve, reject) {
+      commit(types.START_LOADING);
+      axios.post('app/settings/change', settings)
+        .then(response => {
+          resolve();
+          commit(types.STOP_LOADING);
+          commit(types.CHANGE_SETTING, settings);
+        })
+        .catch(err => {
+          commit(types.ERROR_TEXT, err.response);
+        });
+    });
 
-    axios.post('app/settings/change', settings)
-      .then(response => {
-        commit(types.STOP_LOADING);
-        commit(types.CHANGE_SETTING, settings);
-      })
-      .catch(err => {
-        commit(types.STOP_LOADING);
-        commit(types.ERROR_TEXT, 'Application couldn\'t start. Try reloading.');
-      });
   },
 
 }
